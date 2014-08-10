@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Items</key>
+	<array>
+		<string>Is the Scene Safe?</string>
+		<string>Protected From Environment?</string>
+		<string>Is RSI Indicated?</string>
+		<string>Is HERE and NOW the Right Place?</string>
+		<string>Do You Have Enough Help?</string>
+		<string>Have You Got 360\u00B0 Access?</string>
+		<string>Does The Airway Look Manageable?</string>
+		<string>Is Preoxygenation Effective?</string>
+		<string>Consider Apnoeic Oxygenation?</string>
+		<string>Is IV/ IO Access Patent?</string>
+	</array>
+	<key>PHEM</key>
+	<array>
+		<integer>1</integer>
+		<integer>1</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>1</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+	</array>
+	<key>Subview</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>1</integer>
+		<integer>2</integer>
+		<integer>2</integer>
+		<integer>0</integer>
+	</array>
+</dict>
+</plist>

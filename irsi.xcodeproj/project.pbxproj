@@ -1,0 +1,1178 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF334EEF1996D21E001539A9 /* Man_shadow_-_upper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */; };
+		AF334F2F1997F12C001539A9 /* AirwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EF41997F12C001539A9 /* AirwayViewController.m */; };
+		AF334F301997F12C001539A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EF61997F12C001539A9 /* AppDelegate.m */; };
+		AF334F311997F12C001539A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF334EF71997F12C001539A9 /* Main_iPad.storyboard */; };
+		AF334F321997F12C001539A9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */; };
+		AF334F331997F12C001539A9 /* CustomisationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EFC1997F12C001539A9 /* CustomisationViewController.m */; };
+		AF334F341997F12C001539A9 /* DefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EFE1997F12C001539A9 /* DefaultsViewController.m */; };
+		AF334F351997F12C001539A9 /* DemographicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F001997F12C001539A9 /* DemographicsViewController.m */; };
+		AF334F361997F12C001539A9 /* DrugDoses.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F021997F12C001539A9 /* DrugDoses.m */; };
+		AF334F371997F12C001539A9 /* DrugLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */; };
+		AF334F381997F12C001539A9 /* DrugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F061997F12C001539A9 /* DrugLog.m */; };
+		AF334F391997F12C001539A9 /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F081997F12C001539A9 /* DrugsTableViewController.m */; };
+		AF334F3A1997F12C001539A9 /* DrugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F0A1997F12C001539A9 /* DrugsViewController.m */; };
+		AF334F3B1997F12C001539A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF334F0B1997F12C001539A9 /* InfoPlist.strings */; };
+		AF334F3C1997F12C001539A9 /* EquipmentChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */; };
+		AF334F3D1997F12C001539A9 /* EventLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F101997F12C001539A9 /* EventLog.m */; };
+		AF334F3E1997F12C001539A9 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F121997F12C001539A9 /* FinalViewController.m */; };
+		AF334F3F1997F12C001539A9 /* guidePreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F141997F12C001539A9 /* guidePreO2ViewController.m */; };
+		AF334F401997F12C001539A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF334F151997F12C001539A9 /* Images.xcassets */; };
+		AF334F411997F12C001539A9 /* IndicationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F171997F12C001539A9 /* IndicationsViewController.m */; };
+		AF334F421997F12C001539A9 /* InductionAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F191997F12C001539A9 /* InductionAgents.m */; };
+		AF334F431997F12C001539A9 /* Interactions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F1B1997F12C001539A9 /* Interactions.m */; };
+		AF334F441997F12C001539A9 /* irsi-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF334F1C1997F12C001539A9 /* irsi-Info.plist */; };
+		AF334F451997F12C001539A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F1E1997F12C001539A9 /* main.m */; };
+		AF334F461997F12C001539A9 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F201997F12C001539A9 /* MainMenuViewController.m */; };
+		AF334F471997F12C001539A9 /* Nationalities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F221997F12C001539A9 /* Nationalities.m */; };
+		AF334F481997F12C001539A9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F241997F12C001539A9 /* Patient.m */; };
+		AF334F491997F12C001539A9 /* PreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F261997F12C001539A9 /* PreO2ViewController.m */; };
+		AF334F4A1997F12C001539A9 /* RocClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F281997F12C001539A9 /* RocClockViewController.m */; };
+		AF334F4B1997F12C001539A9 /* RSINowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2A1997F12C001539A9 /* RSINowViewController.m */; };
+		AF334F4C1997F12C001539A9 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2C1997F12C001539A9 /* TeamViewController.m */; };
+		AF334F4D1997F12C001539A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2E1997F12C001539A9 /* ViewController.m */; };
+		AF334F4F1997F13E001539A9 /* Plain Border.png in Resources */ = {isa = PBXBuildFile; fileRef = AF334F4E1997F13E001539A9 /* Plain Border.png */; };
+		AF744AC11987021300D91DFD /* InductionAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = AF744AC01987021300D91DFD /* InductionAgents.m */; };
+		AF744AC419883C5C00D91DFD /* Nationalities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF744AC319883C5C00D91DFD /* Nationalities.m */; };
+		AF744AC619883C7F00D91DFD /* NationalDrugLabels.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF744AC519883C7F00D91DFD /* NationalDrugLabels.plist */; };
+		AF744ACC1988408900D91DFD /* Enflurane.png in Resources */ = {isa = PBXBuildFile; fileRef = AF744AC71988408900D91DFD /* Enflurane.png */; };
+		AF744ACD1988408900D91DFD /* Halothane.png in Resources */ = {isa = PBXBuildFile; fileRef = AF744AC81988408900D91DFD /* Halothane.png */; };
+		AF744ACE1988408900D91DFD /* Des.png in Resources */ = {isa = PBXBuildFile; fileRef = AF744AC91988408900D91DFD /* Des.png */; };
+		AF744ACF1988408900D91DFD /* Sevo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF744ACA1988408900D91DFD /* Sevo.png */; };
+		AF744AD01988408900D91DFD /* Iso.png in Resources */ = {isa = PBXBuildFile; fileRef = AF744ACB1988408900D91DFD /* Iso.png */; };
+		AF744AD3198842E600D91DFD /* CustomisationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF744AD2198842E600D91DFD /* CustomisationViewController.m */; };
+		AF8D960519780FAF0050A924 /* redFinalTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95E719780FAF0050A924 /* redFinalTabDeselected.png */; };
+		AF8D960619780FAF0050A924 /* redFinalTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95E819780FAF0050A924 /* redFinalTabSelected.png */; };
+		AF8D960719780FAF0050A924 /* amberFinalTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95E919780FAF0050A924 /* amberFinalTabDeselected.png */; };
+		AF8D960819780FAF0050A924 /* amberFinalTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95EA19780FAF0050A924 /* amberFinalTabSelected.png */; };
+		AF8D960919780FAF0050A924 /* greenFinalTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95EB19780FAF0050A924 /* greenFinalTabDeselected.png */; };
+		AF8D960A19780FAF0050A924 /* greenFinalTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95EC19780FAF0050A924 /* greenFinalTabSelected.png */; };
+		AF8D960B19780FAF0050A924 /* amberTeamTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95ED19780FAF0050A924 /* amberTeamTabDeselected.png */; };
+		AF8D960C19780FAF0050A924 /* redTeamTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95EE19780FAF0050A924 /* redTeamTabDeselected.png */; };
+		AF8D960D19780FAF0050A924 /* redTeamTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95EF19780FAF0050A924 /* redTeamTabSelected.png */; };
+		AF8D960E19780FAF0050A924 /* amberTeamTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F019780FAF0050A924 /* amberTeamTabSelected.png */; };
+		AF8D960F19780FAF0050A924 /* greenTeamTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F119780FAF0050A924 /* greenTeamTabDeselected.png */; };
+		AF8D961019780FAF0050A924 /* greenTeamTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F219780FAF0050A924 /* greenTeamTabSelected.png */; };
+		AF8D961119780FAF0050A924 /* redEquipmentTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F319780FAF0050A924 /* redEquipmentTabDeselected.png */; };
+		AF8D961219780FAF0050A924 /* redEquipmentTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F419780FAF0050A924 /* redEquipmentTabSelected.png */; };
+		AF8D961319780FAF0050A924 /* amberEquipmentTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F519780FAF0050A924 /* amberEquipmentTabDeselected.png */; };
+		AF8D961419780FAF0050A924 /* amberEquipmentTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F619780FAF0050A924 /* amberEquipmentTabSelected.png */; };
+		AF8D961519780FAF0050A924 /* greenEquipmentTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F719780FAF0050A924 /* greenEquipmentTabDeselected.png */; };
+		AF8D961619780FAF0050A924 /* greenEquipmentTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F819780FAF0050A924 /* greenEquipmentTabSelected.png */; };
+		AF8D961719780FAF0050A924 /* redIndicationsTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95F919780FAF0050A924 /* redIndicationsTabDeselected.png */; };
+		AF8D961819780FAF0050A924 /* redIndicationsTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FA19780FAF0050A924 /* redIndicationsTabSelected.png */; };
+		AF8D961919780FAF0050A924 /* amberIndicationsTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FB19780FAF0050A924 /* amberIndicationsTabDeselected.png */; };
+		AF8D961A19780FAF0050A924 /* amberIndicationsTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FC19780FAF0050A924 /* amberIndicationsTabSelected.png */; };
+		AF8D961B19780FAF0050A924 /* greenIndicationsTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FD19780FAF0050A924 /* greenIndicationsTabDeselected.png */; };
+		AF8D961C19780FAF0050A924 /* greenIndicationsTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FE19780FAF0050A924 /* greenIndicationsTabSelected.png */; };
+		AF8D961D19780FAF0050A924 /* greenDrugTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D95FF19780FAF0050A924 /* greenDrugTabSelected.png */; };
+		AF8D961E19780FAF0050A924 /* redDrugTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D960019780FAF0050A924 /* redDrugTabSelected.png */; };
+		AF8D961F19780FAF0050A924 /* amberDrugTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D960119780FAF0050A924 /* amberDrugTabSelected.png */; };
+		AF8D962019780FAF0050A924 /* redDrugTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D960219780FAF0050A924 /* redDrugTabDeselected.png */; };
+		AF8D962119780FAF0050A924 /* amberDrugTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D960319780FAF0050A924 /* amberDrugTabDeselected.png */; };
+		AF8D962219780FAF0050A924 /* greenDrugTabDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D960419780FAF0050A924 /* greenDrugTabDeselected.png */; };
+		AF8D962C197818B60050A924 /* EquipmentChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D962B197818B60050A924 /* EquipmentChecklistViewController.m */; };
+		AF8D962F197818CB0050A924 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D962E197818CB0050A924 /* TeamViewController.m */; };
+		AF8D9632197818DF0050A924 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D9631197818DF0050A924 /* FinalViewController.m */; };
+		AF8D963B197834EE0050A924 /* IndicationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D963A197834EE0050A924 /* IndicationsViewController.m */; };
+		AF8D9643197839570050A924 /* completeTickBox.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D9641197839570050A924 /* completeTickBox.png */; };
+		AF8D9644197839570050A924 /* blankTickBox.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D9642197839570050A924 /* blankTickBox.png */; };
+		AF8D964F19788A6C0050A924 /* SkipTickBox.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D964D19788A6C0050A924 /* SkipTickBox.png */; };
+		AF8D965019788A6C0050A924 /* FailedTickBox.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8D964E19788A6C0050A924 /* FailedTickBox.png */; };
+		AF8D96531978973B0050A924 /* AirwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D96521978973B0050A924 /* AirwayViewController.m */; };
+		AF8D9659197D568F0050A924 /* Interactions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D9658197D568F0050A924 /* Interactions.m */; };
+		AF8D965F197D69390050A924 /* guidePreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D965E197D69390050A924 /* guidePreO2ViewController.m */; };
+		AF8D9662197D9E6D0050A924 /* DefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D9661197D9E6D0050A924 /* DefaultsViewController.m */; };
+		AF8D9665197DB3540050A924 /* DrugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D9664197DB3540050A924 /* DrugsViewController.m */; };
+		AF8D9668197DB3650050A924 /* DrugDoses.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D9667197DB3650050A924 /* DrugDoses.m */; };
+		AFA16C0E197DB78D000799A0 /* BlankAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C0D197DB78D000799A0 /* BlankAgent.png */; };
+		AFA16C11197DBC77000799A0 /* DrugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA16C10197DBC77000799A0 /* DrugLog.m */; };
+		AFA16C14197DBCF3000799A0 /* DrugLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA16C13197DBCF3000799A0 /* DrugLabelTableViewCell.m */; };
+		AFA16C18197E20AA000799A0 /* PlusSign.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C17197E20AA000799A0 /* PlusSign.png */; };
+		AFA16C28197F2B14000799A0 /* Suggamadex.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C1D197F2B14000799A0 /* Suggamadex.png */; };
+		AFA16C29197F2B14000799A0 /* White Label.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C1E197F2B14000799A0 /* White Label.png */; };
+		AFA16C2A197F2B14000799A0 /* Opioids.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C1F197F2B14000799A0 /* Opioids.png */; };
+		AFA16C2B197F2B14000799A0 /* adrenaline.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C20197F2B14000799A0 /* adrenaline.png */; };
+		AFA16C2C197F2B14000799A0 /* Sux.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C21197F2B14000799A0 /* Sux.png */; };
+		AFA16C2D197F2B14000799A0 /* Antimuscarinics.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C22197F2B14000799A0 /* Antimuscarinics.png */; };
+		AFA16C2E197F2B14000799A0 /* LAs.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C23197F2B14000799A0 /* LAs.png */; };
+		AFA16C2F197F2B14000799A0 /* Vasopressors.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C24197F2B14000799A0 /* Vasopressors.png */; };
+		AFA16C30197F2B14000799A0 /* Muscle Relaxants.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C25197F2B14000799A0 /* Muscle Relaxants.png */; };
+		AFA16C31197F2B14000799A0 /* Benzos.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C26197F2B14000799A0 /* Benzos.png */; };
+		AFA16C32197F2B14000799A0 /* Induction Agent.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C27197F2B14000799A0 /* Induction Agent.png */; };
+		AFA16C35198066F9000799A0 /* InductionAgents.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFA16C34198066F9000799A0 /* InductionAgents.plist */; };
+		AFA16C38198599FA000799A0 /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA16C37198599FA000799A0 /* DrugsTableViewController.m */; };
+		AFC666831976AE780091C4BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666821976AE780091C4BE /* Foundation.framework */; };
+		AFC666851976AE780091C4BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666841976AE780091C4BE /* CoreGraphics.framework */; };
+		AFC666871976AE780091C4BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666861976AE780091C4BE /* UIKit.framework */; };
+		AFC6668D1976AE780091C4BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFC6668B1976AE780091C4BE /* InfoPlist.strings */; };
+		AFC6668F1976AE780091C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC6668E1976AE780091C4BE /* main.m */; };
+		AFC666931976AE780091C4BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666921976AE780091C4BE /* AppDelegate.m */; };
+		AFC666961976AE780091C4BE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC666941976AE780091C4BE /* Main_iPhone.storyboard */; };
+		AFC666991976AE780091C4BE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC666971976AE780091C4BE /* Main_iPad.storyboard */; };
+		AFC6669C1976AE780091C4BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC6669B1976AE780091C4BE /* ViewController.m */; };
+		AFC6669E1976AE780091C4BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC6669D1976AE780091C4BE /* Images.xcassets */; };
+		AFC666A51976AE780091C4BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666A41976AE780091C4BE /* XCTest.framework */; };
+		AFC666A61976AE780091C4BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666821976AE780091C4BE /* Foundation.framework */; };
+		AFC666A71976AE780091C4BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666861976AE780091C4BE /* UIKit.framework */; };
+		AFC666AF1976AE780091C4BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFC666AD1976AE780091C4BE /* InfoPlist.strings */; };
+		AFC666B11976AE780091C4BE /* irsiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666B01976AE780091C4BE /* irsiTests.m */; };
+		AFC666BB1976AE940091C4BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666BA1976AE940091C4BE /* QuartzCore.framework */; };
+		AFC666BD1976AE9B0091C4BE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666BC1976AE9B0091C4BE /* AVFoundation.framework */; };
+		AFC666BF1976AEA30091C4BE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC666BE1976AEA30091C4BE /* AudioToolbox.framework */; };
+		AFC666C31976AEC70091C4BE /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666C21976AEC70091C4BE /* MainMenuViewController.m */; };
+		AFC666C61976B28A0091C4BE /* Large App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC666C51976B28A0091C4BE /* Large App Icon.png */; };
+		AFC666D21976CC4A0091C4BE /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666D11976CC4A0091C4BE /* Patient.m */; };
+		AFC666D81976E2420091C4BE /* RSINowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666D71976E2420091C4BE /* RSINowViewController.m */; };
+		AFC666DB1976E4A40091C4BE /* DemographicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666DA1976E4A40091C4BE /* DemographicsViewController.m */; };
+		AFC666E01977173D0091C4BE /* PreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666DF1977173D0091C4BE /* PreO2ViewController.m */; };
+		AFC666E3197718440091C4BE /* EventLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666E2197718440091C4BE /* EventLog.m */; };
+		AFC666E81977B5700091C4BE /* RedBackgroundBorderedBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC666E41977B5700091C4BE /* RedBackgroundBorderedBlack.png */; };
+		AFC666E91977B5700091C4BE /* OrangeBackgroundBorderedBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC666E51977B5700091C4BE /* OrangeBackgroundBorderedBlack.png */; };
+		AFC666EA1977B5700091C4BE /* GreenBackgroundBorderedBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC666E61977B5700091C4BE /* GreenBackgroundBorderedBlack.png */; };
+		AFC666EB1977B5700091C4BE /* WhiteBackgroundBorderedBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC666E71977B5700091C4BE /* WhiteBackgroundBorderedBlack.png */; };
+		AFC666EE1977DD800091C4BE /* RocClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC666ED1977DD800091C4BE /* RocClockViewController.m */; };
+		AFC755D31995EBBB00F9CC51 /* Equipment.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC755D21995EBBB00F9CC51 /* Equipment.plist */; };
+		AFC755D71996037700F9CC51 /* Indications.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC755D61996037700F9CC51 /* Indications.plist */; };
+		AFC755D9199603A300F9CC51 /* StringsUK.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC755D8199603A300F9CC51 /* StringsUK.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFC666A81976AE780091C4BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFC666771976AE780091C4BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFC6667E1976AE780091C4BE;
+			remoteInfo = irsi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Man_shadow_-_upper.png"; path = "../../Images/Man_shadow_-_upper.png"; sourceTree = "<group>"; };
+		AF334EF31997F12C001539A9 /* AirwayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirwayViewController.h; sourceTree = "<group>"; };
+		AF334EF41997F12C001539A9 /* AirwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirwayViewController.m; sourceTree = "<group>"; };
+		AF334EF51997F12C001539A9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF334EF61997F12C001539A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF334EF81997F12C001539A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		AF334EFA1997F12C001539A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		AF334EFB1997F12C001539A9 /* CustomisationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomisationViewController.h; sourceTree = "<group>"; };
+		AF334EFC1997F12C001539A9 /* CustomisationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomisationViewController.m; sourceTree = "<group>"; };
+		AF334EFD1997F12C001539A9 /* DefaultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsViewController.h; sourceTree = "<group>"; };
+		AF334EFE1997F12C001539A9 /* DefaultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsViewController.m; sourceTree = "<group>"; };
+		AF334EFF1997F12C001539A9 /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemographicsViewController.h; sourceTree = "<group>"; };
+		AF334F001997F12C001539A9 /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemographicsViewController.m; sourceTree = "<group>"; };
+		AF334F011997F12C001539A9 /* DrugDoses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDoses.h; sourceTree = "<group>"; };
+		AF334F021997F12C001539A9 /* DrugDoses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDoses.m; sourceTree = "<group>"; };
+		AF334F031997F12C001539A9 /* DrugLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLabelTableViewCell.h; sourceTree = "<group>"; };
+		AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLabelTableViewCell.m; sourceTree = "<group>"; };
+		AF334F051997F12C001539A9 /* DrugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLog.h; sourceTree = "<group>"; };
+		AF334F061997F12C001539A9 /* DrugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLog.m; sourceTree = "<group>"; };
+		AF334F071997F12C001539A9 /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
+		AF334F081997F12C001539A9 /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
+		AF334F091997F12C001539A9 /* DrugsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsViewController.h; sourceTree = "<group>"; };
+		AF334F0A1997F12C001539A9 /* DrugsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsViewController.m; sourceTree = "<group>"; };
+		AF334F0C1997F12C001539A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF334F0D1997F12C001539A9 /* EquipmentChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChecklistViewController.h; sourceTree = "<group>"; };
+		AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentChecklistViewController.m; sourceTree = "<group>"; };
+		AF334F0F1997F12C001539A9 /* EventLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLog.h; sourceTree = "<group>"; };
+		AF334F101997F12C001539A9 /* EventLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLog.m; sourceTree = "<group>"; };
+		AF334F111997F12C001539A9 /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		AF334F121997F12C001539A9 /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
+		AF334F131997F12C001539A9 /* guidePreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guidePreO2ViewController.h; sourceTree = "<group>"; };
+		AF334F141997F12C001539A9 /* guidePreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = guidePreO2ViewController.m; sourceTree = "<group>"; };
+		AF334F151997F12C001539A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF334F161997F12C001539A9 /* IndicationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicationsViewController.h; sourceTree = "<group>"; };
+		AF334F171997F12C001539A9 /* IndicationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicationsViewController.m; sourceTree = "<group>"; };
+		AF334F181997F12C001539A9 /* InductionAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InductionAgents.h; sourceTree = "<group>"; };
+		AF334F191997F12C001539A9 /* InductionAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InductionAgents.m; sourceTree = "<group>"; };
+		AF334F1A1997F12C001539A9 /* Interactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interactions.h; sourceTree = "<group>"; };
+		AF334F1B1997F12C001539A9 /* Interactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interactions.m; sourceTree = "<group>"; };
+		AF334F1C1997F12C001539A9 /* irsi-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "irsi-Info.plist"; sourceTree = "<group>"; };
+		AF334F1D1997F12C001539A9 /* irsi-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "irsi-Prefix.pch"; sourceTree = "<group>"; };
+		AF334F1E1997F12C001539A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF334F1F1997F12C001539A9 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		AF334F201997F12C001539A9 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		AF334F211997F12C001539A9 /* Nationalities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nationalities.h; sourceTree = "<group>"; };
+		AF334F221997F12C001539A9 /* Nationalities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nationalities.m; sourceTree = "<group>"; };
+		AF334F231997F12C001539A9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		AF334F241997F12C001539A9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		AF334F251997F12C001539A9 /* PreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreO2ViewController.h; sourceTree = "<group>"; };
+		AF334F261997F12C001539A9 /* PreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreO2ViewController.m; sourceTree = "<group>"; };
+		AF334F271997F12C001539A9 /* RocClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RocClockViewController.h; sourceTree = "<group>"; };
+		AF334F281997F12C001539A9 /* RocClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RocClockViewController.m; sourceTree = "<group>"; };
+		AF334F291997F12C001539A9 /* RSINowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSINowViewController.h; sourceTree = "<group>"; };
+		AF334F2A1997F12C001539A9 /* RSINowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSINowViewController.m; sourceTree = "<group>"; };
+		AF334F2B1997F12C001539A9 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		AF334F2C1997F12C001539A9 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		AF334F2D1997F12C001539A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF334F2E1997F12C001539A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF334F4E1997F13E001539A9 /* Plain Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Plain Border.png"; path = "../../Images/Plain Border.png"; sourceTree = "<group>"; };
+		AF744ABF1987021300D91DFD /* InductionAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InductionAgents.h; sourceTree = "<group>"; };
+		AF744AC01987021300D91DFD /* InductionAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InductionAgents.m; sourceTree = "<group>"; };
+		AF744AC219883C5C00D91DFD /* Nationalities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nationalities.h; sourceTree = "<group>"; };
+		AF744AC319883C5C00D91DFD /* Nationalities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nationalities.m; sourceTree = "<group>"; };
+		AF744AC519883C7F00D91DFD /* NationalDrugLabels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalDrugLabels.plist; sourceTree = "<group>"; };
+		AF744AC71988408900D91DFD /* Enflurane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Enflurane.png; path = ../../Images/Enflurane.png; sourceTree = "<group>"; };
+		AF744AC81988408900D91DFD /* Halothane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Halothane.png; path = ../../Images/Halothane.png; sourceTree = "<group>"; };
+		AF744AC91988408900D91DFD /* Des.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Des.png; path = ../../Images/Des.png; sourceTree = "<group>"; };
+		AF744ACA1988408900D91DFD /* Sevo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sevo.png; path = ../../Images/Sevo.png; sourceTree = "<group>"; };
+		AF744ACB1988408900D91DFD /* Iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Iso.png; path = ../../Images/Iso.png; sourceTree = "<group>"; };
+		AF744AD1198842E600D91DFD /* CustomisationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomisationViewController.h; sourceTree = "<group>"; };
+		AF744AD2198842E600D91DFD /* CustomisationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomisationViewController.m; sourceTree = "<group>"; };
+		AF8D95E719780FAF0050A924 /* redFinalTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redFinalTabDeselected.png; path = ../../Images/redFinalTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95E819780FAF0050A924 /* redFinalTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redFinalTabSelected.png; path = ../../Images/redFinalTabSelected.png; sourceTree = "<group>"; };
+		AF8D95E919780FAF0050A924 /* amberFinalTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberFinalTabDeselected.png; path = ../../Images/amberFinalTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95EA19780FAF0050A924 /* amberFinalTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberFinalTabSelected.png; path = ../../Images/amberFinalTabSelected.png; sourceTree = "<group>"; };
+		AF8D95EB19780FAF0050A924 /* greenFinalTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenFinalTabDeselected.png; path = ../../Images/greenFinalTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95EC19780FAF0050A924 /* greenFinalTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenFinalTabSelected.png; path = ../../Images/greenFinalTabSelected.png; sourceTree = "<group>"; };
+		AF8D95ED19780FAF0050A924 /* amberTeamTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberTeamTabDeselected.png; path = ../../Images/amberTeamTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95EE19780FAF0050A924 /* redTeamTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redTeamTabDeselected.png; path = ../../Images/redTeamTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95EF19780FAF0050A924 /* redTeamTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redTeamTabSelected.png; path = ../../Images/redTeamTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F019780FAF0050A924 /* amberTeamTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberTeamTabSelected.png; path = ../../Images/amberTeamTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F119780FAF0050A924 /* greenTeamTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenTeamTabDeselected.png; path = ../../Images/greenTeamTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95F219780FAF0050A924 /* greenTeamTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenTeamTabSelected.png; path = ../../Images/greenTeamTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F319780FAF0050A924 /* redEquipmentTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redEquipmentTabDeselected.png; path = ../../Images/redEquipmentTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95F419780FAF0050A924 /* redEquipmentTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redEquipmentTabSelected.png; path = ../../Images/redEquipmentTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F519780FAF0050A924 /* amberEquipmentTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberEquipmentTabDeselected.png; path = ../../Images/amberEquipmentTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95F619780FAF0050A924 /* amberEquipmentTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberEquipmentTabSelected.png; path = ../../Images/amberEquipmentTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F719780FAF0050A924 /* greenEquipmentTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenEquipmentTabDeselected.png; path = ../../Images/greenEquipmentTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95F819780FAF0050A924 /* greenEquipmentTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenEquipmentTabSelected.png; path = ../../Images/greenEquipmentTabSelected.png; sourceTree = "<group>"; };
+		AF8D95F919780FAF0050A924 /* redIndicationsTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redIndicationsTabDeselected.png; path = ../../Images/redIndicationsTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95FA19780FAF0050A924 /* redIndicationsTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redIndicationsTabSelected.png; path = ../../Images/redIndicationsTabSelected.png; sourceTree = "<group>"; };
+		AF8D95FB19780FAF0050A924 /* amberIndicationsTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberIndicationsTabDeselected.png; path = ../../Images/amberIndicationsTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95FC19780FAF0050A924 /* amberIndicationsTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberIndicationsTabSelected.png; path = ../../Images/amberIndicationsTabSelected.png; sourceTree = "<group>"; };
+		AF8D95FD19780FAF0050A924 /* greenIndicationsTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenIndicationsTabDeselected.png; path = ../../Images/greenIndicationsTabDeselected.png; sourceTree = "<group>"; };
+		AF8D95FE19780FAF0050A924 /* greenIndicationsTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenIndicationsTabSelected.png; path = ../../Images/greenIndicationsTabSelected.png; sourceTree = "<group>"; };
+		AF8D95FF19780FAF0050A924 /* greenDrugTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenDrugTabSelected.png; path = ../../Images/greenDrugTabSelected.png; sourceTree = "<group>"; };
+		AF8D960019780FAF0050A924 /* redDrugTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redDrugTabSelected.png; path = ../../Images/redDrugTabSelected.png; sourceTree = "<group>"; };
+		AF8D960119780FAF0050A924 /* amberDrugTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberDrugTabSelected.png; path = ../../Images/amberDrugTabSelected.png; sourceTree = "<group>"; };
+		AF8D960219780FAF0050A924 /* redDrugTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redDrugTabDeselected.png; path = ../../Images/redDrugTabDeselected.png; sourceTree = "<group>"; };
+		AF8D960319780FAF0050A924 /* amberDrugTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amberDrugTabDeselected.png; path = ../../Images/amberDrugTabDeselected.png; sourceTree = "<group>"; };
+		AF8D960419780FAF0050A924 /* greenDrugTabDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenDrugTabDeselected.png; path = ../../Images/greenDrugTabDeselected.png; sourceTree = "<group>"; };
+		AF8D962A197818B60050A924 /* EquipmentChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChecklistViewController.h; sourceTree = "<group>"; };
+		AF8D962B197818B60050A924 /* EquipmentChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentChecklistViewController.m; sourceTree = "<group>"; };
+		AF8D962D197818CB0050A924 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		AF8D962E197818CB0050A924 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		AF8D9630197818DF0050A924 /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		AF8D9631197818DF0050A924 /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
+		AF8D9639197834EE0050A924 /* IndicationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicationsViewController.h; sourceTree = "<group>"; };
+		AF8D963A197834EE0050A924 /* IndicationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicationsViewController.m; sourceTree = "<group>"; };
+		AF8D9641197839570050A924 /* completeTickBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = completeTickBox.png; path = ../../Images/completeTickBox.png; sourceTree = "<group>"; };
+		AF8D9642197839570050A924 /* blankTickBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blankTickBox.png; path = ../../Images/blankTickBox.png; sourceTree = "<group>"; };
+		AF8D964D19788A6C0050A924 /* SkipTickBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SkipTickBox.png; path = ../../Images/SkipTickBox.png; sourceTree = "<group>"; };
+		AF8D964E19788A6C0050A924 /* FailedTickBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FailedTickBox.png; path = ../../Images/FailedTickBox.png; sourceTree = "<group>"; };
+		AF8D96511978973B0050A924 /* AirwayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirwayViewController.h; sourceTree = "<group>"; };
+		AF8D96521978973B0050A924 /* AirwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirwayViewController.m; sourceTree = "<group>"; };
+		AF8D9657197D568F0050A924 /* Interactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interactions.h; sourceTree = "<group>"; };
+		AF8D9658197D568F0050A924 /* Interactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interactions.m; sourceTree = "<group>"; };
+		AF8D965D197D69390050A924 /* guidePreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guidePreO2ViewController.h; sourceTree = "<group>"; };
+		AF8D965E197D69390050A924 /* guidePreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = guidePreO2ViewController.m; sourceTree = "<group>"; };
+		AF8D9660197D9E6D0050A924 /* DefaultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsViewController.h; sourceTree = "<group>"; };
+		AF8D9661197D9E6D0050A924 /* DefaultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsViewController.m; sourceTree = "<group>"; };
+		AF8D9663197DB3540050A924 /* DrugsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsViewController.h; sourceTree = "<group>"; };
+		AF8D9664197DB3540050A924 /* DrugsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsViewController.m; sourceTree = "<group>"; };
+		AF8D9666197DB3650050A924 /* DrugDoses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDoses.h; sourceTree = "<group>"; };
+		AF8D9667197DB3650050A924 /* DrugDoses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDoses.m; sourceTree = "<group>"; };
+		AFA16C0D197DB78D000799A0 /* BlankAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlankAgent.png; path = ../../Images/BlankAgent.png; sourceTree = "<group>"; };
+		AFA16C0F197DBC77000799A0 /* DrugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLog.h; sourceTree = "<group>"; };
+		AFA16C10197DBC77000799A0 /* DrugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLog.m; sourceTree = "<group>"; };
+		AFA16C12197DBCF3000799A0 /* DrugLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLabelTableViewCell.h; sourceTree = "<group>"; };
+		AFA16C13197DBCF3000799A0 /* DrugLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLabelTableViewCell.m; sourceTree = "<group>"; };
+		AFA16C17197E20AA000799A0 /* PlusSign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlusSign.png; path = ../../Images/PlusSign.png; sourceTree = "<group>"; };
+		AFA16C1D197F2B14000799A0 /* Suggamadex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Suggamadex.png; path = "../../Images/UK Drug Labels/Suggamadex.png"; sourceTree = "<group>"; };
+		AFA16C1E197F2B14000799A0 /* White Label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "White Label.png"; path = "../../Images/UK Drug Labels/White Label.png"; sourceTree = "<group>"; };
+		AFA16C1F197F2B14000799A0 /* Opioids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Opioids.png; path = "../../Images/UK Drug Labels/Opioids.png"; sourceTree = "<group>"; };
+		AFA16C20197F2B14000799A0 /* adrenaline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = adrenaline.png; path = "../../Images/UK Drug Labels/adrenaline.png"; sourceTree = "<group>"; };
+		AFA16C21197F2B14000799A0 /* Sux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sux.png; path = "../../Images/UK Drug Labels/Sux.png"; sourceTree = "<group>"; };
+		AFA16C22197F2B14000799A0 /* Antimuscarinics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Antimuscarinics.png; path = "../../Images/UK Drug Labels/Antimuscarinics.png"; sourceTree = "<group>"; };
+		AFA16C23197F2B14000799A0 /* LAs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LAs.png; path = "../../Images/UK Drug Labels/LAs.png"; sourceTree = "<group>"; };
+		AFA16C24197F2B14000799A0 /* Vasopressors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vasopressors.png; path = "../../Images/UK Drug Labels/Vasopressors.png"; sourceTree = "<group>"; };
+		AFA16C25197F2B14000799A0 /* Muscle Relaxants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Muscle Relaxants.png"; path = "../../Images/UK Drug Labels/Muscle Relaxants.png"; sourceTree = "<group>"; };
+		AFA16C26197F2B14000799A0 /* Benzos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Benzos.png; path = "../../Images/UK Drug Labels/Benzos.png"; sourceTree = "<group>"; };
+		AFA16C27197F2B14000799A0 /* Induction Agent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Induction Agent.png"; path = "../../Images/UK Drug Labels/Induction Agent.png"; sourceTree = "<group>"; };
+		AFA16C34198066F9000799A0 /* InductionAgents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InductionAgents.plist; sourceTree = "<group>"; };
+		AFA16C36198599FA000799A0 /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
+		AFA16C37198599FA000799A0 /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
+		AFC6667F1976AE780091C4BE /* irsi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = irsi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC666821976AE780091C4BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AFC666841976AE780091C4BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AFC666861976AE780091C4BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFC6668A1976AE780091C4BE /* irsi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "irsi-Info.plist"; sourceTree = "<group>"; };
+		AFC6668C1976AE780091C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFC6668E1976AE780091C4BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AFC666901976AE780091C4BE /* irsi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "irsi-Prefix.pch"; sourceTree = "<group>"; };
+		AFC666911976AE780091C4BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AFC666921976AE780091C4BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFC666951976AE780091C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		AFC666981976AE780091C4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		AFC6669A1976AE780091C4BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AFC6669B1976AE780091C4BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AFC6669D1976AE780091C4BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFC666A31976AE780091C4BE /* irsiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = irsiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC666A41976AE780091C4BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AFC666AC1976AE780091C4BE /* irsiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "irsiTests-Info.plist"; sourceTree = "<group>"; };
+		AFC666AE1976AE780091C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFC666B01976AE780091C4BE /* irsiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = irsiTests.m; sourceTree = "<group>"; };
+		AFC666BA1976AE940091C4BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFC666BC1976AE9B0091C4BE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AFC666BE1976AEA30091C4BE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AFC666C11976AEC70091C4BE /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		AFC666C21976AEC70091C4BE /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		AFC666C51976B28A0091C4BE /* Large App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Large App Icon.png"; path = "../../Images/Large App Icon.png"; sourceTree = "<group>"; };
+		AFC666D01976CC4A0091C4BE /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		AFC666D11976CC4A0091C4BE /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		AFC666D61976E2420091C4BE /* RSINowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSINowViewController.h; sourceTree = "<group>"; };
+		AFC666D71976E2420091C4BE /* RSINowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSINowViewController.m; sourceTree = "<group>"; };
+		AFC666D91976E4A40091C4BE /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemographicsViewController.h; sourceTree = "<group>"; };
+		AFC666DA1976E4A40091C4BE /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemographicsViewController.m; sourceTree = "<group>"; };
+		AFC666DE1977173D0091C4BE /* PreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreO2ViewController.h; sourceTree = "<group>"; };
+		AFC666DF1977173D0091C4BE /* PreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreO2ViewController.m; sourceTree = "<group>"; };
+		AFC666E1197718440091C4BE /* EventLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLog.h; sourceTree = "<group>"; };
+		AFC666E2197718440091C4BE /* EventLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLog.m; sourceTree = "<group>"; };
+		AFC666E41977B5700091C4BE /* RedBackgroundBorderedBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RedBackgroundBorderedBlack.png; path = ../../Images/RedBackgroundBorderedBlack.png; sourceTree = "<group>"; };
+		AFC666E51977B5700091C4BE /* OrangeBackgroundBorderedBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangeBackgroundBorderedBlack.png; path = ../../Images/OrangeBackgroundBorderedBlack.png; sourceTree = "<group>"; };
+		AFC666E61977B5700091C4BE /* GreenBackgroundBorderedBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenBackgroundBorderedBlack.png; path = ../../Images/GreenBackgroundBorderedBlack.png; sourceTree = "<group>"; };
+		AFC666E71977B5700091C4BE /* WhiteBackgroundBorderedBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WhiteBackgroundBorderedBlack.png; path = ../../Images/WhiteBackgroundBorderedBlack.png; sourceTree = "<group>"; };
+		AFC666EC1977DD800091C4BE /* RocClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RocClockViewController.h; sourceTree = "<group>"; };
+		AFC666ED1977DD800091C4BE /* RocClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RocClockViewController.m; sourceTree = "<group>"; };
+		AFC755D21995EBBB00F9CC51 /* Equipment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Equipment.plist; sourceTree = "<group>"; };
+		AFC755D61996037700F9CC51 /* Indications.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Indications.plist; sourceTree = "<group>"; };
+		AFC755D8199603A300F9CC51 /* StringsUK.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StringsUK.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFC6667C1976AE780091C4BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC666BF1976AEA30091C4BE /* AudioToolbox.framework in Frameworks */,
+				AFC666BD1976AE9B0091C4BE /* AVFoundation.framework in Frameworks */,
+				AFC666BB1976AE940091C4BE /* QuartzCore.framework in Frameworks */,
+				AFC666851976AE780091C4BE /* CoreGraphics.framework in Frameworks */,
+				AFC666871976AE780091C4BE /* UIKit.framework in Frameworks */,
+				AFC666831976AE780091C4BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFC666A01976AE780091C4BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC666A51976AE780091C4BE /* XCTest.framework in Frameworks */,
+				AFC666A71976AE780091C4BE /* UIKit.framework in Frameworks */,
+				AFC666A61976AE780091C4BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF334EF21997F12C001539A9 /* irsi */ = {
+			isa = PBXGroup;
+			children = (
+				AF334EF31997F12C001539A9 /* AirwayViewController.h */,
+				AF334EF41997F12C001539A9 /* AirwayViewController.m */,
+				AF334EF51997F12C001539A9 /* AppDelegate.h */,
+				AF334EF61997F12C001539A9 /* AppDelegate.m */,
+				AF334EF71997F12C001539A9 /* Main_iPad.storyboard */,
+				AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */,
+				AF334EFB1997F12C001539A9 /* CustomisationViewController.h */,
+				AF334EFC1997F12C001539A9 /* CustomisationViewController.m */,
+				AF334EFD1997F12C001539A9 /* DefaultsViewController.h */,
+				AF334EFE1997F12C001539A9 /* DefaultsViewController.m */,
+				AF334EFF1997F12C001539A9 /* DemographicsViewController.h */,
+				AF334F001997F12C001539A9 /* DemographicsViewController.m */,
+				AF334F011997F12C001539A9 /* DrugDoses.h */,
+				AF334F021997F12C001539A9 /* DrugDoses.m */,
+				AF334F031997F12C001539A9 /* DrugLabelTableViewCell.h */,
+				AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */,
+				AF334F051997F12C001539A9 /* DrugLog.h */,
+				AF334F061997F12C001539A9 /* DrugLog.m */,
+				AF334F071997F12C001539A9 /* DrugsTableViewController.h */,
+				AF334F081997F12C001539A9 /* DrugsTableViewController.m */,
+				AF334F091997F12C001539A9 /* DrugsViewController.h */,
+				AF334F0A1997F12C001539A9 /* DrugsViewController.m */,
+				AF334F0B1997F12C001539A9 /* InfoPlist.strings */,
+				AF334F0D1997F12C001539A9 /* EquipmentChecklistViewController.h */,
+				AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */,
+				AF334F0F1997F12C001539A9 /* EventLog.h */,
+				AF334F101997F12C001539A9 /* EventLog.m */,
+				AF334F111997F12C001539A9 /* FinalViewController.h */,
+				AF334F121997F12C001539A9 /* FinalViewController.m */,
+				AF334F131997F12C001539A9 /* guidePreO2ViewController.h */,
+				AF334F141997F12C001539A9 /* guidePreO2ViewController.m */,
+				AF334F151997F12C001539A9 /* Images.xcassets */,
+				AF334F161997F12C001539A9 /* IndicationsViewController.h */,
+				AF334F171997F12C001539A9 /* IndicationsViewController.m */,
+				AF334F181997F12C001539A9 /* InductionAgents.h */,
+				AF334F191997F12C001539A9 /* InductionAgents.m */,
+				AF334F1A1997F12C001539A9 /* Interactions.h */,
+				AF334F1B1997F12C001539A9 /* Interactions.m */,
+				AF334F1C1997F12C001539A9 /* irsi-Info.plist */,
+				AF334F1D1997F12C001539A9 /* irsi-Prefix.pch */,
+				AF334F1E1997F12C001539A9 /* main.m */,
+				AF334F1F1997F12C001539A9 /* MainMenuViewController.h */,
+				AF334F201997F12C001539A9 /* MainMenuViewController.m */,
+				AF334F211997F12C001539A9 /* Nationalities.h */,
+				AF334F221997F12C001539A9 /* Nationalities.m */,
+				AF334F231997F12C001539A9 /* Patient.h */,
+				AF334F241997F12C001539A9 /* Patient.m */,
+				AF334F251997F12C001539A9 /* PreO2ViewController.h */,
+				AF334F261997F12C001539A9 /* PreO2ViewController.m */,
+				AF334F271997F12C001539A9 /* RocClockViewController.h */,
+				AF334F281997F12C001539A9 /* RocClockViewController.m */,
+				AF334F291997F12C001539A9 /* RSINowViewController.h */,
+				AF334F2A1997F12C001539A9 /* RSINowViewController.m */,
+				AF334F2B1997F12C001539A9 /* TeamViewController.h */,
+				AF334F2C1997F12C001539A9 /* TeamViewController.m */,
+				AF334F2D1997F12C001539A9 /* ViewController.h */,
+				AF334F2E1997F12C001539A9 /* ViewController.m */,
+			);
+			name = irsi;
+			sourceTree = "<group>";
+		};
+		AF744ABE198701E900D91DFD /* Singleton Drug Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				AF744ABF1987021300D91DFD /* InductionAgents.h */,
+				AF744AC01987021300D91DFD /* InductionAgents.m */,
+			);
+			name = "Singleton Drug Arrays";
+			sourceTree = "<group>";
+		};
+		AF8D962319780FB90050A924 /* RSI Now Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D95E719780FAF0050A924 /* redFinalTabDeselected.png */,
+				AF8D95E819780FAF0050A924 /* redFinalTabSelected.png */,
+				AF8D95E919780FAF0050A924 /* amberFinalTabDeselected.png */,
+				AF8D95EA19780FAF0050A924 /* amberFinalTabSelected.png */,
+				AF8D95EB19780FAF0050A924 /* greenFinalTabDeselected.png */,
+				AF8D95EC19780FAF0050A924 /* greenFinalTabSelected.png */,
+				AF8D95ED19780FAF0050A924 /* amberTeamTabDeselected.png */,
+				AF8D95EE19780FAF0050A924 /* redTeamTabDeselected.png */,
+				AF8D95EF19780FAF0050A924 /* redTeamTabSelected.png */,
+				AF8D95F019780FAF0050A924 /* amberTeamTabSelected.png */,
+				AF8D95F119780FAF0050A924 /* greenTeamTabDeselected.png */,
+				AF8D95F219780FAF0050A924 /* greenTeamTabSelected.png */,
+				AF8D95F319780FAF0050A924 /* redEquipmentTabDeselected.png */,
+				AF8D95F419780FAF0050A924 /* redEquipmentTabSelected.png */,
+				AF8D95F519780FAF0050A924 /* amberEquipmentTabDeselected.png */,
+				AF8D95F619780FAF0050A924 /* amberEquipmentTabSelected.png */,
+				AF8D95F719780FAF0050A924 /* greenEquipmentTabDeselected.png */,
+				AF8D95F819780FAF0050A924 /* greenEquipmentTabSelected.png */,
+				AF8D95F919780FAF0050A924 /* redIndicationsTabDeselected.png */,
+				AF8D95FA19780FAF0050A924 /* redIndicationsTabSelected.png */,
+				AF8D95FB19780FAF0050A924 /* amberIndicationsTabDeselected.png */,
+				AF8D95FC19780FAF0050A924 /* amberIndicationsTabSelected.png */,
+				AF8D95FD19780FAF0050A924 /* greenIndicationsTabDeselected.png */,
+				AF8D95FE19780FAF0050A924 /* greenIndicationsTabSelected.png */,
+				AF8D95FF19780FAF0050A924 /* greenDrugTabSelected.png */,
+				AF8D960019780FAF0050A924 /* redDrugTabSelected.png */,
+				AF8D960119780FAF0050A924 /* amberDrugTabSelected.png */,
+				AF8D960219780FAF0050A924 /* redDrugTabDeselected.png */,
+				AF8D960319780FAF0050A924 /* amberDrugTabDeselected.png */,
+				AF8D960419780FAF0050A924 /* greenDrugTabDeselected.png */,
+			);
+			name = "RSI Now Tabs";
+			sourceTree = "<group>";
+		};
+		AFA16C0C197DB74A000799A0 /* DrugLabels */ = {
+			isa = PBXGroup;
+			children = (
+				AFA16C1C197F2AE9000799A0 /* UK */,
+				AFA16C0D197DB78D000799A0 /* BlankAgent.png */,
+			);
+			name = DrugLabels;
+			sourceTree = "<group>";
+		};
+		AFA16C1C197F2AE9000799A0 /* UK */ = {
+			isa = PBXGroup;
+			children = (
+				AF744AC71988408900D91DFD /* Enflurane.png */,
+				AF744AC81988408900D91DFD /* Halothane.png */,
+				AF744AC91988408900D91DFD /* Des.png */,
+				AF744ACA1988408900D91DFD /* Sevo.png */,
+				AF744ACB1988408900D91DFD /* Iso.png */,
+				AFA16C1D197F2B14000799A0 /* Suggamadex.png */,
+				AFA16C1E197F2B14000799A0 /* White Label.png */,
+				AFA16C1F197F2B14000799A0 /* Opioids.png */,
+				AFA16C20197F2B14000799A0 /* adrenaline.png */,
+				AFA16C21197F2B14000799A0 /* Sux.png */,
+				AFA16C22197F2B14000799A0 /* Antimuscarinics.png */,
+				AFA16C23197F2B14000799A0 /* LAs.png */,
+				AFA16C24197F2B14000799A0 /* Vasopressors.png */,
+				AFA16C25197F2B14000799A0 /* Muscle Relaxants.png */,
+				AFA16C26197F2B14000799A0 /* Benzos.png */,
+				AFA16C27197F2B14000799A0 /* Induction Agent.png */,
+			);
+			name = UK;
+			sourceTree = "<group>";
+		};
+		AFA16C33198066D9000799A0 /* Property Lists */ = {
+			isa = PBXGroup;
+			children = (
+				AFA16C34198066F9000799A0 /* InductionAgents.plist */,
+				AF744AC519883C7F00D91DFD /* NationalDrugLabels.plist */,
+				AFC755D21995EBBB00F9CC51 /* Equipment.plist */,
+				AFC755D61996037700F9CC51 /* Indications.plist */,
+				AFC755D8199603A300F9CC51 /* StringsUK.plist */,
+			);
+			name = "Property Lists";
+			sourceTree = "<group>";
+		};
+		AFC666761976AE780091C4BE = {
+			isa = PBXGroup;
+			children = (
+				AFA16C33198066D9000799A0 /* Property Lists */,
+				AFC666881976AE780091C4BE /* irsi */,
+				AFC666AA1976AE780091C4BE /* irsiTests */,
+				AFC666811976AE780091C4BE /* Frameworks */,
+				AFC666801976AE780091C4BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFC666801976AE780091C4BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFC6667F1976AE780091C4BE /* irsi.app */,
+				AFC666A31976AE780091C4BE /* irsiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFC666811976AE780091C4BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666BE1976AEA30091C4BE /* AudioToolbox.framework */,
+				AFC666BC1976AE9B0091C4BE /* AVFoundation.framework */,
+				AFC666BA1976AE940091C4BE /* QuartzCore.framework */,
+				AFC666821976AE780091C4BE /* Foundation.framework */,
+				AFC666841976AE780091C4BE /* CoreGraphics.framework */,
+				AFC666861976AE780091C4BE /* UIKit.framework */,
+				AFC666A41976AE780091C4BE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFC666881976AE780091C4BE /* irsi */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666CF1976C8790091C4BE /* Classes */,
+				AFC666CB1976C6960091C4BE /* Contained Views */,
+				AFC666C41976B2640091C4BE /* Images */,
+				AFC666C01976AEAE0091C4BE /* Main View Controllers */,
+				AFC666911976AE780091C4BE /* AppDelegate.h */,
+				AFC666921976AE780091C4BE /* AppDelegate.m */,
+				AFC666941976AE780091C4BE /* Main_iPhone.storyboard */,
+				AFC666971976AE780091C4BE /* Main_iPad.storyboard */,
+				AFC6669A1976AE780091C4BE /* ViewController.h */,
+				AFC6669B1976AE780091C4BE /* ViewController.m */,
+				AFC6669D1976AE780091C4BE /* Images.xcassets */,
+				AFC666891976AE780091C4BE /* Supporting Files */,
+			);
+			path = irsi;
+			sourceTree = "<group>";
+		};
+		AFC666891976AE780091C4BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFC6668A1976AE780091C4BE /* irsi-Info.plist */,
+				AFC6668B1976AE780091C4BE /* InfoPlist.strings */,
+				AFC6668E1976AE780091C4BE /* main.m */,
+				AFC666901976AE780091C4BE /* irsi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFC666AA1976AE780091C4BE /* irsiTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666B01976AE780091C4BE /* irsiTests.m */,
+				AFC666AB1976AE780091C4BE /* Supporting Files */,
+			);
+			path = irsiTests;
+			sourceTree = "<group>";
+		};
+		AFC666AB1976AE780091C4BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666AC1976AE780091C4BE /* irsiTests-Info.plist */,
+				AFC666AD1976AE780091C4BE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFC666C01976AEAE0091C4BE /* Main View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666C11976AEC70091C4BE /* MainMenuViewController.h */,
+				AFC666C21976AEC70091C4BE /* MainMenuViewController.m */,
+				AFC666D61976E2420091C4BE /* RSINowViewController.h */,
+				AFC666D71976E2420091C4BE /* RSINowViewController.m */,
+				AFC666EC1977DD800091C4BE /* RocClockViewController.h */,
+				AFC666ED1977DD800091C4BE /* RocClockViewController.m */,
+				AF8D9660197D9E6D0050A924 /* DefaultsViewController.h */,
+				AF8D9661197D9E6D0050A924 /* DefaultsViewController.m */,
+				AF744AD1198842E600D91DFD /* CustomisationViewController.h */,
+				AF744AD2198842E600D91DFD /* CustomisationViewController.m */,
+			);
+			name = "Main View Controllers";
+			sourceTree = "<group>";
+		};
+		AFC666C41976B2640091C4BE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF334F4E1997F13E001539A9 /* Plain Border.png */,
+				AF334EF21997F12C001539A9 /* irsi */,
+				AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */,
+				AFA16C17197E20AA000799A0 /* PlusSign.png */,
+				AFA16C0C197DB74A000799A0 /* DrugLabels */,
+				AF8D964D19788A6C0050A924 /* SkipTickBox.png */,
+				AF8D964E19788A6C0050A924 /* FailedTickBox.png */,
+				AF8D9641197839570050A924 /* completeTickBox.png */,
+				AF8D9642197839570050A924 /* blankTickBox.png */,
+				AF8D962319780FB90050A924 /* RSI Now Tabs */,
+				AFC666E41977B5700091C4BE /* RedBackgroundBorderedBlack.png */,
+				AFC666E51977B5700091C4BE /* OrangeBackgroundBorderedBlack.png */,
+				AFC666E61977B5700091C4BE /* GreenBackgroundBorderedBlack.png */,
+				AFC666E71977B5700091C4BE /* WhiteBackgroundBorderedBlack.png */,
+				AFC666C51976B28A0091C4BE /* Large App Icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AFC666CB1976C6960091C4BE /* Contained Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFC666D91976E4A40091C4BE /* DemographicsViewController.h */,
+				AFC666DA1976E4A40091C4BE /* DemographicsViewController.m */,
+				AFC666DE1977173D0091C4BE /* PreO2ViewController.h */,
+				AFC666DF1977173D0091C4BE /* PreO2ViewController.m */,
+				AF8D962A197818B60050A924 /* EquipmentChecklistViewController.h */,
+				AF8D962B197818B60050A924 /* EquipmentChecklistViewController.m */,
+				AF8D962D197818CB0050A924 /* TeamViewController.h */,
+				AF8D962E197818CB0050A924 /* TeamViewController.m */,
+				AF8D9630197818DF0050A924 /* FinalViewController.h */,
+				AF8D9631197818DF0050A924 /* FinalViewController.m */,
+				AF8D9639197834EE0050A924 /* IndicationsViewController.h */,
+				AF8D963A197834EE0050A924 /* IndicationsViewController.m */,
+				AF8D96511978973B0050A924 /* AirwayViewController.h */,
+				AF8D96521978973B0050A924 /* AirwayViewController.m */,
+				AF8D965D197D69390050A924 /* guidePreO2ViewController.h */,
+				AF8D965E197D69390050A924 /* guidePreO2ViewController.m */,
+				AF8D9663197DB3540050A924 /* DrugsViewController.h */,
+				AF8D9664197DB3540050A924 /* DrugsViewController.m */,
+				AFA16C36198599FA000799A0 /* DrugsTableViewController.h */,
+				AFA16C37198599FA000799A0 /* DrugsTableViewController.m */,
+			);
+			name = "Contained Views";
+			sourceTree = "<group>";
+		};
+		AFC666CF1976C8790091C4BE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF744ABE198701E900D91DFD /* Singleton Drug Arrays */,
+				AFC666D01976CC4A0091C4BE /* Patient.h */,
+				AFC666D11976CC4A0091C4BE /* Patient.m */,
+				AFC666E1197718440091C4BE /* EventLog.h */,
+				AFC666E2197718440091C4BE /* EventLog.m */,
+				AF8D9657197D568F0050A924 /* Interactions.h */,
+				AF8D9658197D568F0050A924 /* Interactions.m */,
+				AF8D9666197DB3650050A924 /* DrugDoses.h */,
+				AF8D9667197DB3650050A924 /* DrugDoses.m */,
+				AFA16C0F197DBC77000799A0 /* DrugLog.h */,
+				AFA16C10197DBC77000799A0 /* DrugLog.m */,
+				AFA16C12197DBCF3000799A0 /* DrugLabelTableViewCell.h */,
+				AFA16C13197DBCF3000799A0 /* DrugLabelTableViewCell.m */,
+				AF744AC219883C5C00D91DFD /* Nationalities.h */,
+				AF744AC319883C5C00D91DFD /* Nationalities.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFC6667E1976AE780091C4BE /* irsi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFC666B41976AE780091C4BE /* Build configuration list for PBXNativeTarget "irsi" */;
+			buildPhases = (
+				AFC6667B1976AE780091C4BE /* Sources */,
+				AFC6667C1976AE780091C4BE /* Frameworks */,
+				AFC6667D1976AE780091C4BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = irsi;
+			productName = irsi;
+			productReference = AFC6667F1976AE780091C4BE /* irsi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFC666A21976AE780091C4BE /* irsiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFC666B71976AE780091C4BE /* Build configuration list for PBXNativeTarget "irsiTests" */;
+			buildPhases = (
+				AFC6669F1976AE780091C4BE /* Sources */,
+				AFC666A01976AE780091C4BE /* Frameworks */,
+				AFC666A11976AE780091C4BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFC666A91976AE780091C4BE /* PBXTargetDependency */,
+			);
+			name = irsiTests;
+			productName = irsiTests;
+			productReference = AFC666A31976AE780091C4BE /* irsiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFC666771976AE780091C4BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ben Taylor";
+				TargetAttributes = {
+					AFC6667E1976AE780091C4BE = {
+						DevelopmentTeam = 3E5NJZGEGK;
+					};
+					AFC666A21976AE780091C4BE = {
+						TestTargetID = AFC6667E1976AE780091C4BE;
+					};
+				};
+			};
+			buildConfigurationList = AFC6667A1976AE780091C4BE /* Build configuration list for PBXProject "irsi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFC666761976AE780091C4BE;
+			productRefGroup = AFC666801976AE780091C4BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFC6667E1976AE780091C4BE /* irsi */,
+				AFC666A21976AE780091C4BE /* irsiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFC6667D1976AE780091C4BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA16C2E197F2B14000799A0 /* LAs.png in Resources */,
+				AFC666C61976B28A0091C4BE /* Large App Icon.png in Resources */,
+				AF744ACD1988408900D91DFD /* Halothane.png in Resources */,
+				AF8D961919780FAF0050A924 /* amberIndicationsTabDeselected.png in Resources */,
+				AFC666991976AE780091C4BE /* Main_iPad.storyboard in Resources */,
+				AF8D9643197839570050A924 /* completeTickBox.png in Resources */,
+				AFC6669E1976AE780091C4BE /* Images.xcassets in Resources */,
+				AFC666EB1977B5700091C4BE /* WhiteBackgroundBorderedBlack.png in Resources */,
+				AF8D960B19780FAF0050A924 /* amberTeamTabDeselected.png in Resources */,
+				AF8D960D19780FAF0050A924 /* redTeamTabSelected.png in Resources */,
+				AFC666E91977B5700091C4BE /* OrangeBackgroundBorderedBlack.png in Resources */,
+				AF8D961719780FAF0050A924 /* redIndicationsTabDeselected.png in Resources */,
+				AF8D961E19780FAF0050A924 /* redDrugTabSelected.png in Resources */,
+				AF8D961B19780FAF0050A924 /* greenIndicationsTabDeselected.png in Resources */,
+				AF8D9644197839570050A924 /* blankTickBox.png in Resources */,
+				AF8D964F19788A6C0050A924 /* SkipTickBox.png in Resources */,
+				AFC666E81977B5700091C4BE /* RedBackgroundBorderedBlack.png in Resources */,
+				AFC755D71996037700F9CC51 /* Indications.plist in Resources */,
+				AF8D961119780FAF0050A924 /* redEquipmentTabDeselected.png in Resources */,
+				AF8D960A19780FAF0050A924 /* greenFinalTabSelected.png in Resources */,
+				AF8D965019788A6C0050A924 /* FailedTickBox.png in Resources */,
+				AF334F311997F12C001539A9 /* Main_iPad.storyboard in Resources */,
+				AF8D961319780FAF0050A924 /* amberEquipmentTabDeselected.png in Resources */,
+				AFA16C29197F2B14000799A0 /* White Label.png in Resources */,
+				AF334F401997F12C001539A9 /* Images.xcassets in Resources */,
+				AF8D961C19780FAF0050A924 /* greenIndicationsTabSelected.png in Resources */,
+				AF8D960919780FAF0050A924 /* greenFinalTabDeselected.png in Resources */,
+				AFC755D31995EBBB00F9CC51 /* Equipment.plist in Resources */,
+				AF8D961019780FAF0050A924 /* greenTeamTabSelected.png in Resources */,
+				AF8D960819780FAF0050A924 /* amberFinalTabSelected.png in Resources */,
+				AF334F3B1997F12C001539A9 /* InfoPlist.strings in Resources */,
+				AF8D961D19780FAF0050A924 /* greenDrugTabSelected.png in Resources */,
+				AF8D962019780FAF0050A924 /* redDrugTabDeselected.png in Resources */,
+				AF8D961519780FAF0050A924 /* greenEquipmentTabDeselected.png in Resources */,
+				AF744ACC1988408900D91DFD /* Enflurane.png in Resources */,
+				AFA16C2C197F2B14000799A0 /* Sux.png in Resources */,
+				AFA16C18197E20AA000799A0 /* PlusSign.png in Resources */,
+				AF8D961A19780FAF0050A924 /* amberIndicationsTabSelected.png in Resources */,
+				AFA16C35198066F9000799A0 /* InductionAgents.plist in Resources */,
+				AFA16C28197F2B14000799A0 /* Suggamadex.png in Resources */,
+				AF334F321997F12C001539A9 /* Main_iPhone.storyboard in Resources */,
+				AF744ACF1988408900D91DFD /* Sevo.png in Resources */,
+				AF744AD01988408900D91DFD /* Iso.png in Resources */,
+				AF8D961619780FAF0050A924 /* greenEquipmentTabSelected.png in Resources */,
+				AF8D960519780FAF0050A924 /* redFinalTabDeselected.png in Resources */,
+				AF334F4F1997F13E001539A9 /* Plain Border.png in Resources */,
+				AF744ACE1988408900D91DFD /* Des.png in Resources */,
+				AFA16C2F197F2B14000799A0 /* Vasopressors.png in Resources */,
+				AFA16C32197F2B14000799A0 /* Induction Agent.png in Resources */,
+				AFA16C2A197F2B14000799A0 /* Opioids.png in Resources */,
+				AFA16C2D197F2B14000799A0 /* Antimuscarinics.png in Resources */,
+				AFA16C31197F2B14000799A0 /* Benzos.png in Resources */,
+				AF8D962119780FAF0050A924 /* amberDrugTabDeselected.png in Resources */,
+				AF744AC619883C7F00D91DFD /* NationalDrugLabels.plist in Resources */,
+				AFC666961976AE780091C4BE /* Main_iPhone.storyboard in Resources */,
+				AF8D962219780FAF0050A924 /* greenDrugTabDeselected.png in Resources */,
+				AF8D960719780FAF0050A924 /* amberFinalTabDeselected.png in Resources */,
+				AF8D961819780FAF0050A924 /* redIndicationsTabSelected.png in Resources */,
+				AFC755D9199603A300F9CC51 /* StringsUK.plist in Resources */,
+				AF8D960F19780FAF0050A924 /* greenTeamTabDeselected.png in Resources */,
+				AF8D961419780FAF0050A924 /* amberEquipmentTabSelected.png in Resources */,
+				AFA16C0E197DB78D000799A0 /* BlankAgent.png in Resources */,
+				AFC666EA1977B5700091C4BE /* GreenBackgroundBorderedBlack.png in Resources */,
+				AF8D960C19780FAF0050A924 /* redTeamTabDeselected.png in Resources */,
+				AF8D961219780FAF0050A924 /* redEquipmentTabSelected.png in Resources */,
+				AF8D961F19780FAF0050A924 /* amberDrugTabSelected.png in Resources */,
+				AF334F441997F12C001539A9 /* irsi-Info.plist in Resources */,
+				AF8D960619780FAF0050A924 /* redFinalTabSelected.png in Resources */,
+				AFA16C30197F2B14000799A0 /* Muscle Relaxants.png in Resources */,
+				AF8D960E19780FAF0050A924 /* amberTeamTabSelected.png in Resources */,
+				AF334EEF1996D21E001539A9 /* Man_shadow_-_upper.png in Resources */,
+				AFA16C2B197F2B14000799A0 /* adrenaline.png in Resources */,
+				AFC6668D1976AE780091C4BE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFC666A11976AE780091C4BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC666AF1976AE780091C4BE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFC6667B1976AE780091C4BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA16C14197DBCF3000799A0 /* DrugLabelTableViewCell.m in Sources */,
+				AF744AC11987021300D91DFD /* InductionAgents.m in Sources */,
+				AF334F471997F12C001539A9 /* Nationalities.m in Sources */,
+				AF334F3F1997F12C001539A9 /* guidePreO2ViewController.m in Sources */,
+				AF334F2F1997F12C001539A9 /* AirwayViewController.m in Sources */,
+				AF334F461997F12C001539A9 /* MainMenuViewController.m in Sources */,
+				AF334F4D1997F12C001539A9 /* ViewController.m in Sources */,
+				AFA16C38198599FA000799A0 /* DrugsTableViewController.m in Sources */,
+				AF334F3C1997F12C001539A9 /* EquipmentChecklistViewController.m in Sources */,
+				AF334F3D1997F12C001539A9 /* EventLog.m in Sources */,
+				AF334F381997F12C001539A9 /* DrugLog.m in Sources */,
+				AF334F351997F12C001539A9 /* DemographicsViewController.m in Sources */,
+				AF8D9665197DB3540050A924 /* DrugsViewController.m in Sources */,
+				AFC666C31976AEC70091C4BE /* MainMenuViewController.m in Sources */,
+				AF334F3A1997F12C001539A9 /* DrugsViewController.m in Sources */,
+				AF334F391997F12C001539A9 /* DrugsTableViewController.m in Sources */,
+				AFC6669C1976AE780091C4BE /* ViewController.m in Sources */,
+				AF8D965F197D69390050A924 /* guidePreO2ViewController.m in Sources */,
+				AF8D962C197818B60050A924 /* EquipmentChecklistViewController.m in Sources */,
+				AFA16C11197DBC77000799A0 /* DrugLog.m in Sources */,
+				AF334F371997F12C001539A9 /* DrugLabelTableViewCell.m in Sources */,
+				AF744AC419883C5C00D91DFD /* Nationalities.m in Sources */,
+				AF8D9632197818DF0050A924 /* FinalViewController.m in Sources */,
+				AF334F4B1997F12C001539A9 /* RSINowViewController.m in Sources */,
+				AF8D9659197D568F0050A924 /* Interactions.m in Sources */,
+				AFC666D21976CC4A0091C4BE /* Patient.m in Sources */,
+				AF334F431997F12C001539A9 /* Interactions.m in Sources */,
+				AFC666D81976E2420091C4BE /* RSINowViewController.m in Sources */,
+				AF334F331997F12C001539A9 /* CustomisationViewController.m in Sources */,
+				AFC666DB1976E4A40091C4BE /* DemographicsViewController.m in Sources */,
+				AF334F4A1997F12C001539A9 /* RocClockViewController.m in Sources */,
+				AF334F421997F12C001539A9 /* InductionAgents.m in Sources */,
+				AFC666931976AE780091C4BE /* AppDelegate.m in Sources */,
+				AF334F481997F12C001539A9 /* Patient.m in Sources */,
+				AF8D962F197818CB0050A924 /* TeamViewController.m in Sources */,
+				AF334F411997F12C001539A9 /* IndicationsViewController.m in Sources */,
+				AF8D963B197834EE0050A924 /* IndicationsViewController.m in Sources */,
+				AF8D9668197DB3650050A924 /* DrugDoses.m in Sources */,
+				AF334F361997F12C001539A9 /* DrugDoses.m in Sources */,
+				AF334F301997F12C001539A9 /* AppDelegate.m in Sources */,
+				AF334F341997F12C001539A9 /* DefaultsViewController.m in Sources */,
+				AF334F4C1997F12C001539A9 /* TeamViewController.m in Sources */,
+				AFC6668F1976AE780091C4BE /* main.m in Sources */,
+				AF334F491997F12C001539A9 /* PreO2ViewController.m in Sources */,
+				AF8D9662197D9E6D0050A924 /* DefaultsViewController.m in Sources */,
+				AF334F3E1997F12C001539A9 /* FinalViewController.m in Sources */,
+				AF744AD3198842E600D91DFD /* CustomisationViewController.m in Sources */,
+				AFC666E3197718440091C4BE /* EventLog.m in Sources */,
+				AFC666EE1977DD800091C4BE /* RocClockViewController.m in Sources */,
+				AF8D96531978973B0050A924 /* AirwayViewController.m in Sources */,
+				AF334F451997F12C001539A9 /* main.m in Sources */,
+				AFC666E01977173D0091C4BE /* PreO2ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFC6669F1976AE780091C4BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC666B11976AE780091C4BE /* irsiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFC666A91976AE780091C4BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFC6667E1976AE780091C4BE /* irsi */;
+			targetProxy = AFC666A81976AE780091C4BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF334EF71997F12C001539A9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF334EF81997F12C001539A9 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF334EFA1997F12C001539A9 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		AF334F0B1997F12C001539A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF334F0C1997F12C001539A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AFC6668B1976AE780091C4BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC6668C1976AE780091C4BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AFC666941976AE780091C4BE /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC666951976AE780091C4BE /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		AFC666971976AE780091C4BE /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC666981976AE780091C4BE /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		AFC666AD1976AE780091C4BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC666AE1976AE780091C4BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFC666B21976AE780091C4BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFC666B31976AE780091C4BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFC666B51976AE780091C4BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "irsi/irsi-Prefix.pch";
+				INFOPLIST_FILE = "irsi/irsi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AFC666B61976AE780091C4BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "irsi/irsi-Prefix.pch";
+				INFOPLIST_FILE = "irsi/irsi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AFC666B81976AE780091C4BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/irsi.app/irsi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "irsi/irsi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "irsiTests/irsiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AFC666B91976AE780091C4BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/irsi.app/irsi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "irsi/irsi-Prefix.pch";
+				INFOPLIST_FILE = "irsiTests/irsiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFC6667A1976AE780091C4BE /* Build configuration list for PBXProject "irsi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC666B21976AE780091C4BE /* Debug */,
+				AFC666B31976AE780091C4BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFC666B41976AE780091C4BE /* Build configuration list for PBXNativeTarget "irsi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC666B51976AE780091C4BE /* Debug */,
+				AFC666B61976AE780091C4BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFC666B71976AE780091C4BE /* Build configuration list for PBXNativeTarget "irsiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC666B81976AE780091C4BE /* Debug */,
+				AFC666B91976AE780091C4BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFC666771976AE780091C4BE /* Project object */;
+}

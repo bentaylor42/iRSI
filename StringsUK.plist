@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MissionStatement</key>
+	<string>Making Emergency Anaesthesia Safer</string>
+	<key>AppTitle</key>
+	<string>iRSI</string>
+	<key>EmergencyGuidelines</key>
+	<string>Emergency Guidelines</string>
+	<key>UsefulTools</key>
+	<string>Useful Tools</string>
+	<key>RSINow</key>
+	<string>RSI Now</string>
+	<key>Settings</key>
+	<string>Settings</string>
+	<key>PreHospitalMode</key>
+	<string>Pre-Hospital Mode:</string>
+	<key>Version</key>
+	<string>Version %@</string>
+	<key>Copyright2014</key>
+	<string>%@ 2014 RSI Ready.  All Rights Reserved</string>
+	<key>CopyrightAfter2014</key>
+	<string>%@ 2014 - %@.  All Rights Reserved</string>
+	<key>Back</key>
+	<string>Back</string>
+	<key>Forward</key>
+	<string>Forward</string>
+	<key>Indications</key>
+	<string>Indications</string>
+	<key>Drugs</key>
+	<string>Drugs</string>
+	<key>Equipment</key>
+	<string>Equipment</string>
+	<key>Team</key>
+	<string>Team</string>
+	<key>Final</key>
+	<string>Final Check</string>
+	<key>StartRSI</key>
+	<string>Start RSI</string>
+	<key>MoveOn</key>
+	<string>Move On</string>
+	<key>StartPreO2</key>
+	<string>Start Pre-Oxygenation</string>
+	<key>Stop</key>
+	<string>Stop</string>
+	<key>PreO2Time</key>
+	<string>Pre-Oxygenation Time</string>
+	<key>WeightDisplayStatement</key>
+	<string>%iKg %@ %@.  Tap to Change</string>
+	<key>Kg</key>
+	<string>Kg</string>
+	<key>St</key>
+	<string>St</string>
+	<key>Lbs</key>
+	<string>Lbs</string>
+	<key>Cm</key>
+	<string>Cm</string>
+	<key>FtIn</key>
+	<string>Ft/ In</string>
+	<key>Male</key>
+	<string>Male</string>
+	<key>Female</key>
+	<string>Female</string>
+	<key>Adult</key>
+	<string>Adult</string>
+	<key>Child</key>
+	<string>Child</string>
+	<key>BMI</key>
+	<string>BMI</string>
+	<key>Stones</key>
+	<string>Stones</string>
+	<key>Pounds</key>
+	<string>Pounds</string>
+	<key>EnterWeight</key>
+	<string>Enter Weight</string>
+	<key>EnterHeight</key>
+	<string>Enter Height</string>
+	<key>Feet</key>
+	<string>Feet</string>
+	<key>Inches</key>
+	<string>Inches</string>
+	<key>Adult16</key>
+	<string>Adult (16+)</string>
+	<key>15Year</key>
+	<string>15 Years</string>
+	<key>14Year</key>
+	<string>14 Years</string>
+	<key>13Year</key>
+	<string>13 Years</string>
+	<key>12Year</key>
+	<string>12 Years</string>
+	<key>11Year</key>
+	<string>11 Years</string>
+	<key>10Year</key>
+	<string>10 Years</string>
+	<key>9Year</key>
+	<string>9 Years</string>
+	<key>8Year</key>
+	<string>8 Years</string>
+	<key>7Year</key>
+	<string>7 Years</string>
+	<key>6Year</key>
+	<string>6 Years</string>
+	<key>5Year</key>
+	<string>5 Years</string>
+	<key>4Year</key>
+	<string>4 Years</string>
+	<key>3Year</key>
+	<string>3 Years</string>
+	<key>2Year</key>
+	<string>2 Years</string>
+	<key>1Year12Months</key>
+	<string>1 Year/ 12 Months</string>
+	<key>11Months</key>
+	<string>11 Months</string>
+	<key>10Months</key>
+	<string>10 Months</string>
+	<key>9Months</key>
+	<string>9 Months</string>
+	<key>8Months</key>
+	<string>8 Months</string>
+	<key>7Months</key>
+	<string>7 Months</string>
+	<key>6Months</key>
+	<string>6 Months</string>
+	<key>5Months</key>
+	<string>5 Months</string>
+	<key>4Months</key>
+	<string>4 Months</string>
+	<key>3Months</key>
+	<string>3 Months</string>
+	<key>2Months</key>
+	<string>2 Months</string>
+	<key>1Month</key>
+	<string>1 Month</string>
+	<key>Neonate</key>
+	<string>Neonate</string>
+	<key>Close</key>
+	<string>Close</string>
+	<key>TapToSelectAgent</key>
+	<string>Tap a Box to Select an Agent</string>
+	<key>InductionAgents</key>
+	<string>Induction Agents</string>
+	<key>MuscleRelaxants</key>
+	<string>Muscle Relaxants</string>
+	<key>Flush</key>
+	<string>Flush</string>
+	<key>EmergencyDrugs</key>
+	<string>Emergency Drugs</string>
+	<key>Vasopressor</key>
+	<string>Vasopressor</string>
+	<key>Antimuscarinic</key>
+	<string>Antimuscarinic</string>
+	<key>CoInductive</key>
+	<string>Co-Inductive</string>
+	<key>OngoingSedation</key>
+	<string>Ongoing Sedation</string>
+	<key>AddDrug</key>
+	<string>Add Drugs</string>
+	<key>OngoingAnalgesia</key>
+	<string>Ongoing Analgesia</string>
+	<key>OtherDrugs</key>
+	<string>OtherDrugs</string>
+	<key>GuidePreO2Title</key>
+	<string>Guide to Effective Preoxygenation</string>
+	<key>GuidePreO2Para1</key>
+	<string>If a patient has significant hypoxaemia, you may need to consider CPAP to effectively preoxygenate them.  This can be achieved either with a non-invasive ventilator, a Waters Circuit, or by adding a PEEP valve to the BVM</string>
+	<key>GuidePreO2Para2</key>
+	<string>Consider using a nasal cannula underneath the mask, at high flow.  This can be also be used for apnoeic diffusion oxygenation during intubation</string>
+	<key>GuidePreO2Para3</key>
+	<string>More Information on These Excellent, Free FOAMed Blogs: (This will open Safari and Exit the App)</string>
+	<key>Volume</key>
+	<string>Volume</string>
+	<key>Dose</key>
+	<string>Dose</string>
+	<key>NotPaeds</key>
+	<string>Not Paeds</string>
+	<key>VolToGive</key>
+	<string>Volume to Give</string>
+	<key>DoseToGive</key>
+	<string>Dose to Give</string>
+	<key>VTDisplay</key>
+	<string>Estimated Tidal Volume %li - %li mls</string>
+	<key>VTSourceEstWt</key>
+	<string>(From Estimated Weight - Enter Height for IBW)</string>
+	<key>VTSourceTotalWt</key>
+	<string>(From Entered Weight - Enter Height for IBW)</string>
+	<key>VTSourceIBW</key>
+	<string>(From Ideal Body Weight)</string>
+	<key>EquipmentMonitoring</key>
+	<string>Monitoring</string>
+	<key>EquipmentBasic</key>
+	<string>Standard Airway Equipment</string>
+	<key>EquipmentRescue</key>
+	<string>Airway Rescue Equipment</string>
+</dict>
+</plist>

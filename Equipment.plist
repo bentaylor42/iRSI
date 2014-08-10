@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Monitoring</key>
+	<array>
+		<string>Pulse Oximetry</string>
+		<string>ECG Monitoring</string>
+		<string>Blood Pressure</string>
+		<string>End Tidal CO2 Connected</string>
+		<string>Consider Other Monitors</string>
+	</array>
+	<key>BasicAirway</key>
+	<array>
+		<string>ET Tubes x2</string>
+		<string>Syringe for Cuff</string>
+		<string>Working Laryngoscope x2</string>
+		<string>Working Ventilator</string>
+		<string>Patent Ventilator Circuit</string>
+		<string>Bag-Valve-Mask/ Mapleson C</string>
+		<string>Suction</string>
+		<string>Bougie/ Stylet</string>
+		<string>Tube Tie/ holder</string>
+	</array>
+	<key>AirwayRescue</key>
+	<array>
+		<string>Alternative Laryngoscope (e.g. McCoy)</string>
+		<string>Consider Indirect/ Video/ Fibreoptic</string>
+		<string>Oropharyngeal (Guedel) Airways</string>
+		<string>Nasopharyngeal Airways</string>
+		<string>LMA/ Supraglottic Airway Device</string>
+		<string>Equipment for Surgical Airway</string>
+	</array>
+</dict>
+</plist>

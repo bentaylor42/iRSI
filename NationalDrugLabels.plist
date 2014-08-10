@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Template</key>
+	<array>
+		<string>Plain Label</string>
+		<string>Benzodiazepines</string>
+		<string>Non-depolarising Muscle Relaxants</string>
+		<string>Depolarising Muscle Relaxants</string>
+		<string>Induction Agents</string>
+		<string>Opioids</string>
+		<string>Local Anaesthetics</string>
+		<string>Vasopressors</string>
+		<string>Adrenaline (Epinephrine)</string>
+		<string>Antimuscarinics</string>
+		<string>Muscle Relaxant Reversal</string>
+		<string>Isoflurane</string>
+		<string>Sevoflurane</string>
+		<string>Desflurane</string>
+		<string>Halothane</string>
+		<string>Enflurane</string>
+	</array>
+	<key>UK</key>
+	<array>
+		<string>White Label.png</string>
+		<string>Benzos.png</string>
+		<string>Muscle Relaxants.png</string>
+		<string>Sux.png</string>
+		<string>Induction Agent.png</string>
+		<string>Opioids.png</string>
+		<string>LAs.png</string>
+		<string>Vasopressors.png</string>
+		<string>adrenaline.png</string>
+		<string>Antimuscarinics.png</string>
+		<string>Suggamadex.png</string>
+		<string>Iso.png</string>
+		<string>Sevo.png</string>
+		<string>Des.png</string>
+		<string>Halothane.png</string>
+		<string>Enflurane.png</string>
+	</array>
+</dict>
+</plist>
