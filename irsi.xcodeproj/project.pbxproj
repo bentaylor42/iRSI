@@ -8,37 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF334EEF1996D21E001539A9 /* Man_shadow_-_upper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */; };
-		AF334F2F1997F12C001539A9 /* AirwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EF41997F12C001539A9 /* AirwayViewController.m */; };
-		AF334F301997F12C001539A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EF61997F12C001539A9 /* AppDelegate.m */; };
-		AF334F311997F12C001539A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF334EF71997F12C001539A9 /* Main_iPad.storyboard */; };
-		AF334F321997F12C001539A9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */; };
-		AF334F331997F12C001539A9 /* CustomisationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EFC1997F12C001539A9 /* CustomisationViewController.m */; };
-		AF334F341997F12C001539A9 /* DefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334EFE1997F12C001539A9 /* DefaultsViewController.m */; };
-		AF334F351997F12C001539A9 /* DemographicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F001997F12C001539A9 /* DemographicsViewController.m */; };
-		AF334F361997F12C001539A9 /* DrugDoses.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F021997F12C001539A9 /* DrugDoses.m */; };
-		AF334F371997F12C001539A9 /* DrugLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */; };
-		AF334F381997F12C001539A9 /* DrugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F061997F12C001539A9 /* DrugLog.m */; };
-		AF334F391997F12C001539A9 /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F081997F12C001539A9 /* DrugsTableViewController.m */; };
-		AF334F3A1997F12C001539A9 /* DrugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F0A1997F12C001539A9 /* DrugsViewController.m */; };
-		AF334F3B1997F12C001539A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF334F0B1997F12C001539A9 /* InfoPlist.strings */; };
-		AF334F3C1997F12C001539A9 /* EquipmentChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */; };
-		AF334F3D1997F12C001539A9 /* EventLog.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F101997F12C001539A9 /* EventLog.m */; };
-		AF334F3E1997F12C001539A9 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F121997F12C001539A9 /* FinalViewController.m */; };
-		AF334F3F1997F12C001539A9 /* guidePreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F141997F12C001539A9 /* guidePreO2ViewController.m */; };
-		AF334F401997F12C001539A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF334F151997F12C001539A9 /* Images.xcassets */; };
-		AF334F411997F12C001539A9 /* IndicationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F171997F12C001539A9 /* IndicationsViewController.m */; };
-		AF334F421997F12C001539A9 /* InductionAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F191997F12C001539A9 /* InductionAgents.m */; };
-		AF334F431997F12C001539A9 /* Interactions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F1B1997F12C001539A9 /* Interactions.m */; };
-		AF334F441997F12C001539A9 /* irsi-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF334F1C1997F12C001539A9 /* irsi-Info.plist */; };
-		AF334F451997F12C001539A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F1E1997F12C001539A9 /* main.m */; };
-		AF334F461997F12C001539A9 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F201997F12C001539A9 /* MainMenuViewController.m */; };
-		AF334F471997F12C001539A9 /* Nationalities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F221997F12C001539A9 /* Nationalities.m */; };
-		AF334F481997F12C001539A9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F241997F12C001539A9 /* Patient.m */; };
-		AF334F491997F12C001539A9 /* PreO2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F261997F12C001539A9 /* PreO2ViewController.m */; };
-		AF334F4A1997F12C001539A9 /* RocClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F281997F12C001539A9 /* RocClockViewController.m */; };
-		AF334F4B1997F12C001539A9 /* RSINowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2A1997F12C001539A9 /* RSINowViewController.m */; };
-		AF334F4C1997F12C001539A9 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2C1997F12C001539A9 /* TeamViewController.m */; };
-		AF334F4D1997F12C001539A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF334F2E1997F12C001539A9 /* ViewController.m */; };
 		AF334F4F1997F13E001539A9 /* Plain Border.png in Resources */ = {isa = PBXBuildFile; fileRef = AF334F4E1997F13E001539A9 /* Plain Border.png */; };
 		AF744AC11987021300D91DFD /* InductionAgents.m in Sources */ = {isa = PBXBuildFile; fileRef = AF744AC01987021300D91DFD /* InductionAgents.m */; };
 		AF744AC419883C5C00D91DFD /* Nationalities.m in Sources */ = {isa = PBXBuildFile; fileRef = AF744AC319883C5C00D91DFD /* Nationalities.m */; };
@@ -157,63 +126,6 @@
 
 /* Begin PBXFileReference section */
 		AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Man_shadow_-_upper.png"; path = "../../Images/Man_shadow_-_upper.png"; sourceTree = "<group>"; };
-		AF334EF31997F12C001539A9 /* AirwayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirwayViewController.h; sourceTree = "<group>"; };
-		AF334EF41997F12C001539A9 /* AirwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirwayViewController.m; sourceTree = "<group>"; };
-		AF334EF51997F12C001539A9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AF334EF61997F12C001539A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF334EF81997F12C001539A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		AF334EFA1997F12C001539A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		AF334EFB1997F12C001539A9 /* CustomisationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomisationViewController.h; sourceTree = "<group>"; };
-		AF334EFC1997F12C001539A9 /* CustomisationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomisationViewController.m; sourceTree = "<group>"; };
-		AF334EFD1997F12C001539A9 /* DefaultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsViewController.h; sourceTree = "<group>"; };
-		AF334EFE1997F12C001539A9 /* DefaultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsViewController.m; sourceTree = "<group>"; };
-		AF334EFF1997F12C001539A9 /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemographicsViewController.h; sourceTree = "<group>"; };
-		AF334F001997F12C001539A9 /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemographicsViewController.m; sourceTree = "<group>"; };
-		AF334F011997F12C001539A9 /* DrugDoses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugDoses.h; sourceTree = "<group>"; };
-		AF334F021997F12C001539A9 /* DrugDoses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugDoses.m; sourceTree = "<group>"; };
-		AF334F031997F12C001539A9 /* DrugLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLabelTableViewCell.h; sourceTree = "<group>"; };
-		AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLabelTableViewCell.m; sourceTree = "<group>"; };
-		AF334F051997F12C001539A9 /* DrugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugLog.h; sourceTree = "<group>"; };
-		AF334F061997F12C001539A9 /* DrugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugLog.m; sourceTree = "<group>"; };
-		AF334F071997F12C001539A9 /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
-		AF334F081997F12C001539A9 /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
-		AF334F091997F12C001539A9 /* DrugsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsViewController.h; sourceTree = "<group>"; };
-		AF334F0A1997F12C001539A9 /* DrugsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsViewController.m; sourceTree = "<group>"; };
-		AF334F0C1997F12C001539A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AF334F0D1997F12C001539A9 /* EquipmentChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentChecklistViewController.h; sourceTree = "<group>"; };
-		AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentChecklistViewController.m; sourceTree = "<group>"; };
-		AF334F0F1997F12C001539A9 /* EventLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLog.h; sourceTree = "<group>"; };
-		AF334F101997F12C001539A9 /* EventLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLog.m; sourceTree = "<group>"; };
-		AF334F111997F12C001539A9 /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
-		AF334F121997F12C001539A9 /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
-		AF334F131997F12C001539A9 /* guidePreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guidePreO2ViewController.h; sourceTree = "<group>"; };
-		AF334F141997F12C001539A9 /* guidePreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = guidePreO2ViewController.m; sourceTree = "<group>"; };
-		AF334F151997F12C001539A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AF334F161997F12C001539A9 /* IndicationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicationsViewController.h; sourceTree = "<group>"; };
-		AF334F171997F12C001539A9 /* IndicationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicationsViewController.m; sourceTree = "<group>"; };
-		AF334F181997F12C001539A9 /* InductionAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InductionAgents.h; sourceTree = "<group>"; };
-		AF334F191997F12C001539A9 /* InductionAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InductionAgents.m; sourceTree = "<group>"; };
-		AF334F1A1997F12C001539A9 /* Interactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interactions.h; sourceTree = "<group>"; };
-		AF334F1B1997F12C001539A9 /* Interactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interactions.m; sourceTree = "<group>"; };
-		AF334F1C1997F12C001539A9 /* irsi-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "irsi-Info.plist"; sourceTree = "<group>"; };
-		AF334F1D1997F12C001539A9 /* irsi-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "irsi-Prefix.pch"; sourceTree = "<group>"; };
-		AF334F1E1997F12C001539A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF334F1F1997F12C001539A9 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		AF334F201997F12C001539A9 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		AF334F211997F12C001539A9 /* Nationalities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nationalities.h; sourceTree = "<group>"; };
-		AF334F221997F12C001539A9 /* Nationalities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nationalities.m; sourceTree = "<group>"; };
-		AF334F231997F12C001539A9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
-		AF334F241997F12C001539A9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
-		AF334F251997F12C001539A9 /* PreO2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreO2ViewController.h; sourceTree = "<group>"; };
-		AF334F261997F12C001539A9 /* PreO2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreO2ViewController.m; sourceTree = "<group>"; };
-		AF334F271997F12C001539A9 /* RocClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RocClockViewController.h; sourceTree = "<group>"; };
-		AF334F281997F12C001539A9 /* RocClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RocClockViewController.m; sourceTree = "<group>"; };
-		AF334F291997F12C001539A9 /* RSINowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSINowViewController.h; sourceTree = "<group>"; };
-		AF334F2A1997F12C001539A9 /* RSINowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSINowViewController.m; sourceTree = "<group>"; };
-		AF334F2B1997F12C001539A9 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
-		AF334F2C1997F12C001539A9 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
-		AF334F2D1997F12C001539A9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF334F2E1997F12C001539A9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AF334F4E1997F13E001539A9 /* Plain Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Plain Border.png"; path = "../../Images/Plain Border.png"; sourceTree = "<group>"; };
 		AF744ABF1987021300D91DFD /* InductionAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InductionAgents.h; sourceTree = "<group>"; };
 		AF744AC01987021300D91DFD /* InductionAgents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InductionAgents.m; sourceTree = "<group>"; };
@@ -375,70 +287,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF334EF21997F12C001539A9 /* irsi */ = {
-			isa = PBXGroup;
-			children = (
-				AF334EF31997F12C001539A9 /* AirwayViewController.h */,
-				AF334EF41997F12C001539A9 /* AirwayViewController.m */,
-				AF334EF51997F12C001539A9 /* AppDelegate.h */,
-				AF334EF61997F12C001539A9 /* AppDelegate.m */,
-				AF334EF71997F12C001539A9 /* Main_iPad.storyboard */,
-				AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */,
-				AF334EFB1997F12C001539A9 /* CustomisationViewController.h */,
-				AF334EFC1997F12C001539A9 /* CustomisationViewController.m */,
-				AF334EFD1997F12C001539A9 /* DefaultsViewController.h */,
-				AF334EFE1997F12C001539A9 /* DefaultsViewController.m */,
-				AF334EFF1997F12C001539A9 /* DemographicsViewController.h */,
-				AF334F001997F12C001539A9 /* DemographicsViewController.m */,
-				AF334F011997F12C001539A9 /* DrugDoses.h */,
-				AF334F021997F12C001539A9 /* DrugDoses.m */,
-				AF334F031997F12C001539A9 /* DrugLabelTableViewCell.h */,
-				AF334F041997F12C001539A9 /* DrugLabelTableViewCell.m */,
-				AF334F051997F12C001539A9 /* DrugLog.h */,
-				AF334F061997F12C001539A9 /* DrugLog.m */,
-				AF334F071997F12C001539A9 /* DrugsTableViewController.h */,
-				AF334F081997F12C001539A9 /* DrugsTableViewController.m */,
-				AF334F091997F12C001539A9 /* DrugsViewController.h */,
-				AF334F0A1997F12C001539A9 /* DrugsViewController.m */,
-				AF334F0B1997F12C001539A9 /* InfoPlist.strings */,
-				AF334F0D1997F12C001539A9 /* EquipmentChecklistViewController.h */,
-				AF334F0E1997F12C001539A9 /* EquipmentChecklistViewController.m */,
-				AF334F0F1997F12C001539A9 /* EventLog.h */,
-				AF334F101997F12C001539A9 /* EventLog.m */,
-				AF334F111997F12C001539A9 /* FinalViewController.h */,
-				AF334F121997F12C001539A9 /* FinalViewController.m */,
-				AF334F131997F12C001539A9 /* guidePreO2ViewController.h */,
-				AF334F141997F12C001539A9 /* guidePreO2ViewController.m */,
-				AF334F151997F12C001539A9 /* Images.xcassets */,
-				AF334F161997F12C001539A9 /* IndicationsViewController.h */,
-				AF334F171997F12C001539A9 /* IndicationsViewController.m */,
-				AF334F181997F12C001539A9 /* InductionAgents.h */,
-				AF334F191997F12C001539A9 /* InductionAgents.m */,
-				AF334F1A1997F12C001539A9 /* Interactions.h */,
-				AF334F1B1997F12C001539A9 /* Interactions.m */,
-				AF334F1C1997F12C001539A9 /* irsi-Info.plist */,
-				AF334F1D1997F12C001539A9 /* irsi-Prefix.pch */,
-				AF334F1E1997F12C001539A9 /* main.m */,
-				AF334F1F1997F12C001539A9 /* MainMenuViewController.h */,
-				AF334F201997F12C001539A9 /* MainMenuViewController.m */,
-				AF334F211997F12C001539A9 /* Nationalities.h */,
-				AF334F221997F12C001539A9 /* Nationalities.m */,
-				AF334F231997F12C001539A9 /* Patient.h */,
-				AF334F241997F12C001539A9 /* Patient.m */,
-				AF334F251997F12C001539A9 /* PreO2ViewController.h */,
-				AF334F261997F12C001539A9 /* PreO2ViewController.m */,
-				AF334F271997F12C001539A9 /* RocClockViewController.h */,
-				AF334F281997F12C001539A9 /* RocClockViewController.m */,
-				AF334F291997F12C001539A9 /* RSINowViewController.h */,
-				AF334F2A1997F12C001539A9 /* RSINowViewController.m */,
-				AF334F2B1997F12C001539A9 /* TeamViewController.h */,
-				AF334F2C1997F12C001539A9 /* TeamViewController.m */,
-				AF334F2D1997F12C001539A9 /* ViewController.h */,
-				AF334F2E1997F12C001539A9 /* ViewController.m */,
-			);
-			name = irsi;
-			sourceTree = "<group>";
-		};
 		AF744ABE198701E900D91DFD /* Singleton Drug Arrays */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				AF334F4E1997F13E001539A9 /* Plain Border.png */,
-				AF334EF21997F12C001539A9 /* irsi */,
 				AF334EEE1996D21E001539A9 /* Man_shadow_-_upper.png */,
 				AFA16C17197E20AA000799A0 /* PlusSign.png */,
 				AFA16C0C197DB74A000799A0 /* DrugLabels */,
@@ -799,16 +646,13 @@
 				AF8D961119780FAF0050A924 /* redEquipmentTabDeselected.png in Resources */,
 				AF8D960A19780FAF0050A924 /* greenFinalTabSelected.png in Resources */,
 				AF8D965019788A6C0050A924 /* FailedTickBox.png in Resources */,
-				AF334F311997F12C001539A9 /* Main_iPad.storyboard in Resources */,
 				AF8D961319780FAF0050A924 /* amberEquipmentTabDeselected.png in Resources */,
 				AFA16C29197F2B14000799A0 /* White Label.png in Resources */,
-				AF334F401997F12C001539A9 /* Images.xcassets in Resources */,
 				AF8D961C19780FAF0050A924 /* greenIndicationsTabSelected.png in Resources */,
 				AF8D960919780FAF0050A924 /* greenFinalTabDeselected.png in Resources */,
 				AFC755D31995EBBB00F9CC51 /* Equipment.plist in Resources */,
 				AF8D961019780FAF0050A924 /* greenTeamTabSelected.png in Resources */,
 				AF8D960819780FAF0050A924 /* amberFinalTabSelected.png in Resources */,
-				AF334F3B1997F12C001539A9 /* InfoPlist.strings in Resources */,
 				AF8D961D19780FAF0050A924 /* greenDrugTabSelected.png in Resources */,
 				AF8D962019780FAF0050A924 /* redDrugTabDeselected.png in Resources */,
 				AF8D961519780FAF0050A924 /* greenEquipmentTabDeselected.png in Resources */,
@@ -818,7 +662,6 @@
 				AF8D961A19780FAF0050A924 /* amberIndicationsTabSelected.png in Resources */,
 				AFA16C35198066F9000799A0 /* InductionAgents.plist in Resources */,
 				AFA16C28197F2B14000799A0 /* Suggamadex.png in Resources */,
-				AF334F321997F12C001539A9 /* Main_iPhone.storyboard in Resources */,
 				AF744ACF1988408900D91DFD /* Sevo.png in Resources */,
 				AF744AD01988408900D91DFD /* Iso.png in Resources */,
 				AF8D961619780FAF0050A924 /* greenEquipmentTabSelected.png in Resources */,
@@ -844,7 +687,6 @@
 				AF8D960C19780FAF0050A924 /* redTeamTabDeselected.png in Resources */,
 				AF8D961219780FAF0050A924 /* redEquipmentTabSelected.png in Resources */,
 				AF8D961F19780FAF0050A924 /* amberDrugTabSelected.png in Resources */,
-				AF334F441997F12C001539A9 /* irsi-Info.plist in Resources */,
 				AF8D960619780FAF0050A924 /* redFinalTabSelected.png in Resources */,
 				AFA16C30197F2B14000799A0 /* Muscle Relaxants.png in Resources */,
 				AF8D960E19780FAF0050A924 /* amberTeamTabSelected.png in Resources */,
@@ -871,55 +713,29 @@
 			files = (
 				AFA16C14197DBCF3000799A0 /* DrugLabelTableViewCell.m in Sources */,
 				AF744AC11987021300D91DFD /* InductionAgents.m in Sources */,
-				AF334F471997F12C001539A9 /* Nationalities.m in Sources */,
-				AF334F3F1997F12C001539A9 /* guidePreO2ViewController.m in Sources */,
-				AF334F2F1997F12C001539A9 /* AirwayViewController.m in Sources */,
-				AF334F461997F12C001539A9 /* MainMenuViewController.m in Sources */,
-				AF334F4D1997F12C001539A9 /* ViewController.m in Sources */,
 				AFA16C38198599FA000799A0 /* DrugsTableViewController.m in Sources */,
-				AF334F3C1997F12C001539A9 /* EquipmentChecklistViewController.m in Sources */,
-				AF334F3D1997F12C001539A9 /* EventLog.m in Sources */,
-				AF334F381997F12C001539A9 /* DrugLog.m in Sources */,
-				AF334F351997F12C001539A9 /* DemographicsViewController.m in Sources */,
 				AF8D9665197DB3540050A924 /* DrugsViewController.m in Sources */,
 				AFC666C31976AEC70091C4BE /* MainMenuViewController.m in Sources */,
-				AF334F3A1997F12C001539A9 /* DrugsViewController.m in Sources */,
-				AF334F391997F12C001539A9 /* DrugsTableViewController.m in Sources */,
 				AFC6669C1976AE780091C4BE /* ViewController.m in Sources */,
 				AF8D965F197D69390050A924 /* guidePreO2ViewController.m in Sources */,
 				AF8D962C197818B60050A924 /* EquipmentChecklistViewController.m in Sources */,
 				AFA16C11197DBC77000799A0 /* DrugLog.m in Sources */,
-				AF334F371997F12C001539A9 /* DrugLabelTableViewCell.m in Sources */,
 				AF744AC419883C5C00D91DFD /* Nationalities.m in Sources */,
 				AF8D9632197818DF0050A924 /* FinalViewController.m in Sources */,
-				AF334F4B1997F12C001539A9 /* RSINowViewController.m in Sources */,
 				AF8D9659197D568F0050A924 /* Interactions.m in Sources */,
 				AFC666D21976CC4A0091C4BE /* Patient.m in Sources */,
-				AF334F431997F12C001539A9 /* Interactions.m in Sources */,
 				AFC666D81976E2420091C4BE /* RSINowViewController.m in Sources */,
-				AF334F331997F12C001539A9 /* CustomisationViewController.m in Sources */,
 				AFC666DB1976E4A40091C4BE /* DemographicsViewController.m in Sources */,
-				AF334F4A1997F12C001539A9 /* RocClockViewController.m in Sources */,
-				AF334F421997F12C001539A9 /* InductionAgents.m in Sources */,
 				AFC666931976AE780091C4BE /* AppDelegate.m in Sources */,
-				AF334F481997F12C001539A9 /* Patient.m in Sources */,
 				AF8D962F197818CB0050A924 /* TeamViewController.m in Sources */,
-				AF334F411997F12C001539A9 /* IndicationsViewController.m in Sources */,
 				AF8D963B197834EE0050A924 /* IndicationsViewController.m in Sources */,
 				AF8D9668197DB3650050A924 /* DrugDoses.m in Sources */,
-				AF334F361997F12C001539A9 /* DrugDoses.m in Sources */,
-				AF334F301997F12C001539A9 /* AppDelegate.m in Sources */,
-				AF334F341997F12C001539A9 /* DefaultsViewController.m in Sources */,
-				AF334F4C1997F12C001539A9 /* TeamViewController.m in Sources */,
 				AFC6668F1976AE780091C4BE /* main.m in Sources */,
-				AF334F491997F12C001539A9 /* PreO2ViewController.m in Sources */,
 				AF8D9662197D9E6D0050A924 /* DefaultsViewController.m in Sources */,
-				AF334F3E1997F12C001539A9 /* FinalViewController.m in Sources */,
 				AF744AD3198842E600D91DFD /* CustomisationViewController.m in Sources */,
 				AFC666E3197718440091C4BE /* EventLog.m in Sources */,
 				AFC666EE1977DD800091C4BE /* RocClockViewController.m in Sources */,
 				AF8D96531978973B0050A924 /* AirwayViewController.m in Sources */,
-				AF334F451997F12C001539A9 /* main.m in Sources */,
 				AFC666E01977173D0091C4BE /* PreO2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,30 +759,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF334EF71997F12C001539A9 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF334EF81997F12C001539A9 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		AF334EF91997F12C001539A9 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF334EFA1997F12C001539A9 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		AF334F0B1997F12C001539A9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF334F0C1997F12C001539A9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		AFC6668B1976AE780091C4BE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -191,6 +191,8 @@ NSString * sourceVTIBW;
     [UIView animateWithDuration:1.0 animations:^{_demographicsDropDown.frame = newFrame;}];
     demographicsDown = YES;
     
+    [self.view bringSubviewToFront:_demographicsDropDown];
+    
     Interactions *sharedDemographicsOpen = [Interactions sharedDemographicsOpen];
     [sharedDemographicsOpen setDemographicsOpen:[NSNumber numberWithBool:YES]];
 }
@@ -231,6 +233,8 @@ NSString * sourceVTIBW;
         
         [UIView animateWithDuration:1.0 animations:^{_demographicsDropDown.frame = newFrame;}];
         demographicsDown = YES;
+        
+        [self.view bringSubviewToFront:_demographicsDropDown];
         
         Interactions *sharedDemographicsOpen = [Interactions sharedDemographicsOpen];
         [sharedDemographicsOpen setDemographicsOpen:[NSNumber numberWithBool:YES]];
