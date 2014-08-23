@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EventLog.h"
 #import "Interactions.h"
+#import "Nationalities.h"
 
 @interface IndicationsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

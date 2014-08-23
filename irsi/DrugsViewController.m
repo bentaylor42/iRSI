@@ -15,13 +15,15 @@
     NSMutableArray *displaySelectedArray;
     NSMutableArray *displayIndexArray;
     NSMutableArray *customLabelDisplayArray;
+    NSMutableArray *activeArray;
+    NSMutableArray *phemArray;
 }
 
 @end
 
 @implementation DrugsViewController
 
-NSInteger doseDisplayType = 0;
+NSInteger doseDisplayType = 2;
 NSMutableDictionary *inductionAgents;
 NSTimer *drugSelection;
 bool selectionLoaded = NO;
@@ -41,6 +43,7 @@ NSString * otherDrugString;
 NSString * tapToSelect;
 NSString * volToGive;
 NSString * doseToGive;
+NSString * mgKg;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,10 +81,12 @@ NSString * doseToGive;
     tapToSelect = [dict objectForKey:@"TapToSelectAgent"];
     volToGive = [dict objectForKey:@"VolToGive"];
     doseToGive = [dict objectForKey:@"DoseToGive"];
+    mgKg = [dict objectForKey:@"mgKg"];
     
     self.labelTapToSelect.text = tapToSelect;
     [self.segmentedDoseDisplayType setTitle:volToGive forSegmentAtIndex:0];
     [self.segmentedDoseDisplayType setTitle:doseToGive forSegmentAtIndex:1];
+    [self.segmentedDoseDisplayType setTitle:mgKg forSegmentAtIndex:2];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults synchronize];
@@ -98,24 +103,15 @@ NSString * doseToGive;
     }
     if ([defaults objectForKey:@"drugDisplayTypeSelected"] != nil){doseDisplayType = [defaults integerForKey:@"drugDisplayTypeSelected"];}
     
-    doseDisplayType = [[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue];
+    if ([sharedDrugDoseDisplayType drugDoseDisplayType] != nil){
+        doseDisplayType = [[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue];}
     
-    self.segmentedDoseDisplayType.selectedSegmentIndex = doseDisplayType;
-}
+    if (([sharedDrugDoseDisplayType drugDoseDisplayType] == nil) && ([defaults objectForKey:@"drugDisplayTypeSelected"] == nil)){
+        doseDisplayType = 2;
+        [sharedDrugDoseDisplayType setDrugDoseDisplayType:[NSNumber numberWithInteger:2]];
+    }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults synchronize];
-    
-    DrugLog *sharedDrugDoseDisplayType = [DrugLog sharedDrugDoseDisplayType];
-    doseDisplayType = [[sharedDrugDoseDisplayType drugDoseDisplayType] boolValue];
-    
-    if ([defaults objectForKey:@"drugDisplayTypeSelected"] != nil){doseDisplayType = [defaults integerForKey:@"drugDisplayTypeSelected"];}
-    
     self.segmentedDoseDisplayType.selectedSegmentIndex = doseDisplayType;
-
-    return;
 }
 
 - (void)didReceiveMemoryWarning
@@ -233,6 +229,8 @@ NSString * doseToGive;
     [sharedPaedsMax setPaedsMax:[dict objectForKey:@"PaedsMax"]];
     [sharedPaedsSingle setPaedsSingle:[dict objectForKey:@"PaedsSingleScaledDose"]];
     [sharedPaedsMaxTotal setPaedsMaxTotal:[dict objectForKey:@"PaedsMaxTotal"]];
+    activeArray = [[NSMutableArray alloc]initWithArray:[dict objectForKey:@"Active"]];
+    phemArray = [[NSMutableArray alloc]initWithArray:[dict objectForKey:@"PHEM"]];
     
     // Loads the arrays of drugs in each class
     DrugLog *sharedInductionDrug = [DrugLog sharedInductionDrug];
@@ -254,70 +252,80 @@ NSString * doseToGive;
     // Goes through the entire drug database and populates an array
     NSInteger i = 0;
     
+    EventLog *sharedPreHospital = [EventLog sharedPreHospital];
+    bool phem = [[sharedPreHospital preHospital]boolValue];
+    
+    
+    
     for (i = 0; i < [sharedInductionClass inductionClass].count; i++)
     {
-        if ([[sharedManualDose manualDose] count] <= i){[[sharedManualDose manualDose] addObject:[NSNumber numberWithInt:0]];}
-        
-        if ([[[sharedInductionClass inductionClass]objectAtIndex:i]integerValue] == sectionOpen)
-        {
-            [displayNamesArray addObject:[[sharedInductionName inductionName] objectAtIndex:i]];
-            NSInteger label = [[[sharedInductionLabelType inductionLabelType] objectAtIndex:i] integerValue];
-            [customLabelDisplayArray addObject:[NSNumber numberWithInteger:label]];
-            [displayLabelArray addObject:[[sharedDrugLabels drugLabels] objectAtIndex:label]];
-            [displayIndexArray addObject:[NSNumber numberWithInteger:i]];
-            
-            // detects if the item has already been selected
-            NSArray *currentClass = [[NSArray alloc] init];
-            
-            switch (sectionOpen) {
-                case 0:
-                    currentClass = [sharedInductionDrug inductionDrug];
-                    break;
+        if ((phem == NO) || ([[phemArray objectAtIndex:i]boolValue] == YES)){
+            if ([[activeArray objectAtIndex:i]boolValue] == YES){
+                if ([[sharedManualDose manualDose] count] <= i){[[sharedManualDose manualDose] addObject:[NSNumber numberWithInt:0]];}
+                
+                if ([[[sharedInductionClass inductionClass]objectAtIndex:i]integerValue] == sectionOpen)
+                {
+                    [displayNamesArray addObject:[[sharedInductionName inductionName] objectAtIndex:i]];
+                    NSInteger label = [[[sharedInductionLabelType inductionLabelType] objectAtIndex:i] integerValue];
+                    [customLabelDisplayArray addObject:[NSNumber numberWithInteger:label]];
+                    [displayLabelArray addObject:[[sharedDrugLabels drugLabels] objectAtIndex:label]];
+                    [displayIndexArray addObject:[NSNumber numberWithInteger:i]];
                     
-                case 1:
-                    currentClass = [sharedRelaxantsDrug relaxantsDrug];
-                    break;
+                    // detects if the item has already been selected
+                    NSArray *currentClass = [[NSArray alloc] init];
                     
-                case 2:
-                    currentClass = [sharedFlush flush];
-                    break;
+                    switch (sectionOpen) {
+                        case 0:
+                            currentClass = [sharedInductionDrug inductionDrug];
+                            break;
+                            
+                        case 1:
+                            currentClass = [sharedRelaxantsDrug relaxantsDrug];
+                            break;
+                            
+                        case 2:
+                            currentClass = [sharedFlush flush];
+                            break;
+                            
+                        case 3:
+                            currentClass = [sharedEmergencyDrug emergencyDrug];
+                            break;
+                            
+                        case 4:
+                            currentClass = [sharedCoinductiveDrug coInductiveDrug];
+                            break;
+                            
+                        case 5:
+                            currentClass = [sharedOngoingSedationDrug ongoingSedationDrug];
+                            break;
+                            
+                        case 6:
+                            currentClass = [sharedOngoingAnalgesiaDrug ongoingAnalgesiaDrug];
+                            break;
+                            
+                        case 7:
+                            currentClass = [sharedOtherDrug otherDrug];
+                            break;
+                            
+                        default:
+                            break;
+                    }
                     
-                case 3:
-                    currentClass = [sharedEmergencyDrug emergencyDrug];
-                    break;
+                    NSMutableArray *listOfDrugs = [[NSMutableArray alloc] init];
+                    for (int list=0; list<[currentClass count]; list++){
+                        NSArray *array = [[NSArray alloc] init];
+                        array = [currentClass objectAtIndex:list];
+                        [listOfDrugs addObject:[array objectAtIndex:0]];
+                    }
                     
-                case 4:
-                    currentClass = [sharedCoinductiveDrug coInductiveDrug];
-                    break;
-                    
-                case 5:
-                    currentClass = [sharedOngoingSedationDrug ongoingSedationDrug];
-                    break;
-                    
-                case 6:
-                    currentClass = [sharedOngoingAnalgesiaDrug ongoingAnalgesiaDrug];
-                    break;
-                    
-                case 7:
-                    currentClass = [sharedOtherDrug otherDrug];
-                    break;
-                    
-                default:
-                    break;
+                    if ([listOfDrugs containsObject:[[sharedInductionName inductionName] objectAtIndex:i]]){
+                        [displaySelectedArray addObject:[NSNumber numberWithBool:YES]];}
+                    else {[displaySelectedArray addObject:[NSNumber numberWithBool:NO]];}
+                }
             }
-            
-            NSMutableArray *listOfDrugs = [[NSMutableArray alloc] init];
-            for (int list=0; list<[currentClass count]; list++){
-                NSArray *array = [[NSArray alloc] init];
-                array = [currentClass objectAtIndex:list];
-                [listOfDrugs addObject:[array objectAtIndex:0]];
-            }
-            
-            if ([listOfDrugs containsObject:[[sharedInductionName inductionName] objectAtIndex:i]]){
-                [displaySelectedArray addObject:[NSNumber numberWithBool:YES]];}
-            else {[displaySelectedArray addObject:[NSNumber numberWithBool:NO]];}
         }
     }
+        
     
     [self.tableDrugSelector reloadData];
     return;

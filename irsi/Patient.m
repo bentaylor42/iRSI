@@ -19,6 +19,10 @@
 @synthesize age;
 @synthesize ageArrayIndex;
 @synthesize height;
+@synthesize tubeSize;
+@synthesize isCuffedTube;
+@synthesize isNasalTube;
+@synthesize tubeLength;
 
 #pragma mark Singleton Methods
 
@@ -94,6 +98,38 @@
     return sharedHeight;
 }
 
++(id) sharedIsCuffedTube
+{
+    static Patient * sharedIsCuffedTube = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedIsCuffedTube = [[self alloc] init];});
+    return sharedIsCuffedTube;
+}
+
++(id) sharedTubeSize
+{
+    static Patient * sharedTubeSize = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTubeSize = [[self alloc] init];});
+    return sharedTubeSize;
+}
+
++(id) sharedIsNasalTube
+{
+    static Patient * sharedIsNasalTube = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedIsNasalTube = [[self alloc] init];});
+    return sharedIsNasalTube;
+}
+
++(id) sharedTubeLength
+{
+    static Patient * sharedTubeLength = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTubeLength = [[self alloc] init];});
+    return sharedTubeLength;
+}
+
 -(id) init
 {
     if (self = [super init])
@@ -107,6 +143,10 @@
         age = [[NSNumber alloc] init];
         ageArrayIndex = [[NSNumber alloc] initWithInt:0];
         height = [[NSNumber alloc] init];
+        tubeSize = [[NSNumber alloc] init];
+        isCuffedTube = [[NSNumber alloc] initWithBool:YES];
+        tubeLength = [[NSNumber alloc] init];
+        isNasalTube = [[NSNumber alloc] initWithBool:NO];
     }
     return self;
 }

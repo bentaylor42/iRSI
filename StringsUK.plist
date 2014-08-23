@@ -180,6 +180,8 @@
 	<string>Volume to Give</string>
 	<key>DoseToGive</key>
 	<string>Dose to Give</string>
+	<key>mgKg</key>
+	<string>Dose per Kg</string>
 	<key>VTDisplay</key>
 	<string>Estimated Tidal Volume %li - %li mls</string>
 	<key>VTSourceEstWt</key>
@@ -194,5 +196,297 @@
 	<string>Standard Airway Equipment</string>
 	<key>EquipmentRescue</key>
 	<string>Airway Rescue Equipment</string>
+	<key>TeamIntro</key>
+	<string>Who Is Doing Each of the Following Roles?</string>
+	<key>TeamExplain</key>
+	<string>(One Person can do Several Roles if Needed)</string>
+	<key>AirwayAssistant</key>
+	<string>Airway Assistant</string>
+	<key>IntubatorFirst</key>
+	<string>1st Intubator</string>
+	<key>IntubatorSecond</key>
+	<string>2nd Intubator</string>
+	<key>CSpine</key>
+	<string>C-Spine</string>
+	<key>Cricoid</key>
+	<string>Cricoid Pressure</string>
+	<key>DrugAdministrator</key>
+	<string>Drugs</string>
+	<key>TeamLeader</key>
+	<string>Team Leader</string>
+	<key>Scribe</key>
+	<string>Scribe</string>
+	<key>RocClockButton</key>
+	<string>The &quot;Roc Clock&quot;</string>
+	<key>PaedsCalc</key>
+	<string>Paediatric Calculator</string>
+	<key>HeightWeightCalc</key>
+	<string>Height and Weight Calculator</string>
+	<key>VentCalc</key>
+	<string>Calculate Target Tidal Volumes</string>
+	<key>StartTube</key>
+	<string>Start Intubation</string>
+	<key>SuccessTube</key>
+	<string>Successful Intubation</string>
+	<key>StartRoc</key>
+	<string>Start</string>
+	<key>Emergency</key>
+	<string>Emergency</string>
+	<key>InitialRocInstructions</key>
+	<string>Press Start When RSI Drugs Given</string>
+	<key>RocNodesat</key>
+	<string>Consider Use of Nasal Cannula/ Apnoeic Oxygenation</string>
+	<key>RocRedButton</key>
+	<string>Press Red Button for Emergency Guidelines</string>
+	<key>RocOrangeButton</key>
+	<string>Press Orange Button Below When Ready to Intubate</string>
+	<key>RocGreenButton</key>
+	<string>Press Green Button Below to Confirm Tube Placement</string>
+	<key>ConfirmTitle</key>
+	<string>Confirm Tube Placement</string>
+	<key>GenerateReport</key>
+	<string>Generate Report</string>
+	<key>Finished</key>
+	<string>Finished</string>
+	<key>OralConfirm</key>
+	<string>Oral Length</string>
+	<key>NasalConfirm</key>
+	<string>Nasal Length</string>
+	<key>GPSPosition</key>
+	<string>Get GPS Position</string>
+	<key>OralPaeds</key>
+	<string>Oral: %.1f cm</string>
+	<key>NasalPaeds</key>
+	<string>Nasal: %.1f cm</string>
+	<key>TubeLength</key>
+	<string>ETT Length:</string>
+	<key>ConfirmReportTitle</key>
+	<string>No Report Generated</string>
+	<key>ConfirmReportReportTitle</key>
+	<string>Generate Report</string>
+	<key>ConfirmReportMessage</key>
+	<string>Would You Like to Generate an Automated Summary Report?</string>
+	<key>ConfirmReportCancelTitle</key>
+	<string>No Thanks</string>
+	<key>Latitude</key>
+	<string>Latitude</string>
+	<key>Longitude</key>
+	<string>Longitude</string>
+	<key>Address</key>
+	<string>Address</string>
+	<key>PressButton</key>
+	<string>Press Button to Get Location</string>
+	<key>calcPosn</key>
+	<string>Record Position</string>
+	<key>GPSUnavailable</key>
+	<string>No GPS Signal</string>
+	<key>GPSPoorSignal</key>
+	<string>Fix Location (Weak GPS Fix)</string>
+	<key>locationSaved</key>
+	<string>Location Saved.  Tap to Change</string>
+	<key>signalError</key>
+	<string>GPS Error.  Tap to Retry</string>
+	<key>enter</key>
+	<string>Enter</string>
+	<key>tubeSizeTitle</key>
+	<string>Tube Size:</string>
+	<key>CuffedTube</key>
+	<string>Cuffed</string>
+	<key>UncuffedTube</key>
+	<string>Uncuffed</string>
+	<key>GenReportButton</key>
+	<string>Confirm and Finish</string>
+	<key>CLGrade</key>
+	<string>Intubation Grade:</string>
+	<key>ReportTitle</key>
+	<string>iRSI Intubation Report</string>
+	<key>LocationTimings</key>
+	<string>Location and Timings</string>
+	<key>Date</key>
+	<string>Date:</string>
+	<key>Time</key>
+	<string>Report Generated at:</string>
+	<key>PreHospital</key>
+	<string>Pre-Hospital RSI:</string>
+	<key>InHospital</key>
+	<string>In-Hospital RSI:</string>
+	<key>WardDepartment</key>
+	<string>(Ward/ Department)</string>
+	<key>Accuracy</key>
+	<string>Accuracy: within %i m</string>
+	<key>IncidentAddress</key>
+	<string>Address of Incident</string>
+	<key>dateformat</key>
+	<string>dd/MM/yyyy</string>
+	<key>preparationTitle</key>
+	<string>Preparation</string>
+	<key>challengeResponse</key>
+	<string>Challenge-response pre-RSI checklist used</string>
+	<key>indicated</key>
+	<string>RSI Indicated</string>
+	<key>bestLocation</key>
+	<string>, and performed in most suitable location at most suitable time</string>
+	<key>protectedEnvironment</key>
+	<string>Protected from environment.</string>
+	<key>safeScene</key>
+	<string>Scene Safe.</string>
+	<key>fullAccess</key>
+	<string>360 degree access to patient</string>
+	<key>preO2TotalTime</key>
+	<string>Effective Pre-oxygenation for %02i : %02i mins</string>
+	<key>ivIOPatent</key>
+	<string>IV/ IO access patent</string>
+	<key>airwayOK</key>
+	<string>Airway assessed: no difficultly anticipated</string>
+	<key>airwayNotOK</key>
+	<string>Airway assessed: potential difficulty identified and planned for</string>
+	<key>fullMonitoring</key>
+	<string>Monitored with:</string>
+	<key>spO2</key>
+	<string>SpO2</string>
+	<key>ecg</key>
+	<string>ECG</string>
+	<key>bloodPressure</key>
+	<string>Blood Pressure</string>
+	<key>etCO2</key>
+	<string>ETCO2</string>
+	<key>otherMonitors</key>
+	<string>Other Monitors</string>
+	<key>kitCheck</key>
+	<string>Equipment checked and ready</string>
+	<key>airwayRescue</key>
+	<string>Airway rescue equipment available</string>
+	<key>apnoeicOxy</key>
+	<string>Apnoeic oxygenation/ NODESAT used</string>
+	<key>drugsUsed</key>
+	<string>Drugs Prepared</string>
+	<key>sedationMaintained</key>
+	<string>Sedation maintained with:</string>
+	<key>analgesiaMaintained</key>
+	<string>Analgesia maintained with:</string>
+	<key>DemographicsHeading</key>
+	<string>(Enter patient details or place addressograph label here)</string>
+	<key>adultPatient</key>
+	<string>adult patient</string>
+	<key>paediatricPatient</key>
+	<string>paediatric patient</string>
+	<key>age</key>
+	<string>Age:</string>
+	<key>weight</key>
+	<string>Weight: </string>
+	<key>estWeight</key>
+	<string>Estimated Weight: </string>
+	<key>height</key>
+	<string>Height: </string>
+	<key>ibWeight</key>
+	<string>Ideal Body Weight: </string>
+	<key>intubationAttemptHeading</key>
+	<string>Intubation Attempt</string>
+	<key>teamBrief</key>
+	<string>Team brief conducted</string>
+	<key>cricoidUsed</key>
+	<string>Cricoid pressure applied</string>
+	<key>cricoidPressureNotUsed</key>
+	<string>Cricoid pressure not used</string>
+	<key>milsUsed</key>
+	<string>Manual-in-line stabilisation of cervical spine during intubation attempt</string>
+	<key>drugTime</key>
+	<string>Drugs given at:</string>
+	<key>intubationStartTime</key>
+	<string>Intubation attempt started at:</string>
+	<key>successfulTubeTime</key>
+	<string>Successful intubation at:</string>
+	<key>tubeSize</key>
+	<string>Size</string>
+	<key>oral</key>
+	<string>oral endotracheal tube</string>
+	<key>nasal</key>
+	<string>nasal endotracheal tube</string>
+	<key>tubeSecuredAt</key>
+	<string>Tube secured at:</string>
+	<key>cuffed</key>
+	<string>cuffed </string>
+	<key>uncuffed</key>
+	<string>uncuffed </string>
+	<key>capnoTrace</key>
+	<string>Consistent end-tidal CO2 trace confirmed</string>
+	<key>tubeThroughCords</key>
+	<string>Tube visualised passing cords</string>
+	<key>intubationGrade</key>
+	<string>Cormack-Lehane grade</string>
+	<key>laryngoscopy</key>
+	<string>laryngoscopy</string>
+	<key>emailTitle</key>
+	<string>iRSI Intubation Report Created At:</string>
+	<key>emailMessageBody</key>
+	<string>Created using iRSI.  For more information on iRSI, please visit &lt;a href=&quot;http://www.rsiready.com&quot;&gt;rsiready.com&lt;/a&gt;</string>
+	<key>ageDisplayButtonBlank</key>
+	<string>Tap to Enter Age</string>
+	<key>ageDisplayButtonComplete</key>
+	<string>%@. Tap to change</string>
+	<key>equalAE</key>
+	<string>Equal air entry confirmed</string>
+	<key>cxrOrdered</key>
+	<string>Chest X-ray ordered</string>
+	<key>secureForTransfer</key>
+	<string>Airway secured and packaged for transfer</string>
+	<key>incidents</key>
+	<string>Incidents</string>
+	<key>comments</key>
+	<string>Comments</string>
+	<key>defibEnergy</key>
+	<string>Defibrillation Energy: %@</string>
+	<key>agePickerTitle</key>
+	<string>Select Age</string>
+	<key>tubeLengthOral</key>
+	<string>Tube Length (Oral):</string>
+	<key>tubeLengthNasal</key>
+	<string>Tube Length (Nasal):</string>
+	<key>traumaBolus</key>
+	<string>Fluid Bolus (Trauma): %@</string>
+	<key>medicalBolus</key>
+	<string>Fluid Bolus (Medical): %@</string>
+	<key>cardiacArrest</key>
+	<string>Cardiac Arrest</string>
+	<key>bodyMass</key>
+	<string>Body Mass Index</string>
+	<key>saveWeight</key>
+	<string>Save Weight for This Patient</string>
+	<key>weightSaved</key>
+	<string>Weight Saved</string>
+	<key>saveHeight</key>
+	<string>Save Height for This Patient</string>
+	<key>heightSaved</key>
+	<string>Height Saved</string>
+	<key>ards4Kg</key>
+	<string>4 ml/Kg</string>
+	<key>ards6Kg</key>
+	<string>6 ml/Kg</string>
+	<key>ards8Kg</key>
+	<string>8 ml/Kg</string>
+	<key>enterHeightOrWeight</key>
+	<string>Enter Weight or Height</string>
+	<key>alsoConsider</key>
+	<string>Also Consider:</string>
+	<key>permissiveHypercapnoea</key>
+	<string>Permissive Hypercapnoea</string>
+	<key>limitPlateau</key>
+	<string>Limit Plateau Pressures to 30 cmH</string>
+	<key>openLung</key>
+	<string>Open Lung Ventilation (PEEP)</string>
+	<key>restrictiveFluids</key>
+	<string>Restrictive Fluid Strategy</string>
+	<key>notIBW</key>
+	<string>From Total Weight: IBW May Differ</string>
+	<key>fromIBW</key>
+	<string>Calculated From Ideal Body Weight</string>
+	<key>failedIntubation</key>
+	<string>Failed Intubation</string>
+	<key>als</key>
+	<string>Cardiac Arrest (Adult)</string>
+	<key>apls</key>
+	<string>Cardiac Arrest (Child)</string>
+	<key>anaphylaxis</key>
+	<string>Anaphylaxis</string>
 </dict>
 </plist>

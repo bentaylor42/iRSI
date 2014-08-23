@@ -18,6 +18,12 @@
 @synthesize deleteDrugRow;
 @synthesize deleteDrugSection;
 @synthesize demographicsOpen;
+@synthesize transitionToRoc;
+@synthesize transitionToGPS;
+@synthesize transitionToConfirm;
+@synthesize resetAll;
+@synthesize triggerReport;
+@synthesize transitionToEmergency;
 
 + (id) sharedAirwayWindowOpen
 {
@@ -83,6 +89,54 @@
     return sharedDemographicsOpen;
 }
 
++ (id) sharedTransitionToRoc
+{
+    static Interactions *sharedTransitionToRoc = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTransitionToRoc = [[self alloc] init];});
+    return sharedTransitionToRoc;
+}
+
++ (id) sharedTransitionToGPS
+{
+    static Interactions *sharedTransitionToGPS = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTransitionToGPS = [[self alloc] init];});
+    return sharedTransitionToGPS;
+}
+
++ (id) sharedTransitionToConfirm
+{
+    static Interactions *sharedTransitionToConfirm = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTransitionToConfirm = [[self alloc] init];});
+    return sharedTransitionToConfirm;
+}
+
++ (id) sharedResetAll
+{
+    static Interactions *sharedResetAll = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedResetAll = [[self alloc] init];});
+    return sharedResetAll;
+}
+
++ (id) sharedTriggerReport
+{
+    static Interactions *sharedTriggerReport = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTriggerReport = [[self alloc] init];});
+    return sharedTriggerReport;
+}
+
++ (id) sharedTransitionToEmergency
+{
+    static Interactions *sharedTransitionToEmergency = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{sharedTransitionToEmergency = [[self alloc] init];});
+    return sharedTransitionToEmergency;
+}
+
 - (id) init
 {
     if (self = [super init])
@@ -96,6 +150,13 @@
         deleteDrugRow = [[NSNumber alloc] initWithInteger:0];
         deleteDrugSection = [[NSNumber alloc] initWithInteger:0];
         demographicsOpen = [[NSNumber alloc] initWithBool:NO];
+        
+        transitionToRoc = [[NSNumber alloc] initWithInteger:0];
+        transitionToGPS = [[NSNumber alloc] initWithInteger:0];
+        transitionToConfirm = [[NSNumber alloc] initWithInteger:0];
+        resetAll = [[NSNumber alloc] initWithBool:NO];
+        triggerReport = [[NSNumber alloc] initWithBool:NO];
+        transitionToEmergency  = [[NSNumber alloc]initWithInteger:0];
     }
     return self;
 }

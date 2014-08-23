@@ -19,6 +19,13 @@
     NSNumber *deleteDrugSection;
     NSNumber *deleteDrugRow;
     NSNumber *demographicsOpen;
+    
+    NSNumber *transitionToRoc;
+    NSNumber *transitionToGPS;
+    NSNumber *transitionToConfirm;
+    NSNumber *transitionToEmergency;
+    NSNumber *resetAll;
+    NSNumber *triggerReport;
 }
 
 @property (nonatomic, retain) NSNumber *airwayWindowOpen;
@@ -31,6 +38,13 @@
 @property (nonatomic, retain) NSNumber *deleteDrugRow;
 @property (nonatomic, retain) NSNumber *demographicsOpen;
 
+@property (nonatomic, retain) NSNumber *transitionToRoc;
+@property (nonatomic, retain) NSNumber *transitionToGPS;
+@property (nonatomic, retain) NSNumber *transitionToConfirm;
+@property (nonatomic, retain) NSNumber *resetAll;
+@property (nonatomic, retain) NSNumber *triggerReport;
+@property (nonatomic, retain) NSNumber *transitionToEmergency;
+
 + (id) sharedAirwayWindowOpen;
 + (id) sharedNODESATWindowOpen;
 
@@ -40,5 +54,12 @@
 + (id) sharedDeleteDrugSection;
 + (id) sharedDeleteDrugRow;
 + (id) sharedDemographicsOpen;
+
++ (id) sharedTransitionToRoc;
++ (id) sharedTransitionToGPS;
++ (id) sharedTransitionToConfirm;
++ (id) sharedResetAll;
++ (id) sharedTriggerReport;
++ (id) sharedTransitionToEmergency;
 
 @end

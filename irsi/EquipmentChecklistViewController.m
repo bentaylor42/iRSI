@@ -126,27 +126,28 @@ NSString * sectionRescue;
     }
 }
 
+//oh fucksticks
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EventLog *sharedEquipmentTicked = [EventLog sharedEquipmentTicked];
     NSDictionary *dict = [equipmentArray objectAtIndex:indexPath.section];
     NSArray *array = [dict objectForKey:@"data"];
     NSString *cellID = @"ChecklistBasic";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.textLabel.text = [array objectAtIndex:indexPath.row];
-    
-    /*
     NSInteger indexSelected;
     NSInteger section0;
     NSInteger section1;
     
-    dict = [equipmentArray objectAtIndex:0];
-    array = [dict objectForKey:@"data"];
-    section0 = [array count];
+    NSDictionary *dictionary = [equipmentArray objectAtIndex:0];
+    NSArray *arr = [dictionary objectForKey:@"data"];
+    section0 = [arr count];
     
-    dict = [equipmentArray objectAtIndex:0];
-    array = [dict objectForKey:@"data"];
-    section1 = [array count];
+    NSDictionary *dic = [equipmentArray objectAtIndex:1];
+    NSArray *ar = [dic objectForKey:@"data"];
+    section1 = [ar count];
+    
+    EventLog *sharedEquipmentTicked = [EventLog sharedEquipmentTicked];
     
     switch (indexPath.section) {
         case 0:
@@ -158,41 +159,40 @@ NSString * sectionRescue;
             break;
             
         case 2:
-            indexSelected = (section1 + indexPath.row);
+            indexSelected = (section0 + section1 + indexPath.row);
             break;
             
         default:
             break;
     }
-    
-    switch ([[[sharedEquipmentTicked equipmentTicked]objectAtIndex:indexSelected]integerValue]) {
-        case 0:
-            cell.imageView.image = [UIImage imageNamed:@"blankTickBox.png"];
-            cell.backgroundColor = [UIColor clearColor];
-            break;
-            
+    switch ([[[sharedEquipmentTicked equipmentTicked] objectAtIndex:indexSelected] integerValue]) {
         case 1:
+            // Selected State
             cell.imageView.image = [UIImage imageNamed:@"completeTickBox.png"];
             cell.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:215.0f/255.0f blue:168.0f/255.0f alpha:1.0];
             break;
             
         case 2:
+            // Failed/ Unsuccessful State
             cell.imageView.image = [UIImage imageNamed:@"FailedTickBox.png"];
             cell.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:174.0f/255.0f blue:174.0f/255.0f alpha:1.0];
             break;
             
         case 3:
+            // Skipped State
             cell.imageView.image = [UIImage imageNamed:@"SkipTickBox.png"];
             cell.backgroundColor = [UIColor colorWithRed:166/255.0f green:196/255.0f blue:244/255.0f alpha:0.4];
+            break;
+            
+        case 0:
+            // Default State
+            cell.imageView.image = [UIImage imageNamed:@"blankTickBox.png"];
+            cell.backgroundColor = [UIColor clearColor];
             break;
             
         default:
             break;
     }
-    */
-    
-    cell.backgroundColor = [UIColor clearColor];
-    
     return cell;
 }
 

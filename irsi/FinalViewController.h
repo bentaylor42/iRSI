@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventLog.h"
+#import "Interactions.h"
+#import "Nationalities.h"
 
-@interface FinalViewController : UIViewController
+@interface FinalViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

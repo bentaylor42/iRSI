@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DrugDoses.h"
 #import "DrugLog.h"
 #import "Interactions.h"
 #import "Nationalities.h"
 #import "InductionAgents.h"
+#import "EventLog.h"
 
 @interface DrugsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

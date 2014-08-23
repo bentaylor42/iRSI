@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DrugDoses.h"
 #import "Nationalities.h"
 #import "DrugLog.h"
 #import "InductionAgents.h"

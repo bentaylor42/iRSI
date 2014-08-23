@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Items</key>
+	<array>
+		<string>Does Everybody Know Their Role?</string>
+		<string>Any Concerns From Team?</string>
+		<string>Is There a Plan for Emergencies?</string>
+		<string>Drugs Ready?</string>
+		<string>Equipment Checked and Working?</string>
+		<string>Is Cricoid Pressure Ready to Start?</string>
+	</array>
+	<key>Cricoid</key>
+	<array>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+		<true/>
+	</array>
+</dict>
+</plist>

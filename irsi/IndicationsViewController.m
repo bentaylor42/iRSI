@@ -66,7 +66,7 @@
         [array addObject:[[sharedIndicationTicked indicationTicked]objectAtIndex:i]];
         
         [fullArray addObject:array];
-    }
+        }
     
     for (NSInteger p = 0; p < [fullArray count]; p ++){
         EventLog *sharedPreHospital = [EventLog sharedPreHospital];
@@ -86,6 +86,7 @@
             }
         }
     }
+    return;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -102,7 +103,34 @@
     if ([[array objectAtIndex:3]integerValue]>0){cellID = @"ChecklistMoreDetail";}
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.textLabel.text = [array objectAtIndex:1];
-    [[cell textLabel] setBackgroundColor:[UIColor clearColor]];
+    switch ([[array objectAtIndex:4] integerValue]) {
+        case 1:
+            // Selected State
+            cell.imageView.image = [UIImage imageNamed:@"completeTickBox.png"];
+            cell.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:215.0f/255.0f blue:168.0f/255.0f alpha:1.0];
+            break;
+            
+        case 2:
+            // Failed/ Unsuccessful State
+            cell.imageView.image = [UIImage imageNamed:@"FailedTickBox.png"];
+            cell.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:174.0f/255.0f blue:174.0f/255.0f alpha:1.0];
+            break;
+            
+        case 3:
+            // Skipped State
+            cell.imageView.image = [UIImage imageNamed:@"SkipTickBox.png"];
+            cell.backgroundColor = [UIColor colorWithRed:166/255.0f green:196/255.0f blue:244/255.0f alpha:0.4];
+            break;
+            
+        case 0:
+            // Default State
+            cell.imageView.image = [UIImage imageNamed:@"blankTickBox.png"];
+            cell.backgroundColor = [UIColor clearColor];
+            break;
+            
+        default:
+            break;
+    }
     return cell;
 }
 

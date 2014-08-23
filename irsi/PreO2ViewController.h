@@ -10,6 +10,7 @@
 #import "EventLog.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Nationalities.h"
+#import "Alerts.h"
 
 @interface PreO2ViewController : UIViewController
 
@@ -22,7 +23,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonStartPreO2;
 
 @property (strong, nonatomic) IBOutlet UILabel *labelTitle;
-
-@property (strong, nonatomic) IBOutlet UILabel *labelColour;
 
 @end

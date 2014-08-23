@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "EventLog.h"
 #import "Nationalities.h"
+#import "Interactions.h"
+#import "DrugLog.h"
+#import "Alerts.h"
+#import "Patient.h"
+#import "EventLog.h"
 
 @interface MainMenuViewController : UIViewController
 

@@ -22,6 +22,7 @@ bool demographicsDown = NO;
 NSInteger pageNumberRSI = 1;
 NSTimer *tabUpdate;
 NSTimer * updateVT;
+NSTimer *alertTimer;
 
 // Declares the strings used on this page
 NSString * back;
@@ -42,6 +43,10 @@ NSString * displayVT;
 NSString * sourceVTestimate;
 NSString * sourceVTentered;
 NSString * sourceVTIBW;
+NSString * tubeSizeTitle;
+NSString * enter;
+NSString * cuffed;
+NSString * unCuffed;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,6 +81,161 @@ NSString * sourceVTIBW;
     updateVT = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(checkUpdates) userInfo:nil repeats:YES];
     
     [self loadVT];
+    
+    alertTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(preO2Alerts) userInfo:nil repeats:YES];
+    
+    [self loadTubeSize];
+    
+    Patient *sharedIsCuffedTube = [Patient sharedIsCuffedTube];
+    if ([[sharedIsCuffedTube isCuffedTube] boolValue] == YES){self.segmentedCuffed.selectedSegmentIndex = 0;}
+    else {self.segmentedCuffed.selectedSegmentIndex = 1;}
+    
+    self.labelTubeSmaller.hidden = YES;
+    self.labelTubeLarger.hidden = YES;
+    
+    [self createKeyboardReturnButton];
+}
+
+-(void) createKeyboardReturnButton
+{
+    //Creates a custom keypad with a return button
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 35.0f)];
+    toolbar.barStyle=UIBarStyleDefault;
+    
+    // Create a flexible space to align buttons to the right
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    //Create a cancel button to dismiss the keyboard
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard:)];
+    
+    // Add buttons to the toolbar
+    [toolbar setItems:[NSArray arrayWithObjects:flexibleSpace, barButtonItem, nil]];
+    
+    // Set the toolbar as accessory view of an UITextField object
+    _textFieldTubeSize.inputAccessoryView = toolbar;
+
+    return;
+}
+
+-(void) dismissKeyboard:(id) sender
+{
+    if ([_textFieldTubeSize isFirstResponder]){
+        [_textFieldTubeSize resignFirstResponder];
+    }
+    
+    return;
+}
+
+// minimises keyboard on tapping elsewhere on screen
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([_textFieldTubeSize isFirstResponder] && [touch view]!= _textFieldTubeSize) {
+        [_textFieldTubeSize resignFirstResponder];
+    }
+    
+    return;
+}
+
+- (void) loadTubeSize{
+    Patient *sharedIsAdult = [Patient sharedIsAdult];
+    Patient *sharedAge = [Patient sharedAge];
+    Patient *sharedIsCuffedTube = [Patient sharedIsCuffedTube];
+    Patient *sharedTubeSize = [Patient sharedTubeSize];
+    
+    if ([[sharedIsAdult isAdult]boolValue] == NO){
+        self.labelTubeLarger.hidden = NO;
+        self.labelTubeSmaller.hidden = NO;
+        [self.segmentedCuffed setEnabled:YES forSegmentAtIndex:1];
+        float rawTubeSize = (([[sharedAge age]floatValue]/4) + 4);
+        if ([[sharedIsCuffedTube isCuffedTube]boolValue] == YES){rawTubeSize = (rawTubeSize - 1);}
+        if ((rawTubeSize - (int) rawTubeSize) == 0.25){rawTubeSize = (int) rawTubeSize;}
+        if ((rawTubeSize - (int) rawTubeSize) == 0.75){rawTubeSize = ((int) rawTubeSize) +0.5;}
+        self.textFieldTubeSize.placeholder = [NSString stringWithFormat:@"%.1f", rawTubeSize];
+        if ([[sharedTubeSize tubeSize]floatValue] >0){
+            rawTubeSize = [[sharedTubeSize tubeSize] floatValue];
+            self.textFieldTubeSize.text = [NSString stringWithFormat:@"%.1f", rawTubeSize];
+        }
+        self.labelTubeSmaller.text = [NSString stringWithFormat:@"%.1f", (rawTubeSize - 0.5)];
+        self.labelTubeLarger.text = [NSString stringWithFormat:@"%.1f", (rawTubeSize + 0.5)];
+    }
+    else{
+        self.labelTubeSmaller.hidden = YES;
+        self.labelTubeLarger.hidden = YES;
+        self.segmentedCuffed.selectedSegmentIndex = 0;
+        [sharedIsCuffedTube setIsCuffedTube:[NSNumber numberWithBool:YES]];
+        [self.segmentedCuffed setEnabled:NO forSegmentAtIndex:1];
+        if ([[sharedTubeSize tubeSize]floatValue] >0){
+            self.textFieldTubeSize.text = [NSString stringWithFormat:@"%.1f", [[sharedTubeSize tubeSize] floatValue]];
+        }
+        else {self.textFieldTubeSize.placeholder = enter;}
+    }
+}
+
+- (void) preO2Alerts{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    
+    bool beepOn = YES;
+    bool flashOn = YES;
+    bool vibrateOn = YES;
+    bool preO2Alert = YES;
+    
+    NSInteger preO2Min = 180;
+    NSInteger preO2Max = 300;
+    
+    if ([defaults objectForKey:@"preO2Min"] != nil){preO2Min = [defaults integerForKey:@"preO2Min"];}
+    if ([defaults objectForKey:@"preO2Max"] != nil){preO2Max = [defaults integerForKey:@"preO2Max"];}
+    if ([defaults objectForKey:@"beepOn"] != nil){beepOn = [defaults boolForKey:@"beepOn"];}
+    if ([defaults objectForKey:@"vibrateOn"] != nil){vibrateOn = [defaults boolForKey:@"vibrateOn"];}
+    if ([defaults objectForKey:@"flashOn"] != nil){flashOn = [defaults boolForKey:@"flashOn"];}
+    if ([defaults objectForKey:@"preO2Alert"] != nil){preO2Alert = [defaults boolForKey:@"preO2Alert"];}
+    
+    Alerts *sharedPreO2AlertOn = [Alerts sharedPreO2AlertOn];
+    Alerts *sharedPreO2Alert1 = [Alerts sharedPreO2Alert1];
+    Alerts *sharedPreO2Alert2 = [Alerts sharedPreO2Alert2];
+    EventLog *sharedPreO2Start = [EventLog sharedPreO2Start];
+    EventLog *sharedPreO2Running = [EventLog sharedPreO2Running];
+    
+   if (([[sharedPreO2AlertOn preO2AlertOn]boolValue] == YES) && ([[sharedPreO2Running preO2Running]boolValue] == YES) && (preO2Alert == YES)){
+        // Calculates elapsed time
+        double timeElapsed = CACurrentMediaTime() - [[sharedPreO2Start preO2Start] doubleValue];
+        bool ping = NO;
+        if ((timeElapsed >= preO2Min) && ([[sharedPreO2Alert1 preO2Alert1]boolValue] == NO)){
+            ping = YES;
+            [sharedPreO2Alert1 setPreO2Alert1:[NSNumber numberWithBool:YES]];
+        }
+        if ((timeElapsed >= preO2Max) && ([[sharedPreO2Alert2 preO2Alert2]boolValue] == NO)){
+            ping = YES;
+            [sharedPreO2Alert2 setPreO2Alert2:[NSNumber numberWithBool:YES]];
+        }
+        if (ping == YES){
+            if (beepOn == YES){AudioServicesPlaySystemSound(1005);}
+            if (vibrateOn == YES){AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);}
+            if (flashOn == YES){
+                // makes the screen flash briefly yellow
+                UIView *flashview = [[UIView alloc] initWithFrame:self.view.bounds];
+                flashview.backgroundColor = [UIColor yellowColor];
+                [self.view addSubview:flashview];
+                [UIView animateWithDuration:0.7 delay:0.1 options:0 animations:^{flashview.alpha = 0.0f;}completion:^(BOOL finished) {
+                    [flashview removeFromSuperview];}];
+                
+                // Flashes the torch after checking it is available on the used device
+                AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+                if ([device hasTorch] == YES)
+                {
+                    [device lockForConfiguration:nil];
+                    [device setTorchMode:AVCaptureTorchModeOn];
+                    [NSThread sleepForTimeInterval:1.0f];
+                    [device setTorchMode:AVCaptureTorchModeOff];
+                    [device unlockForConfiguration];
+                }
+            }
+            ping = NO;
+        }
+    }
+    else{return;}
 }
 
 - (void) loadStrings{
@@ -98,17 +258,24 @@ NSString * sourceVTIBW;
     weightDisplayStatement = [dict objectForKey:@"WeightDisplayStatement"];
     male = [dict objectForKey:@"Male"];
     female = [dict objectForKey:@"Female"];
-    adult = [dict objectForKey:@"Adult"];
     child = [dict objectForKey:@"Child"];
     startRSI = [dict objectForKey:@"StartRSI"];
     displayVT = [dict objectForKey:@"VTDisplay"];
     sourceVTestimate = [dict objectForKey:@"VTSourceEstWt"];
     sourceVTentered = [dict objectForKey:@"VTSourceTotalWt"];
     sourceVTIBW = [dict objectForKey:@"VTSourceIBW"];
+    tubeSizeTitle = [dict objectForKey:@"tubeSizeTitle"];
+    enter = [dict objectForKey:@"enter"];
+    cuffed = [dict objectForKey:@"CuffedTube"];
+    unCuffed = [dict objectForKey:@"UncuffedTube"];
     
     pageListingRSI = @[back, indications, drugs, equipment, team, final, startRSI];
     
     self.labelMoveOn.text = moveOn;
+    self.labelTubeSizeTitle.text = tubeSizeTitle;
+    self.textFieldTubeSize.placeholder = enter;
+    [self.segmentedCuffed setTitle:cuffed forSegmentAtIndex:0];
+    [self.segmentedCuffed setTitle:unCuffed forSegmentAtIndex:1];
 }
 
 - (void) checkUpdates{
@@ -132,16 +299,22 @@ NSString * sourceVTIBW;
     if ([[sharedIbwKnown ibwKnown]boolValue] == YES){
         self.labelWeightSource.text = sourceVTIBW;
         weight = [[sharedIdealBodyWeight idealBodyWeight] floatValue];
+        self.labelDisplayVT.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:215.0f/255.0f blue:168.0f/255.0f alpha:1.0];
+        self.labelWeightSource.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:215.0f/255.0f blue:168.0f/255.0f alpha:1.0];
     }
     
     else if ([[sharedWeightKnown weightKnown] boolValue] == YES){
         self.labelWeightSource.text = sourceVTentered;
         weight = [[sharedWeight weight] floatValue];
+        self.labelDisplayVT.backgroundColor = [UIColor colorWithRed:255/255.0f green:204/255.0f blue:0/255.0f alpha:1.0f];
+        self.labelWeightSource.backgroundColor = [UIColor colorWithRed:255/255.0f green:204/255.0f blue:0/255.0f alpha:1.0f];
     }
     
     else if ([[sharedWeightKnown weightKnown] boolValue] == NO){
         self.labelWeightSource.text = sourceVTestimate;
         weight = [[sharedWeight weight]floatValue];
+        self.labelDisplayVT.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:174.0f/255.0f blue:174.0f/255.0f alpha:1.0];
+        self.labelWeightSource.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:174.0f/255.0f blue:174.0f/255.0f alpha:1.0];
     }
     
     vT6Kg = (weight * 6);
@@ -174,6 +347,7 @@ NSString * sourceVTIBW;
     
     Interactions *sharedDemographicsOpen = [Interactions sharedDemographicsOpen];
     [sharedDemographicsOpen setDemographicsOpen:[NSNumber numberWithBool:NO]];
+    [self loadTubeSize];
 }
 
 
@@ -221,6 +395,7 @@ NSString * sourceVTIBW;
         
         Interactions *sharedDemographicsOpen = [Interactions sharedDemographicsOpen];
         [sharedDemographicsOpen setDemographicsOpen:[NSNumber numberWithBool:NO]];
+        [self loadTubeSize];
     }
     return;
 }
@@ -354,25 +529,27 @@ NSString * sourceVTIBW;
         case 1:
             self.viewIndications.hidden = NO;
             self.viewScroll.hidden = NO;
+            [self.view bringSubviewToFront:_viewIndications];
             break;
             
         case 2:
             self.viewDrugs.hidden = NO;
+            [self.view bringSubviewToFront:_viewDrugs];
             break;
             
         case 3:
             self.viewEquipment.hidden = NO;
-            self.viewScroll.hidden = NO;
+            [self.view bringSubviewToFront:_viewEquipment];
             break;
             
         case 4:
             self.viewTeam.hidden = NO;
-            self.viewScroll.hidden = NO;
+            [self.view bringSubviewToFront:_viewTeam];
             break;
             
         case 5:
             self.viewFinal.hidden = NO;
-            self.viewScroll.hidden = NO;
+            [self.view bringSubviewToFront:_viewFinal];
             break;
             
         default:
@@ -384,16 +561,28 @@ NSString * sourceVTIBW;
 - (IBAction)buttonMoveOn:(id)sender {
     Interactions *sharedAirwayWindowOpen = [Interactions sharedAirwayWindowOpen];
     Interactions *sharedNODESATWindowOpen = [Interactions sharedNODESATWindowOpen];
-    [sharedAirwayWindowOpen setAirwayWindowOpen:[NSNumber numberWithBool:NO]];
-    [sharedNODESATWindowOpen setNodesatWindowOpen:[NSNumber numberWithBool:NO]];
     
-    if (pageNumberRSI == 5){[self performSegueWithIdentifier:@"segueRSItoRoc" sender:self];}
-    if (pageNumberRSI <5)
+    if ([[sharedAirwayWindowOpen airwayWindowOpen] boolValue] == YES)
     {
-        pageNumberRSI ++;
-        [self updateNavigation];
+        [sharedAirwayWindowOpen setAirwayWindowOpen:[NSNumber numberWithBool:NO]];
+        [self.scrollview setContentOffset:CGPointZero animated:YES];
     }
-    if (pageNumberRSI >5){pageNumberRSI = 5; [self updateNavigation];}
+    
+    if ([[sharedNODESATWindowOpen nodesatWindowOpen] boolValue] == YES)
+    {
+        [sharedNODESATWindowOpen setNodesatWindowOpen:[NSNumber numberWithBool:NO]];
+        [self.scrollview setContentOffset:CGPointZero animated:YES];
+    }
+    
+    else{
+        if (pageNumberRSI == 5){[self performSegueWithIdentifier:@"segueRSItoRoc" sender:self];}
+        if (pageNumberRSI <5)
+        {
+            pageNumberRSI ++;
+            [self updateNavigation];
+        }
+        if (pageNumberRSI >5){pageNumberRSI = 5; [self updateNavigation];}
+    }
     
     return;
 }
@@ -615,6 +804,41 @@ NSString * sourceVTIBW;
             break;
     }
     return;
+}
+
+- (IBAction)textFieldTubeSize:(id)sender {
+    Patient *sharedTubeSize = [Patient sharedTubeSize];
+    [sharedTubeSize setTubeSize:[NSNumber numberWithFloat:[self.textFieldTubeSize.text floatValue]]];
+    [self loadTubeSize];
+}
+
+- (IBAction)segmentedCuffed:(id)sender {
+    Patient *sharedIsCuffedTube = [Patient sharedIsCuffedTube];
+    switch (self.segmentedCuffed.selectedSegmentIndex) {
+        case 0:
+            [sharedIsCuffedTube setIsCuffedTube:[NSNumber numberWithBool:YES]];
+            break;
+            
+        case 1:
+            [sharedIsCuffedTube setIsCuffedTube:[NSNumber numberWithBool:NO]];
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self loadTubeSize];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"segueRSItoRoc"]){
+        Interactions *sharedTransitionToRoc = [Interactions sharedTransitionToRoc];
+        [sharedTransitionToRoc setTransitionToRoc:[NSNumber numberWithInt:1]];
+    }
+    pageNumberRSI = 1;
 }
 
 @end

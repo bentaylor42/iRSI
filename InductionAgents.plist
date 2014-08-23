@@ -41,6 +41,8 @@
 		<string>Alfentanil Infusion</string>
 		<string>Tranexamic Acid</string>
 		<string>Noradrenaline</string>
+		<string>Lorazepam</string>
+		<string>Glucose</string>
 	</array>
 	<key>Class</key>
 	<array>
@@ -80,6 +82,8 @@
 		<integer>6</integer>
 		<integer>6</integer>
 		<integer>7</integer>
+		<integer>3</integer>
+		<integer>3</integer>
 		<integer>3</integer>
 	</array>
 	<key>IsMaxMin</key>
@@ -121,6 +125,8 @@
 		<true/>
 		<false/>
 		<true/>
+		<false/>
+		<false/>
 	</array>
 	<key>IsSingleAdultDose</key>
 	<array>
@@ -161,6 +167,8 @@
 		<false/>
 		<true/>
 		<false/>
+		<true/>
+		<true/>
 	</array>
 	<key>MinimumDose</key>
 	<array>
@@ -201,6 +209,8 @@
 		<real>0.5</real>
 		<integer>15</integer>
 		<real>0.04</real>
+		<integer>4</integer>
+		<integer>15000</integer>
 	</array>
 	<key>MaximumDose</key>
 	<array>
@@ -241,6 +251,8 @@
 		<integer>1</integer>
 		<integer>15</integer>
 		<real>0.4</real>
+		<integer>4</integer>
+		<integer>16000</integer>
 	</array>
 	<key>SingleScaledDose</key>
 	<array>
@@ -281,6 +293,8 @@
 		<real>0.5</real>
 		<integer>15</integer>
 		<real>0.04</real>
+		<real>0.1</real>
+		<integer>200</integer>
 	</array>
 	<key>SingleAdultDose</key>
 	<array>
@@ -321,6 +335,8 @@
 		<integer>0</integer>
 		<integer>1000</integer>
 		<integer>0</integer>
+		<integer>4</integer>
+		<integer>15000</integer>
 	</array>
 	<key>NormalConc</key>
 	<array>
@@ -361,6 +377,8 @@
 		<integer>500</integer>
 		<integer>100</integer>
 		<integer>80</integer>
+		<integer>4</integer>
+		<integer>100</integer>
 	</array>
 	<key>UnitType</key>
 	<array>
@@ -399,8 +417,10 @@
 		<integer>0</integer>
 		<integer>1</integer>
 		<integer>5</integer>
-		<integer>0</integer>
+		<integer>7</integer>
 		<integer>5</integer>
+		<string>0</string>
+		<string>2</string>
 	</array>
 	<key>LabelType</key>
 	<array>
@@ -441,6 +461,8 @@
 		<integer>5</integer>
 		<integer>0</integer>
 		<integer>7</integer>
+		<integer>1</integer>
+		<integer>0</integer>
 	</array>
 	<key>IsVasopressor</key>
 	<array>
@@ -481,9 +503,13 @@
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>1</integer>
+		<integer>0</integer>
+		<integer>0</integer>
 	</array>
 	<key>ManualDose</key>
 	<array>
+		<integer>0</integer>
+		<integer>0</integer>
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>0</integer>
@@ -561,6 +587,8 @@
 		<true/>
 		<true/>
 		<true/>
+		<true/>
+		<true/>
 	</array>
 	<key>PaedsMin</key>
 	<array>
@@ -601,6 +629,8 @@
 		<real>0.5</real>
 		<integer>15</integer>
 		<real>0.04</real>
+		<real>0.1</real>
+		<integer>200</integer>
 	</array>
 	<key>PaedsMax</key>
 	<array>
@@ -641,6 +671,8 @@
 		<integer>1</integer>
 		<integer>15</integer>
 		<real>0.4</real>
+		<real>0.1</real>
+		<integer>500</integer>
 	</array>
 	<key>PaedsSingleScaledDose</key>
 	<array>
@@ -681,6 +713,8 @@
 		<real>0.5</real>
 		<integer>15</integer>
 		<real>0.04</real>
+		<real>0.1</real>
+		<integer>200</integer>
 	</array>
 	<key>PaedsMaxTotal</key>
 	<array>
@@ -721,7 +755,92 @@
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>1000</integer>
-		<integer>0</integer>
+		<integer>4</integer>
+		<integer>16000</integer>
+	</array>
+	<key>Active</key>
+	<array>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<false/>
+		<false/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+	</array>
+	<key>PHEM</key>
+	<array>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+		<false/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
+		<true/>
 	</array>
 </dict>
 </plist>

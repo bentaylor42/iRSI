@@ -20,4 +20,32 @@
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl * segmentedDrugDoseDisplayType;
 
+@property (strong, nonatomic) IBOutlet UISwitch *switchCricoid;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldPreO2Min;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldPreO2Max;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldRocMin;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldRocMax;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switchBeepOn;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switchVibrateOn;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switchFlashOn;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldBeepInterval;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldVibrateInterval;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldFlashInterval;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switchPreO2Alert;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switchRocAlert;
+
+@property (strong, nonatomic) IBOutlet UISwitch *switch30SAlert;
+
 @end

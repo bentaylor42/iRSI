@@ -48,6 +48,11 @@ NSString * stopString;
     self.buttonStopPreO2.enabled = NO;
     self.labelTitle.hidden = YES;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    if ([defaults objectForKey:@"preO2Min"] != nil){preO2Min = [defaults integerForKey:@"preO2Min"];}
+    if ([defaults objectForKey:@"preO2Max"] != nil){preO2Max = [defaults integerForKey:@"preO2Max"];}
+    
     [self checkState];
     entice = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(entice) userInfo:nil repeats:YES];
     return;
@@ -88,6 +93,13 @@ NSString * stopString;
     
     EventLog *sharedPreO2Running = [EventLog sharedPreO2Running];
     EventLog *sharedPreO2Start = [EventLog sharedPreO2Start];
+    Alerts *sharedPreO2AlertOn = [Alerts sharedPreO2AlertOn];
+    Alerts *sharedPreO2Alert1 = [Alerts sharedPreO2Alert1];
+    Alerts *sharedPreO2Alert2 = [Alerts sharedPreO2Alert2];
+    
+    [sharedPreO2AlertOn setPreO2AlertOn:[NSNumber numberWithBool:YES]];
+    [sharedPreO2Alert1 setPreO2Alert1:[NSNumber numberWithBool:NO]];
+    [sharedPreO2Alert2 setPreO2Alert2:[NSNumber numberWithBool:NO]];
     
     [sharedPreO2Start setPreO2Start:[NSNumber numberWithDouble:CACurrentMediaTime()]];
     [sharedPreO2Running setPreO2Running:[NSNumber numberWithBool:YES]];
@@ -166,6 +178,9 @@ NSString * stopString;
 {
     EventLog *sharedPreO2Running = [EventLog sharedPreO2Running];
     EventLog *sharedTotalPreO2 = [EventLog sharedTotalPreO2];
+    Alerts *sharedPreO2AlertOn = [Alerts sharedPreO2AlertOn];
+    
+    [sharedPreO2AlertOn setPreO2AlertOn:[NSNumber numberWithBool:NO]];
     
     _imageBorder.image = [UIImage imageNamed:@"WhiteBackgroundBorderedBlack.png"];
     self.labelPreO2Time.hidden = YES;

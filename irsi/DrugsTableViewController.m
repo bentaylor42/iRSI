@@ -554,6 +554,8 @@ NSString * notPaeds;
     NSInteger drugLabelInt;
     NSString *drugLabelString;
     NSString *alternateLabel;
+    NSString *doseLabel;
+    NSString *calcDoseString;
     
     float weight = 70.0;
     bool isAdult = YES;
@@ -585,6 +587,8 @@ NSString * notPaeds;
     float paedsMax = 0;
     float paedsSingle = 0;
     float paedsMaxTotal = 0;
+    
+    bool manualDoseSelected = NO;
     
     DrugLog *sharedDrugDoseDisplayType = [DrugLog sharedDrugDoseDisplayType];
     Patient *sharedIsAdult = [Patient sharedIsAdult];
@@ -623,41 +627,62 @@ NSString * notPaeds;
             case 0:
                 concLabelValue = @"mg/ml";
                 alternateLabel = @"mg";
+                doseLabel = @"mg/kg";
                 break;
                 
             case 1:
                 concLabelValue = @"micrograms/ml";
                 alternateLabel = @"micrograms";
+                doseLabel = @"micrograms/kg";
                 break;
                 
             case 2:
                 concLabelValue = @"%";
                 alternateLabel = @"mg";
+                doseLabel = @"mg/kg";
                 isPercent = YES;
                 break;
                 
             case 3:
                 concLabelValue =@"";
                 alternateLabel = @"mls";
+                doseLabel = @"mls";
                 break;
                 
             case 4:
                 concLabelValue =@"mg/ml";
                 alternateLabel =@"mcg/min";
+                doseLabel = @"mcg/kg/min";
                 isInfusion = YES;
                 break;
                 
             case 5:
                 concLabelValue =@"micrograms/ml";
                 alternateLabel = @"mcg/min";
+                doseLabel = @"mcg/kg/min";
                 isInfusion = YES;
                 break;
                 
             case 6:
                 concLabelValue = @"%";
                 alternateLabel = @"mcg/min";
+                doseLabel = @"mcg/kg/min";
                 isInfusion = YES;
                 isPercent = YES;
+                break;
+                
+            case 7:
+                if (isAdult == YES){
+                    concLabelValue = @"mg/ml";
+                    alternateLabel = @"grams";
+                    doseLabel = @"grams";
+                }
+                else {
+                    concLabelValue = @"mg/ml";
+                    alternateLabel = @"mg";
+                    doseLabel = @"mg/kg";
+                }
+                break;
                 
                 default:
                 break;
@@ -707,16 +732,35 @@ NSString * notPaeds;
     // Calculates the dose for weight
     if (isAdult == YES){
         if (isSingleAdultDose == YES){
+            // Displays doses > 1000mg as grams
+            doseLabel = @"mg";
             minDose = singleAdultDose;
             maxDose = minDose;
+            if (singleAdultDose<1){calcDoseString = [NSString stringWithFormat:@"%.1f", singleAdultDose];}
+            else {calcDoseString = [NSString stringWithFormat:@"%i", (int) singleAdultDose];}
+            if ([[[array objectAtIndex:indexPath.row] objectAtIndex:9]integerValue] == 1){doseLabel = @"micrograms";}
+            if (([[[array objectAtIndex:indexPath.row] objectAtIndex:9]integerValue] == 7) && ([[sharedDrugDoseDisplayType drugDoseDisplayType] integerValue] != 0) && (singleAdultDose > 999)){
+                minDose = singleAdultDose/1000;
+                maxDose = minDose;
+                doseLabel = @"grams";
+                if (minDose<1){calcDoseString = [NSString stringWithFormat:@"%.1f", minDose];}
+                else {calcDoseString = [NSString stringWithFormat:@"%i", (int) minDose];}}
         }
         else if (isMaxMin == NO){
             minDose = (singleScaledDose * weight);
             maxDose = minDose;
+            if (singleScaledDose<1){calcDoseString = [NSString stringWithFormat:@"%.1f", singleScaledDose];}
+            else {calcDoseString = [NSString stringWithFormat:@"%i", (int) singleScaledDose];}
+            if (singleScaledDose<0.1){calcDoseString = [NSString stringWithFormat:@"%.2f", singleScaledDose];}
+            if (singleScaledDose<0.01){calcDoseString = [NSString stringWithFormat:@"%.1f", singleScaledDose];}
         }
         else{
             minDose = (minimumDose *weight);
             maxDose = (maximumDose *weight);
+            if ((minimumDose != (int)minimumDose) || (maximumDose != (int) maximumDose)){calcDoseString = [NSString stringWithFormat:@"%.1f - %.1f", minimumDose, maximumDose];}
+            else {calcDoseString = [NSString stringWithFormat:@"%i - %i", (int) minimumDose, (int) maximumDose];}
+            if (minimumDose < 0.1){calcDoseString = [NSString stringWithFormat:@"%.2f - %.2f", minimumDose, maximumDose];}
+            if (minimumDose < 0.01){calcDoseString = [NSString stringWithFormat:@"%.3f - %.3f", minimumDose, maximumDose];}
         }
     }
     
@@ -724,10 +768,19 @@ NSString * notPaeds;
         if (isMaxMin == NO){
             minDose = (paedsSingle * weight);
             maxDose = minDose;
+            if (paedsSingle <1){calcDoseString = [NSString stringWithFormat:@"%.1f", paedsSingle];}
+            else {calcDoseString = [NSString stringWithFormat:@"%i", (int) paedsSingle];}
+            if (paedsSingle < 0.1){calcDoseString = [NSString stringWithFormat:@"%.2f", paedsSingle];}
+            if (paedsSingle < 0.01){calcDoseString = [NSString stringWithFormat:@"%.3f", paedsSingle];}
         }
         if (isMaxMin == YES){
             minDose = (paedsMin *weight);
             maxDose = (paedsMax *weight);
+            if ((paedsMin != (int)paedsMin) || (paedsMax != (int) paedsMax)){calcDoseString = [NSString stringWithFormat:@"%.1f - %.1f", paedsMin, paedsMax];}
+            else {calcDoseString = [NSString stringWithFormat:@"%i - %i", (int) paedsMin, (int) paedsMax];}
+            if (paedsMin < 0.1){calcDoseString = [NSString stringWithFormat:@"%.2f - %.2f", paedsMin, paedsMax];}
+            if (paedsMin < 0.01){calcDoseString = [NSString stringWithFormat:@"%.3f - %.3f", paedsMin, paedsMax];}
+            
         }
         if (paedsMaxTotal > 0){
             if (minDose > paedsMaxTotal){minDose = paedsMaxTotal;}
@@ -766,10 +819,12 @@ NSString * notPaeds;
         else {calculatedMls = [NSString stringWithFormat:@"%i - %i", (int) minVolume, (int) maxVolume];}
     }
     
-    
-    
     // if there is an entered manual dose, fills it into the dose display text field
     if (manualDose>0){
+        manualDoseSelected = YES;
+        // Displays doses > 1000mg as grams
+        if (([[[array objectAtIndex:indexPath.row] objectAtIndex:9]integerValue] == 7) && (isAdult == YES) && ([[sharedDrugDoseDisplayType drugDoseDisplayType] integerValue] != 0) && (manualDose > 999)){
+            manualDose = manualDose/1000;}
         if (manualDose <5){enteredMg = [NSString stringWithFormat:@"%.1f",manualDose];}
         else {enteredMg = [NSString stringWithFormat:@"%i",(int) manualDose];}
         float volume = (manualDose/concentration);
@@ -803,9 +858,19 @@ NSString * notPaeds;
         if (manualDose==0){doseTextField.text = @"";}
         if (minDose == 0){doseTextField.placeholder = doseString;}
     }
+    if ([[sharedDrugDoseDisplayType drugDoseDisplayType] integerValue] == 2){
+        labelMlsMgs.text = doseLabel;
+        concTextField.hidden = YES;
+        concTextField.enabled = NO;
+        doseTextField.text = enteredMg;
+        doseTextField.placeholder = calcDoseString;
+        if (manualDose==0){doseTextField.text = @"";}
+        if (minDose == 0){doseTextField.placeholder = doseString;}
+        if (manualDoseSelected == YES){labelMlsMgs.text = alternateLabel;}
+    }
     
     // Hides placeholder for drugs not indicated in children, if patient is a child
-    if ((isAdult == NO) && (safePaeds == NO)){
+    if ((isAdult == NO) && (safePaeds == NO) && (blank == NO)){
         doseTextField.placeholder = notPaeds;
     }
     
@@ -1058,7 +1123,7 @@ NSString * notPaeds;
 
 
 
-- (bool) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+- (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
 
@@ -1203,6 +1268,8 @@ NSString * notPaeds;
         InductionAgents *sharedInductionClass = [InductionAgents sharedInductionClass];
         InductionAgents *sharedManualDose = [InductionAgents sharedManualDose];
         DrugLog *sharedDrugDoseDisplayType = [DrugLog sharedDrugDoseDisplayType];
+        Patient *sharedIsAdult = [Patient sharedIsAdult];
+        Patient *sharedWeight = [Patient sharedWeight];
         
         // gets the present drug concentration
         NSMutableArray *change = [[NSMutableArray alloc]init];
@@ -1215,6 +1282,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1226,6 +1296,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1242,6 +1316,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1253,6 +1330,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1269,6 +1350,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1280,6 +1364,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1296,6 +1384,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1307,6 +1398,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1323,6 +1418,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1334,6 +1432,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1350,6 +1452,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1361,6 +1466,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1377,6 +1486,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1388,6 +1500,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if ([[sharedIsAdult isAdult]boolValue] == YES){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:
@@ -1404,6 +1520,9 @@ NSString * notPaeds;
                 if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 0) {
                     enteredDose = (enteredDose * concentration);
                 }
+                if ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] == 2) {
+                    if (([[change objectAtIndex:3]boolValue] == NO) || ([[sharedIsAdult isAdult]boolValue] == NO)){
+                        enteredDose = (enteredDose * [[sharedWeight weight]floatValue]);}}
                 switch (infusionType) {
                     case 4:
                         enteredDose = ((enteredDose *1000)/60);
@@ -1415,6 +1534,10 @@ NSString * notPaeds;
                         
                     case 6:
                         enteredDose = ((enteredDose *1000)/60);
+                        break;
+                        
+                    case 7:
+                        if (([[sharedIsAdult isAdult]boolValue] && ([[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue] > 0) == YES)){enteredDose = (enteredDose *1000);}
                         break;
                         
                     default:

@@ -12,6 +12,10 @@
 #import "Interactions.h"
 #import "IndicationsViewController.h"
 #import "Nationalities.h"
+#import "Alerts.h"
+#import "DrugLog.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface RSINowViewController : UIViewController
 
@@ -55,4 +59,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *labelWeightSource;
 
+@property (strong, nonatomic) IBOutlet UILabel *labelTubeSizeTitle;
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldTubeSize;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTubeLarger;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTubeSmaller;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedCuffed;
 @end
