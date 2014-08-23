@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Items</key>
+	<array>
+		<string>Consistent End-Tidal CO2 Trace</string>
+		<string>Tube Seen to Pass Cords</string>
+		<string>Equal Air Entry</string>
+		<string>Chest X-Ray if Required</string>
+		<string>Secure for Transfer</string>
+		<string>ETT Length Appropriate:</string>
+	</array>
+	<key>PHEM</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>2</integer>
+		<integer>1</integer>
+		<integer>0</integer>
+	</array>
+</dict>
+</plist>
