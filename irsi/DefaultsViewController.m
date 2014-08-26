@@ -8,7 +8,19 @@
 
 #import "DefaultsViewController.h"
 
-@interface DefaultsViewController ()
+@interface DefaultsViewController (){
+    NSMutableArray *displayNamesArray;
+    NSMutableArray *displayLabelArray;
+    NSMutableArray *displaySelectedArray;
+    NSMutableArray *displayIndexArray;
+    NSMutableArray *customLabelDisplayArray;
+    
+    NSArray *defaultInductionAgent;
+    NSArray *defaultRelaxant;
+    NSArray *defaultVasopressor;
+    NSArray *defaultAntimuscarinic;
+    NSArray *defaultSedation;
+}
 
 @end
 
@@ -143,7 +155,7 @@
     NSInteger preO2Max = 300;
     NSInteger rocMin = 60;
     NSInteger rocMax = 120;
-    NSInteger drugDisplayTypeSelected = 2;
+    NSInteger drugDisplayTypeSelected = 0;
     NSInteger beepInterval = 30;
     NSInteger vibrateInterval = 30;
     NSInteger flashInterval = 30;
@@ -170,6 +182,12 @@
     if ([defaults objectForKey:@"vibrateInterval"] != nil){vibrateInterval = [defaults integerForKey:@"vibrateInterval"];}
     if ([defaults objectForKey:@"flashInterval"] != nil){flashInterval = [defaults integerForKey:@"flashInterval"];}
     
+    if ([defaults objectForKey:@"inductionAgent"] != nil){defaultInductionAgent = [defaults arrayForKey:@"inductionAgent"];}
+    if ([defaults objectForKey:@"Relaxant"] != nil){defaultRelaxant = [defaults arrayForKey:@"Relaxant"];}
+    if ([defaults objectForKey:@"Vasopressor"] != nil){defaultVasopressor = [defaults arrayForKey:@"Vasopressor"];}
+    if ([defaults objectForKey:@"Antimuscarininic"] != nil){defaultAntimuscarinic = [defaults arrayForKey:@"Antimuscarininic"];}
+    if ([defaults arrayForKey:@"Sedation"] != nil){defaultSedation = [defaults arrayForKey:@"Sedation"];}
+    
     // Defines the variables to singletons - if there is a pre-saved default, then saves it.  Else uses the pre-defined defaults
     EventLog *sharedPreHospital = [EventLog sharedPreHospital];
     
@@ -194,6 +212,77 @@
     self.textFieldBeepInterval.placeholder = [NSString stringWithFormat:@"%li", (long)beepInterval];
     self.textFieldFlashInterval.placeholder = [NSString stringWithFormat:@"%li", (long)flashInterval];
     self.textFieldVibrateInterval.placeholder = [NSString stringWithFormat:@"%li", (long)vibrateInterval];
+    
+    [self loadDrugs];
+}
+
+- (void) loadDrugs{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    
+    [self loadDrugLabels];
+    Nationalities *sharedDrugLabels = [Nationalities sharedDrugLabels];
+    
+    if ([defaults objectForKey:@"inductionAgent"] != nil){
+        self.labelIA.text = [defaultInductionAgent objectAtIndex:0];
+        [self.buttonIA setImage:[UIImage imageNamed:[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultInductionAgent objectAtIndex:10]intValue]]] forState:UIControlStateNormal];
+    }
+    if ([defaults objectForKey:@"inductionAgent"] == nil){
+        self.labelIA.text = @"No Default";
+        [self.buttonIA setImage:[UIImage imageNamed:@"BlankAgent.png"] forState:UIControlStateNormal];
+    }
+    
+    if ([defaults objectForKey:@"Relaxant"] != nil){
+        self.labelRelaxant.text = [defaultRelaxant objectAtIndex:0];
+        [self.buttonRelaxant setImage:[UIImage imageNamed:[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultRelaxant objectAtIndex:10]intValue]]] forState:UIControlStateNormal];
+    }
+    if ([defaults objectForKey:@"Relaxant"] == nil){
+        self.labelRelaxant.text = @"No Default";
+        [self.buttonRelaxant setImage:[UIImage imageNamed:@"BlankAgent.png"] forState:UIControlStateNormal];
+    }
+    
+    if ([defaults objectForKey:@"Vasopressor"] != nil){
+        self.labelVasopressor.text = [defaultVasopressor objectAtIndex:0];
+        [self.buttonVasopressor setImage:[UIImage imageNamed:[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultVasopressor objectAtIndex:10]intValue]]] forState:UIControlStateNormal];
+    }
+    if ([defaults objectForKey:@"Vasopressor"] == nil){
+        self.labelVasopressor.text = @"No Default";
+        [self.buttonVasopressor setImage:[UIImage imageNamed:@"BlankAgent.png"] forState:UIControlStateNormal];
+    }
+    
+    if ([defaults objectForKey:@"Antimuscarininic"] != nil){
+        self.labelAntimuscarininc.text = [defaultAntimuscarinic objectAtIndex:0];
+        [self.buttonAntimuscarininic setImage:[UIImage imageNamed:[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultAntimuscarinic objectAtIndex:10]intValue]]] forState:UIControlStateNormal];
+    }
+    if ([defaults objectForKey:@"Antimuscarininic"] == nil){
+        self.labelAntimuscarininc.text = @"No Default";
+        [self.buttonAntimuscarininic setImage:[UIImage imageNamed:@"BlankAgent.png"] forState:UIControlStateNormal];
+    }
+    
+    if ([defaults objectForKey:@"Sedation"] != nil){
+        self.labelOnogingSedation.text = [defaultSedation objectAtIndex:0];
+        [self.buttonOngoingSed setImage:[UIImage imageNamed:[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultSedation objectAtIndex:10]intValue]]] forState:UIControlStateNormal];
+    }
+    if ([defaults objectForKey:@"Sedation"] == nil){
+        self.labelOnogingSedation.text = @"No Default";
+        [self.buttonOngoingSed setImage:[UIImage imageNamed:@"BlankAgent.png"] forState:UIControlStateNormal];
+    }
+    
+    // Changes text colour for sux and adrenaline labels
+    self.labelRelaxant.font = [UIFont systemFontOfSize:12];
+    self.labelRelaxant.textColor = [UIColor blackColor];
+    self.labelVasopressor.font = [UIFont systemFontOfSize:12];
+    self.labelVasopressor.textColor = [UIColor blackColor];
+    
+    if ([[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultRelaxant objectAtIndex:10]intValue]] isEqualToString: @"Sux.png"]){
+        self.labelRelaxant.font = [UIFont boldSystemFontOfSize:12];
+        self.labelRelaxant.textColor = [UIColor redColor];
+    }
+    
+    if ([[[sharedDrugLabels drugLabels]objectAtIndex:[[defaultVasopressor objectAtIndex:10]intValue]] isEqualToString: @"adrenaline.png"]){
+        self.labelVasopressor.font = [UIFont boldSystemFontOfSize:12];
+        self.labelVasopressor.textColor = [UIColor colorWithRed:216.0f/255.0f green:10.0f/255.0f blue:216.0f/255.0f alpha:1.0];
+    }
 }
 
 - (IBAction)switchPHEM:(id)sender
@@ -376,5 +465,340 @@
     return;
 }
 
+NSInteger openSection = 0;
+bool vasopressor = NO;
+bool antimuscarininic = NO;
+
+- (IBAction)buttonIA:(id)sender {
+    self.viewDrugChoice.hidden = NO;
+    self.viewDrugChoice.alpha = 1;
+    openSection = 0;
+    [self loadDrugLabels];
+    [self populateTable];
+}
+- (IBAction)buttonRelaxant:(id)sender {
+    self.viewDrugChoice.hidden = NO;
+    self.viewDrugChoice.alpha = 1;
+    openSection = 1;
+    [self loadDrugLabels];
+    [self populateTable];
+}
+- (IBAction)buttonVasopressor:(id)sender {
+    self.viewDrugChoice.hidden = NO;
+    self.viewDrugChoice.alpha = 1;
+    openSection = 3;
+    vasopressor = YES;
+    [self loadDrugLabels];
+    [self populateTable];
+}
+- (IBAction)buttonAntimuscarininic:(id)sender {
+    self.viewDrugChoice.hidden = NO;
+    self.viewDrugChoice.alpha = 1;
+    openSection = 3;
+    antimuscarininic = YES;
+    [self loadDrugLabels];
+    [self populateTable];
+}
+- (IBAction)buttonOngoingSedation:(id)sender {
+    self.viewDrugChoice.hidden = NO;
+    self.viewDrugChoice.alpha = 1;
+    openSection = 5;
+    [self loadDrugLabels];
+    [self populateTable];
+}
+
+- (IBAction)buttonClose:(id)sender {
+    self.viewDrugChoice.hidden = YES;
+    self.viewDrugChoice.alpha = 0;
+    vasopressor = NO;
+    antimuscarininic = NO;
+}
+
+- (void) loadDrugLabels
+{
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults synchronize];
+        
+        Nationalities *sharedNationality = [Nationalities sharedNationality];
+        Nationalities *sharedDrugLabels = [Nationalities sharedDrugLabels];
+        Nationalities *sharedNationalityArray = [Nationalities sharedNationalityArray];
+        
+        if ([defaults objectForKey:@"Nationality"] != nil){[sharedNationality setNationality:[NSNumber numberWithInteger:[defaults integerForKey:@"Nationalities"]]];}
+        
+        // Find out path of druglabels.plist file
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"NationalDrugLabels" ofType:@"plist"];
+        
+        // Get the string for the country name of the chosen country
+        NSString *country = [[sharedNationalityArray nationalityArray] objectAtIndex:[[sharedNationality nationality] integerValue]];
+        
+        // Load the file content and read the data into an array
+        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+        [sharedDrugLabels setDrugLabels:[dict objectForKey:country]];
+        
+        return;
+}
+
+- (void) populateTable
+{
+    InductionAgents *sharedInductionName = [InductionAgents sharedInductionName];
+    InductionAgents *sharedInductionClass = [InductionAgents sharedInductionClass];
+    InductionAgents *sharedInductionIsMaxMin = [InductionAgents sharedInductionIsMaxMin];
+    InductionAgents *sharedInductionIsSingleAdultDose = [InductionAgents sharedInductionIsSingleAdultDose];
+    InductionAgents *sharedInductionMinimumDose = [InductionAgents sharedInductionMinimumDose];
+    InductionAgents *sharedInductionMaximumDose = [InductionAgents sharedInductionMaximumDose];
+    InductionAgents *sharedInductionSingleScaledDose = [InductionAgents sharedInductionSingleScaledDose];
+    InductionAgents *sharedInductionSingleAdultDose = [InductionAgents sharedInductionSingleAdultDose];
+    InductionAgents *sharedInductionNormalConc = [InductionAgents sharedInductionNormalConc];
+    InductionAgents *sharedInductionUnitType = [InductionAgents sharedInductionUnitType];
+    InductionAgents *sharedInductionLabelType = [InductionAgents sharedInductionLabelType];
+    InductionAgents *sharedIsVasopressor = [InductionAgents sharedIsVasopressor];
+    InductionAgents *sharedManualDose = [InductionAgents sharedManualDose];
+    InductionAgents *sharedSafePaeds = [InductionAgents sharedSafePaeds];
+    InductionAgents *sharedPaedsMin = [InductionAgents sharedPaedsMin];
+    InductionAgents *sharedPaedsMax = [InductionAgents sharedPaedsMax];
+    InductionAgents *sharedPaedsSingle = [InductionAgents sharedPaedsSingle];
+    InductionAgents *sharedPaedsMaxTotal = [InductionAgents sharedPaedsMaxTotal];
+    
+    Nationalities *sharedDrugLabels = [Nationalities sharedDrugLabels];
+    
+    // Find out the path of InductionAgents.plist
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"InductionAgents" ofType:@"plist"];
+    
+    // Load the file content and read the data into arrays
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    [sharedInductionName setInductionName:[dict objectForKey:@"DrugName"]];
+    [sharedInductionClass setInductionClass:[dict objectForKey:@"Class"]];
+    [sharedInductionIsMaxMin setInductionIsMaxMin:[dict objectForKey:@"IsMaxMin"]];
+    [sharedInductionIsSingleAdultDose setInductionIsSingleAdultDose:[dict objectForKey:@"IsSingleAdultDose"]];
+    [sharedInductionMinimumDose setInductionMinimumDose:[dict objectForKey:@"MinimumDose"]];
+    [sharedInductionMaximumDose setInductionMaximumDose:[dict objectForKey:@"MaximumDose"]];
+    [sharedInductionSingleScaledDose setInductionSingleScaledDose:[dict objectForKey:@"SingleScaledDose"]];
+    [sharedInductionSingleAdultDose setInductionSingleAdultDose:[dict objectForKey:@"SingleAdultDose"]];
+    [sharedInductionNormalConc setInductionNormalConc:[dict objectForKey:@"NormalConc"]];
+    [sharedInductionUnitType setInductionUnitType:[dict objectForKey:@"UnitType"]];
+    [sharedInductionLabelType setInductionLabelType:[dict objectForKey:@"LabelType"]];
+    [sharedIsVasopressor setIsVasopressor:[dict objectForKey:@"IsVasopressor"]];
+    //if ([sharedManualDose manualDose] == nil){[sharedManualDose setManualDose:[dict objectForKey:@"ManualDose"]];}
+    for (NSInteger t = 0; t < [[sharedInductionName inductionName]count]; t++)
+    {
+        if ([[sharedManualDose manualDose]count] < t){[[sharedManualDose manualDose] addObject:[NSNumber numberWithInt:0]];}
+    }
+    [sharedSafePaeds setSafePaeds:[dict objectForKey:@"SafeInPaeds"]];
+    [sharedPaedsMin setPaedsMin:[dict objectForKey:@"PaedsMin"]];
+    [sharedPaedsMax setPaedsMax:[dict objectForKey:@"PaedsMax"]];
+    [sharedPaedsSingle setPaedsSingle:[dict objectForKey:@"PaedsSingleScaledDose"]];
+    [sharedPaedsMaxTotal setPaedsMaxTotal:[dict objectForKey:@"PaedsMaxTotal"]];
+    
+    // Initialises the display array
+    displayNamesArray = [[NSMutableArray alloc] init];
+    displayLabelArray = [[NSMutableArray alloc] init];
+    displayIndexArray = [[NSMutableArray alloc] init];
+    customLabelDisplayArray = [[NSMutableArray alloc] init];
+    
+    // Goes through the entire drug database and populates an array
+    NSInteger i = 0;
+    for (i = 0; i < [sharedInductionClass inductionClass].count; i++)
+    {
+                if ([[sharedManualDose manualDose] count] <= i){[[sharedManualDose manualDose] addObject:[NSNumber numberWithInt:0]];}
+                
+                if (([[[sharedInductionClass inductionClass]objectAtIndex:i]integerValue] == openSection) && ((openSection != 3) || ((vasopressor == YES) && ([[[sharedIsVasopressor isVasopressor]objectAtIndex:i]intValue] == 1)) || ((antimuscarininic == YES) && ([[[sharedIsVasopressor isVasopressor]objectAtIndex:i]intValue] == 2))))
+                {
+                    [displayNamesArray addObject:[[sharedInductionName inductionName] objectAtIndex:i]];
+                    NSInteger label = [[[sharedInductionLabelType inductionLabelType] objectAtIndex:i] integerValue];
+                    [customLabelDisplayArray addObject:[NSNumber numberWithInteger:label]];
+                    [displayLabelArray addObject:[[sharedDrugLabels drugLabels] objectAtIndex:label]];
+                    [displayIndexArray addObject:[NSNumber numberWithInteger:i]];
+                }
+    }
+    if ([displayNamesArray containsObject:@"No Default"]){
+        NSInteger index = [displayNamesArray indexOfObject:@"No Default"];
+        [displayNamesArray removeObjectAtIndex:index];
+        [displayIndexArray removeObjectAtIndex:index];
+    }
+    [displayNamesArray addObject:@"No Default"];
+    [displayIndexArray addObject:[NSNumber numberWithInteger:1000]];
+    
+    [self.tableDrugSelector reloadData];
+    return;
+}
+
+// Creates a tableview with one section
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+// Calculates the number of rows to display based on the count of the display array
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [displayNamesArray count];
+}
+
+// defines the cells
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"drugDisplayCheck"];
+    
+    // Defines the labels by tag number
+    UILabel *drugName = (UILabel *) [cell viewWithTag:100];
+    UIImageView *drugLabel = (UIImageView *)[cell viewWithTag:103];
+    UIImageView *tick = (UIImageView *)[cell viewWithTag:1];
+    NSInteger label;
+    
+    drugName.text = [displayNamesArray objectAtIndex:indexPath.row];
+    if ([[displayNamesArray objectAtIndex:indexPath.row] isEqualToString:@"No Default"]){
+        [drugLabel setImage:[UIImage imageNamed:@"BlankAgent.png"]];
+        label = 0;
+        drugName.font = [UIFont systemFontOfSize:12];
+        drugName.textColor = [UIColor blackColor];
+    }
+    else{
+        [drugLabel setImage:[UIImage imageNamed:[displayLabelArray objectAtIndex:indexPath.row]]];
+        label = [[customLabelDisplayArray objectAtIndex:indexPath.row]integerValue];
+        drugName.font = [UIFont systemFontOfSize:12];
+        drugName.textColor = [UIColor blackColor];
+        
+        // Changes text colour for sux and adrenaline labels
+        if ([[displayLabelArray objectAtIndex:indexPath.row]  isEqualToString: @"Sux.png"]){
+            drugName.font = [UIFont boldSystemFontOfSize:12];
+            drugName.textColor = [UIColor redColor];
+        }
+        
+        if ([[displayLabelArray objectAtIndex:indexPath.row] isEqualToString: @"adrenaline.png"]){
+            drugName.font = [UIFont boldSystemFontOfSize:12];
+            drugName.textColor = [UIColor colorWithRed:216.0f/255.0f green:10.0f/255.0f blue:216.0f/255.0f alpha:1.0];
+        }
+        
+        // places a checkmark next to selected items
+        if ([[displaySelectedArray objectAtIndex:indexPath.row] boolValue] == YES){
+            [tick setImage:[UIImage imageNamed:@"completeTickBox.png"]];
+            cell.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:215.0f/255.0f blue:168.0f/255.0f alpha:1.0];
+        }
+        if ([[displaySelectedArray objectAtIndex:indexPath.row] boolValue] == NO){
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            [tick setImage:[UIImage imageNamed:@"blankTickBox.png"]];
+            cell.backgroundColor = [UIColor clearColor];
+        }
+    }
+    
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+
+// - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Loads singletons
+    
+    InductionAgents *sharedInductionName = [InductionAgents sharedInductionName];
+    InductionAgents *sharedInductionClass = [InductionAgents sharedInductionClass];
+    InductionAgents *sharedInductionIsMaxMin = [InductionAgents sharedInductionIsMaxMin];
+    InductionAgents *sharedInductionIsSingleAdultDose = [InductionAgents sharedInductionIsSingleAdultDose];
+    InductionAgents *sharedInductionMinimumDose = [InductionAgents sharedInductionMinimumDose];
+    InductionAgents *sharedInductionMaximumDose = [InductionAgents sharedInductionMaximumDose];
+    InductionAgents *sharedInductionSingleScaledDose = [InductionAgents sharedInductionSingleScaledDose];
+    InductionAgents *sharedInductionSingleAdultDose = [InductionAgents sharedInductionSingleAdultDose];
+    InductionAgents *sharedInductionNormalConc = [InductionAgents sharedInductionNormalConc];
+    InductionAgents *sharedInductionUnitType = [InductionAgents sharedInductionUnitType];
+    InductionAgents *sharedInductionLabelType = [InductionAgents sharedInductionLabelType];
+    InductionAgents *sharedIsVasopressor = [InductionAgents sharedIsVasopressor];
+    InductionAgents *sharedManualDose = [InductionAgents sharedManualDose];
+    InductionAgents *sharedSafePaeds = [InductionAgents sharedSafePaeds];
+    InductionAgents *sharedPaedsMin = [InductionAgents sharedPaedsMin];
+    InductionAgents *sharedPaedsMax = [InductionAgents sharedPaedsMax];
+    InductionAgents *sharedPaedsSingle = [InductionAgents sharedPaedsSingle];
+    InductionAgents *sharedPaedsMaxTotal = [InductionAgents sharedPaedsMaxTotal];
+    
+    // If row is not yet selected, adds it to the database
+    NSInteger selectedIndex = [[displayIndexArray objectAtIndex:indexPath.row]integerValue];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (selectedIndex != 1000) {
+    // Creates and populates an array with the selected drug
+    NSMutableArray *array = [[NSMutableArray alloc]init];
+    [array addObject:[[sharedInductionName inductionName] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionClass inductionClass] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionIsMaxMin inductionIsMaxMin] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionIsSingleAdultDose inductionIsSingleAdultDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionMinimumDose inductionMinimumDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionMaximumDose inductionMaximumDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionSingleScaledDose inductionSingleScaledDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionSingleAdultDose inductionSingleAdultDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionNormalConc inductionNormalConc] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionUnitType inductionUnitType] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedInductionLabelType inductionLabelType] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedIsVasopressor isVasopressor] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedManualDose manualDose] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedSafePaeds safePaeds] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedPaedsMin paedsMin] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedPaedsMax paedsMax] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedPaedsSingle paedsSingle] objectAtIndex:selectedIndex]];
+    [array addObject:[[sharedPaedsMaxTotal paedsMaxTotal] objectAtIndex:selectedIndex]];
+    
+    
+        switch (openSection) {
+            case 0:
+                [defaults setObject:array forKey:@"inductionAgent"];
+                defaultInductionAgent = array;
+                break;
+                
+            case 1:
+                [defaults setObject:array forKey:@"Relaxant"];
+                defaultRelaxant = array;
+                break;
+
+            case 3:
+                if ([[array objectAtIndex:11]intValue] == 1){[defaults setObject:array forKey:@"Vasopressor"];
+                    defaultVasopressor = array;}
+                if ([[array objectAtIndex:11]intValue] == 2){[defaults setObject:array forKey:@"Antimuscarininic"];
+                    defaultAntimuscarinic = array;}
+                break;
+                
+            case 5:
+                [defaults setObject:array forKey:@"Sedation"];
+                defaultSedation = array;
+                break;
+                
+                
+            default:
+                break;
+        }
+    }
+    
+    else {
+        switch (openSection) {
+            case 0:
+                [defaults removeObjectForKey:@"inductionAgent"];
+                break;
+                
+            case 1:
+                [defaults removeObjectForKey:@"Relaxant"];
+                break;
+                
+            case 3:
+                if (vasopressor == YES){[defaults removeObjectForKey:@"Vasopressor"];}
+                if (antimuscarininic == YES){[defaults removeObjectForKey:@"Antimuscarininic"];}
+                break;
+                
+            case 5:
+                [defaults removeObjectForKey:@"Sedation"];
+                break;
+                
+                
+            default:
+                break;
+        }
+    }
+    
+    [defaults synchronize];
+    [self loadDrugs];
+    
+    self.viewDrugChoice.hidden = YES;
+    self.viewDrugChoice.alpha = 0;
+    vasopressor = NO;
+    antimuscarininic = NO;
+    
+    return;
+}
 
 @end

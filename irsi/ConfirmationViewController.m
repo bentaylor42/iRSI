@@ -417,6 +417,9 @@ float oralTubeLength;
     [sharedResetAll setResetAll:[NSNumber numberWithBool:YES]];
     Interactions * sharedTriggerReport = [Interactions sharedTriggerReport];
     [sharedTriggerReport setTriggerReport:[NSNumber numberWithBool:NO]];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    [appDelegate application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:nil];
 }
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

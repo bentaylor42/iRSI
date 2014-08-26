@@ -423,8 +423,9 @@
     stringGenerator = [[NSString alloc]init];
     createString = [[NSMutableString alloc]init];
     
-    EventLog *sharedTotalPreO2 = [EventLog sharedTotalPreO2];
-    NSInteger preO2Time = [[sharedTotalPreO2 totalPreO2]integerValue];
+    EventLog *sharedPreO2Start = [EventLog sharedPreO2Start];
+    EventLog *sharedPreO2End = [EventLog sharedPreO2End];
+    NSInteger preO2Time = [[sharedPreO2End preO2End]integerValue] - [[sharedPreO2Start preO2Start] integerValue];
     if ((preO2TotalTime > 0) && ([[[sharedIndicationTicked indicationTicked]objectAtIndex:7]integerValue] == 1)){
         int minutes = (int) (preO2Time/60);
         int seconds = (int) (preO2Time - (minutes*60));
@@ -1627,6 +1628,9 @@ NSString *filename;
         [sharedTriggerReport setTriggerReport:[NSNumber numberWithBool:NO]];
         Interactions *sharedResetAll = [Interactions sharedResetAll];
         [sharedResetAll setResetAll:[NSNumber numberWithBool:YES]];
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [appDelegate application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:nil];
     }
 }
 

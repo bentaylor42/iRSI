@@ -32,6 +32,12 @@
     NSArray *antimuscarinic;
     NSArray *ongoingSedation;
     UITextField *_textFieldBeingEdited;
+    
+    NSArray *defaultInductionAgent;
+    NSArray *defaultRelaxant;
+    NSArray *defaultVasopressor;
+    NSArray *defaultAntimuscarinic;
+    NSArray *defaultSedation;
 }
 
 @end
@@ -102,6 +108,15 @@ NSString * notPaeds;
     
     // keeps checking to see if the dose display type has changed
     checkChangeDose = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector (updateChangedDoseDisplay) userInfo:nil repeats:YES];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    DrugLog *sharedDrugDoseDisplayType = [DrugLog sharedDrugDoseDisplayType];
+    
+    if ([sharedDrugDoseDisplayType drugDoseDisplayType] == nil){
+        if ([defaults objectForKey:@"drugDisplayTypeSelected"] != nil){[sharedDrugDoseDisplayType setDrugDoseDisplayType:[NSNumber numberWithInteger:[defaults integerForKey:@"drugDisplayTypeSelected"]]];}
+        else {[sharedDrugDoseDisplayType setDrugDoseDisplayType:[NSNumber numberWithInteger:0]];}
+    }
 }
 
 - (void) updateChangedDoseDisplay{
@@ -243,6 +258,7 @@ NSString * notPaeds;
     if ([sharedInductionDrug inductionDrug].count > 0)
     {
         inductionAgentsArray  = [[NSMutableArray alloc] initWithArray:[sharedInductionDrug inductionDrug]];
+        /*
         if ([inductionAgentsArray containsObject:addDrug])
         {
             NSInteger index = [inductionAgentsArray indexOfObject:addDrug];
@@ -250,7 +266,7 @@ NSString * notPaeds;
             [inductionAgentsArray addObject:addDrug];
         }
         else {[inductionAgentsArray addObject:addDrug];}
-        
+        */
         drugTabCounter++;
     }
 
@@ -269,6 +285,7 @@ NSString * notPaeds;
     if ([sharedRelaxantsDrug relaxantsDrug].count > 0)
     {
         relaxantsArray = [[NSMutableArray alloc] initWithArray:[sharedRelaxantsDrug relaxantsDrug]];
+        /*
         if ([relaxantsArray containsObject:addDrug])
         {
             NSInteger index = [relaxantsArray indexOfObject:addDrug];
@@ -276,9 +293,10 @@ NSString * notPaeds;
             [relaxantsArray addObject:addDrug];
         }
         else {[relaxantsArray addObject:addDrug];}
-        
+        */
         drugTabCounter++;
     }
+
 
     if ([sharedRelaxantsDrug relaxantsDrug].count == 0)
     {
@@ -312,6 +330,7 @@ NSString * notPaeds;
     if ([sharedCoinductiveDrug coInductiveDrug].count > 0)
     {
         coInductiveArray = [[NSMutableArray alloc] initWithArray:[sharedCoinductiveDrug coInductiveDrug]];
+        /*
         if ([coInductiveArray containsObject:addDrug])
         {
             NSInteger index = [coInductiveArray indexOfObject:addDrug];
@@ -319,6 +338,7 @@ NSString * notPaeds;
             [coInductiveArray addObject:addDrug];
         }
         else {[coInductiveArray addObject:addDrug];}
+         */
     }
     if ([sharedCoinductiveDrug coInductiveDrug].count == 0)
     {
@@ -328,6 +348,7 @@ NSString * notPaeds;
     if ([sharedOngoingSedationDrug ongoingSedationDrug].count > 0)
     {
         ongoingSedationArray = [[NSMutableArray alloc] initWithArray:[sharedOngoingSedationDrug ongoingSedationDrug]];
+        /*
         if ([ongoingSedationArray containsObject:addDrug])
         {
             NSInteger index = [ongoingSedationArray indexOfObject:addDrug];
@@ -335,7 +356,7 @@ NSString * notPaeds;
             [ongoingSedationArray addObject:addDrug];
         }
         else {[ongoingSedationArray addObject:addDrug];}
-        
+        */
         drugTabCounter++;
     }
     if ([sharedOngoingSedationDrug ongoingSedationDrug].count == 0)
@@ -343,15 +364,18 @@ NSString * notPaeds;
         ongoingSedationArray = [[NSMutableArray alloc] initWithObjects: ongoingSedation, nil];
     }
     
+    /*
     // If all the selected drugs have been deleted, replaces the remaining add drug label with the placeholder
     if (([ongoingSedationArray count] == 1) && ([ongoingSedationArray containsObject:addDrug])){
         NSInteger index = [ongoingSedationArray indexOfObject:addDrug];
         [ongoingSedationArray replaceObjectAtIndex:index withObject:ongoingSedation];
     }
+     */
     
     if ([sharedOngoingAnalgesiaDrug ongoingAnalgesiaDrug].count > 0)
     {
         ongoingAnalgesiaArray = [[NSMutableArray alloc] initWithArray:[sharedOngoingAnalgesiaDrug ongoingAnalgesiaDrug]];
+        /*
         if ([ongoingAnalgesiaArray containsObject:addDrug])
         {
             NSInteger index = [ongoingAnalgesiaArray indexOfObject:addDrug];
@@ -359,6 +383,7 @@ NSString * notPaeds;
             [ongoingAnalgesiaArray addObject:addDrug];
         }
         else {[ongoingAnalgesiaArray addObject:addDrug];}
+         */
     }
     if ([sharedOngoingAnalgesiaDrug ongoingAnalgesiaDrug].count == 0)
     {
@@ -368,6 +393,7 @@ NSString * notPaeds;
     if ([sharedOtherDrug otherDrug].count > 0)
     {
         otherDrugsArray = [sharedOtherDrug otherDrug];
+        /*
         if ([otherDrugsArray containsObject:addDrug])
         {
             NSInteger index = [otherDrugsArray indexOfObject:addDrug];
@@ -375,6 +401,7 @@ NSString * notPaeds;
             [otherDrugsArray addObject:addDrug];
         }
         else {[otherDrugsArray addObject:addDrug];}
+         */
     }
     if ([sharedOtherDrug otherDrug].count == 0)
     {
@@ -461,7 +488,7 @@ NSString * notPaeds;
             NSInteger index = [emergencyDrugsArray indexOfObject:addDrug];
             [emergencyDrugsArray removeObjectAtIndex:index];
         }
-        [emergencyDrugsArray addObject:addDrug];
+        //[emergencyDrugsArray addObject:addDrug];
         drugTabCounter++;
         drugTabCounter++;
     }
@@ -558,6 +585,7 @@ NSString * notPaeds;
     NSString *calcDoseString;
     
     float weight = 70.0;
+    float fullWeight = 70;
     bool isAdult = YES;
     
     bool isMaxMin = YES;
@@ -593,10 +621,17 @@ NSString * notPaeds;
     DrugLog *sharedDrugDoseDisplayType = [DrugLog sharedDrugDoseDisplayType];
     Patient *sharedIsAdult = [Patient sharedIsAdult];
     Patient *sharedWeight = [Patient sharedWeight];
+    Patient *sharedIbwKnown = [Patient sharedIbwKnown];
+    Patient *sharedIdealBodyWeight = [Patient sharedIdealBodyWeight];
     
     isAdult = [[sharedIsAdult isAdult]boolValue];
-    weight = [[sharedWeight weight]floatValue];
+    
+    fullWeight = [[sharedWeight weight]floatValue];
+    if ([[sharedIbwKnown ibwKnown]boolValue] == YES){weight = [[sharedIdealBodyWeight idealBodyWeight]floatValue];}
+    else {weight = [[sharedWeight weight]floatValue];}
+    
     if (weight >= 10){weight = (int) weight;};
+    if (fullWeight >= 10){fullWeight = (int) fullWeight;};
     
     // if the item at indexpath.row is a filler item, sets the label as the string
     if ([[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:addDrugString]  || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:inductionAgentString] || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:muscleRelaxantString] || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:flushString] || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:vasopressorString] || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:antiMuscString] || [[[array objectAtIndex:indexPath.row] objectAtIndex:0] isEqualToString:ongoingSedationString])
@@ -690,7 +725,6 @@ NSString * notPaeds;
         
         drugLabelInt = [[[array objectAtIndex:indexPath.row] objectAtIndex:10]integerValue];
         drugLabelValue = [UIImage imageNamed:[[sharedDrugLabels drugLabels] objectAtIndex:drugLabelInt]];
-        
         drugLabelString = [[sharedDrugLabels drugLabels] objectAtIndex:drugLabelInt];
         manualDose = [[[array objectAtIndex:indexPath.row] objectAtIndex:12]floatValue];
         safePaeds = [[[array objectAtIndex:indexPath.row] objectAtIndex:13]boolValue];
@@ -698,6 +732,14 @@ NSString * notPaeds;
         paedsMax = [[[array objectAtIndex:indexPath.row] objectAtIndex:15]floatValue];
         paedsSingle = [[[array objectAtIndex:indexPath.row] objectAtIndex:16]floatValue];
         paedsMaxTotal = [[[array objectAtIndex:indexPath.row] objectAtIndex:17]floatValue];
+        
+        // uses the ideal body weight (if known) to calculate the dose of all drugs, except...
+        if (drugLabelInt == 3){weight = fullWeight;}
+        if ([drugNameValue isEqualToString:@"Propofol Infusion"]){weight = weight + ((fullWeight - weight)*0.4);}
+        if ([drugNameValue isEqualToString:@"Fentanyl"]){weight = fullWeight;}
+        if ([drugNameValue isEqualToString:@"Thiopentone"]){weight = fullWeight;}
+        if ([drugNameValue isEqualToString:@"Midazolam"]){weight = fullWeight;}
+        if ([drugNameValue isEqualToString:@"Atracurium"]){weight = fullWeight;}
     }
     
     NSString *cellIdentifier = @"displayDrug";
@@ -743,13 +785,13 @@ NSString * notPaeds;
                 minDose = singleAdultDose/1000;
                 maxDose = minDose;
                 doseLabel = @"grams";
-                if (minDose<1){calcDoseString = [NSString stringWithFormat:@"%.1f", minDose];}
+                if (minDose<10){calcDoseString = [NSString stringWithFormat:@"%.1f", minDose];}
                 else {calcDoseString = [NSString stringWithFormat:@"%i", (int) minDose];}}
         }
         else if (isMaxMin == NO){
             minDose = (singleScaledDose * weight);
             maxDose = minDose;
-            if (singleScaledDose<1){calcDoseString = [NSString stringWithFormat:@"%.1f", singleScaledDose];}
+            if (singleScaledDose<10){calcDoseString = [NSString stringWithFormat:@"%.1f", singleScaledDose];}
             else {calcDoseString = [NSString stringWithFormat:@"%i", (int) singleScaledDose];}
             if (singleScaledDose<0.1){calcDoseString = [NSString stringWithFormat:@"%.2f", singleScaledDose];}
             if (singleScaledDose<0.01){calcDoseString = [NSString stringWithFormat:@"%.1f", singleScaledDose];}
@@ -768,7 +810,7 @@ NSString * notPaeds;
         if (isMaxMin == NO){
             minDose = (paedsSingle * weight);
             maxDose = minDose;
-            if (paedsSingle <1){calcDoseString = [NSString stringWithFormat:@"%.1f", paedsSingle];}
+            if (paedsSingle <10){calcDoseString = [NSString stringWithFormat:@"%.1f", paedsSingle];}
             else {calcDoseString = [NSString stringWithFormat:@"%i", (int) paedsSingle];}
             if (paedsSingle < 0.1){calcDoseString = [NSString stringWithFormat:@"%.2f", paedsSingle];}
             if (paedsSingle < 0.01){calcDoseString = [NSString stringWithFormat:@"%.3f", paedsSingle];}
@@ -978,11 +1020,60 @@ NSString * notPaeds;
     InductionAgents *sharedInductionUnitType = [InductionAgents sharedInductionUnitType];
     InductionAgents *sharedInductionLabelType = [InductionAgents sharedInductionLabelType];
     
-    DrugLog *sharedFlush = [DrugLog sharedFlush];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
     
-    if (indexPath.section != 2){
-        [sharedDrugsSelectionSection setDrugSelectionSection:[NSNumber numberWithInteger:indexPath.section]];
-        [sharedDrugsSelectorWindowOpen setDrugSelectorWindowOpen:[NSNumber numberWithBool:YES]];
+    if ([defaults objectForKey:@"inductionAgent"] != nil){defaultInductionAgent = [defaults arrayForKey:@"inductionAgent"];}
+    if ([defaults objectForKey:@"Relaxant"] != nil){defaultRelaxant = [defaults arrayForKey:@"Relaxant"];}
+    if ([defaults objectForKey:@"Vasopressor"] != nil){defaultVasopressor = [defaults arrayForKey:@"Vasopressor"];}
+    if ([defaults objectForKey:@"Antimuscarininic"] != nil){defaultAntimuscarinic = [defaults arrayForKey:@"Antimuscarininic"];}
+    if ([defaults arrayForKey:@"Sedation"] != nil){defaultSedation = [defaults arrayForKey:@"Sedation"];}
+    
+    bool triggered = NO;
+    
+    DrugLog *sharedFlush = [DrugLog sharedFlush];
+    DrugLog *sharedInductionDrug = [DrugLog sharedInductionDrug];
+    DrugLog *sharedRelaxantsDrug = [DrugLog sharedRelaxantsDrug];
+    DrugLog *sharedOngoingSedationDrug = [DrugLog sharedOngoingSedationDrug];
+    DrugLog *sharedVasopressorChosen = [DrugLog sharedVasopressorChosen];
+    DrugLog *sharedAntimuscarinicChosen = [DrugLog sharedAntimuscarinicChosen];
+    DrugLog *sharedEmergencyDrug = [DrugLog sharedEmergencyDrug];
+    
+    if ((indexPath.section == 0) && ([[sharedInductionDrug inductionDrug] count] == 0) && ([defaults objectForKey:@"inductionAgent"] != nil)){
+        [[sharedInductionDrug inductionDrug] addObject:defaultInductionAgent];
+        
+        [self reloadTable];
+        triggered = YES;
+    }
+    
+    if ((indexPath.section == 1) && ([[sharedRelaxantsDrug relaxantsDrug] count] == 0) && ([defaults objectForKey:@"Relaxant"] != nil)){
+        [[sharedRelaxantsDrug relaxantsDrug] addObject:defaultRelaxant];
+        
+        [self reloadTable];
+        triggered = YES;
+    }
+    
+    if ((indexPath.section == 5) && ([[sharedOngoingSedationDrug ongoingSedationDrug] count] == 0) && ([defaults objectForKey:@"Sedation"] != nil)){
+        [[sharedOngoingSedationDrug ongoingSedationDrug] addObject:defaultSedation];
+        
+        [self reloadTable];
+        triggered = YES;
+    }
+    
+    if ((indexPath.section == 3) && ([[sharedVasopressorChosen vasopressorChosen] intValue] == 0) && ([defaults objectForKey:@"Vasopressor"] != nil)){
+        [[sharedEmergencyDrug emergencyDrug] addObject:defaultVasopressor];
+        [sharedVasopressorChosen setVasopressorChosen:[NSNumber numberWithInt:1]];
+        
+        [self reloadTable];
+        triggered = YES;
+    }
+    
+    if ((indexPath.section == 3) && ([[sharedAntimuscarinicChosen antimuscarinicChosen] intValue] == 0) && ([defaults objectForKey:@"Antimuscarininic"] != nil) && (triggered == NO)){
+        [[sharedEmergencyDrug emergencyDrug] addObject:defaultAntimuscarinic];
+        [sharedAntimuscarinicChosen setAntimuscarinicChosen:[NSNumber numberWithInt:1]];
+        
+        [self reloadTable];
+        triggered = YES;
     }
     
     if (indexPath.section == 2){
@@ -1010,7 +1101,14 @@ NSString * notPaeds;
         if ([[sharedFlush flush] count] == 0){
             [[sharedFlush flush] addObject:saline];}
         
+        triggered = YES;
+        
         [self reloadTable];
+    }
+    
+    if (triggered == NO){
+        [sharedDrugsSelectionSection setDrugSelectionSection:[NSNumber numberWithInteger:indexPath.section]];
+        [sharedDrugsSelectorWindowOpen setDrugSelectorWindowOpen:[NSNumber numberWithBool:YES]];
     }
     
     if ([[sharedDrugsSelectorWindowOpen drugSelectorWindowOpen]boolValue] == YES){
@@ -1021,6 +1119,9 @@ NSString * notPaeds;
     {
         [_textFieldBeingEdited resignFirstResponder];
     }
+    
+    triggered = NO;
+    return;
     
 }
 

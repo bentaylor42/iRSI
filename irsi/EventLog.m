@@ -348,7 +348,7 @@
         equipComplete = [[NSNumber alloc] initWithInteger:0];
         teamComplete = [[NSNumber alloc] initWithInteger:0];
         finalComplete = [[NSNumber alloc] initWithInteger:0];
-        preHospital = [[NSNumber alloc] initWithBool:NO];
+        preHospital = [[NSNumber alloc] init];
         
         indicationChecklist = [[NSArray alloc] init];
         indicationTicked = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0],nil];

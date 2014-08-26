@@ -16,6 +16,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreText/CoreText.h>
 #import <MessageUI/MessageUI.h>
+#import "AppDelegate.h"
 
 @interface GenerateReportViewController : UIViewController <UITextViewDelegate, MFMailComposeViewControllerDelegate>
 

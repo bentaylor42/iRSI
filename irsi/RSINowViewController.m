@@ -66,6 +66,8 @@ NSString * unCuffed;
     
     [self updateNavigation];
     
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
     self.scrollview.translatesAutoresizingMaskIntoConstraints = NO;
     self.viewIndications.translatesAutoresizingMaskIntoConstraints = NO;
     self.viewDrugs.translatesAutoresizingMaskIntoConstraints = NO;
@@ -333,8 +335,8 @@ NSString * unCuffed;
     if ([[sharedIsFemale isFemale] boolValue] == YES){gender = female;}
     if ([[sharedIsFemale isFemale] boolValue] == NO){gender = male;}
     NSString *adultAge;
-    if ([[sharedIsAdult isAdult] boolValue] == YES){adultAge = adult;}
-    if ([[sharedIsAdult isAdult] boolValue] == NO){adultAge = child;}
+    if ([[sharedIsAdult isAdult] boolValue] == YES){adultAge = @"Adult";}
+    if ([[sharedIsAdult isAdult] boolValue] == NO){adultAge = @"Child";}
     
     _labelDisplayWeight.text = [NSString stringWithFormat:weightDisplayStatement, [[sharedWeight weight] intValue], gender, adultAge];
     

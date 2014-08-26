@@ -50,6 +50,18 @@ NSString *appTitle;
     [self copyrightVersion];
     
     resetTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(resetSingletons) userInfo:nil repeats:YES];
+    
+    bool phem = NO;
+    EventLog *sharedPreHospital = [EventLog sharedPreHospital];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    
+    if ([defaults objectForKey:@"PHEM"] != nil){
+        phem = [defaults boolForKey:@"PHEM"];
+        [sharedPreHospital setPreHospital:[NSNumber numberWithBool:phem]];
+    }
+    self.switchPHEM.on = phem;
 }
 
 - (void) loadStrings{
@@ -138,6 +150,8 @@ NSString *appTitle;
 - (void) resetSingletons{
     Interactions *sharedResetAll = [Interactions sharedResetAll];
     if ([[sharedResetAll resetAll]boolValue] == YES){
+        
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
         
         // ===== Resets all singleton variables =====
         Patient *sharedAge = [Patient sharedAge];

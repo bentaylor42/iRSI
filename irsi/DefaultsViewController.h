@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "EventLog.h"
 #import "Patient.h"
+#import "Nationalities.h"
+#import "InductionAgents.h"
+#import "DrugLog.h"
 
-@interface DefaultsViewController : UIViewController
+@interface DefaultsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UISwitch * switchPHEM;
 
@@ -18,6 +21,7 @@
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl * segmentedWeight;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableDrugSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl * segmentedDrugDoseDisplayType;
 
 @property (strong, nonatomic) IBOutlet UISwitch *switchCricoid;
@@ -48,4 +52,35 @@
 
 @property (strong, nonatomic) IBOutlet UISwitch *switch30SAlert;
 
+@property (strong, nonatomic) IBOutlet UIButton *buttonIA;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelIA;
+
+- (IBAction)buttonIA:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonRelaxant;
+
+- (IBAction)buttonRelaxant:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelRelaxant;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonVasopressor;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelVasopressor;
+
+- (IBAction)buttonVasopressor:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonAntimuscarininic;
+
+- (IBAction)buttonAntimuscarininic:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelAntimuscarininc;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonOngoingSed;
+
+- (IBAction)buttonOngoingSedation:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelOnogingSedation;
+
+@property (strong, nonatomic) IBOutlet UIView *viewDrugChoice;
 @end

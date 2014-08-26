@@ -23,7 +23,7 @@
 
 @implementation DrugsViewController
 
-NSInteger doseDisplayType = 2;
+NSInteger doseDisplayType = 0;
 NSMutableDictionary *inductionAgents;
 NSTimer *drugSelection;
 bool selectionLoaded = NO;
@@ -107,7 +107,7 @@ NSString * mgKg;
         doseDisplayType = [[sharedDrugDoseDisplayType drugDoseDisplayType]integerValue];}
     
     if (([sharedDrugDoseDisplayType drugDoseDisplayType] == nil) && ([defaults objectForKey:@"drugDisplayTypeSelected"] == nil)){
-        doseDisplayType = 2;
+        doseDisplayType = 0;
         [sharedDrugDoseDisplayType setDrugDoseDisplayType:[NSNumber numberWithInteger:2]];
     }
 
@@ -177,7 +177,6 @@ NSString * mgKg;
         
         return;
     }
-    
 }
 
 - (void) populateTable
@@ -218,11 +217,12 @@ NSString * mgKg;
     [sharedInductionSingleAdultDose setInductionSingleAdultDose:[dict objectForKey:@"SingleAdultDose"]];
     [sharedInductionNormalConc setInductionNormalConc:[dict objectForKey:@"NormalConc"]];
     [sharedInductionUnitType setInductionUnitType:[dict objectForKey:@"UnitType"]];
+    [sharedInductionLabelType setInductionLabelType:[dict objectForKey:@"LabelType"]];
     [sharedIsVasopressor setIsVasopressor:[dict objectForKey:@"IsVasopressor"]];
     //if ([sharedManualDose manualDose] == nil){[sharedManualDose setManualDose:[dict objectForKey:@"ManualDose"]];}
     for (NSInteger t = 0; t < [[sharedInductionName inductionName]count]; t++)
     {
-        if ([[sharedManualDose manualDose]count] < t){[[sharedManualDose manualDose] addObject:0];}
+        if ([[sharedManualDose manualDose]count] < t){[[sharedManualDose manualDose] addObject:[NSNumber numberWithInt:0]];}
     }
     [sharedSafePaeds setSafePaeds:[dict objectForKey:@"SafeInPaeds"]];
     [sharedPaedsMin setPaedsMin:[dict objectForKey:@"PaedsMin"]];

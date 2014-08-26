@@ -100,7 +100,7 @@
 		<true/>
 		<true/>
 		<true/>
-		<true/>
+		<false/>
 		<false/>
 		<false/>
 		<false/>
@@ -184,7 +184,7 @@
 		<real>0.8</real>
 		<real>0.8</real>
 		<integer>1</integer>
-		<real>0.6</real>
+		<real>1.2</real>
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>0</integer>
@@ -268,7 +268,7 @@
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>0</integer>
-		<integer>0</integer>
+		<real>1.2</real>
 		<real>0.01</real>
 		<real>0.5</real>
 		<integer>5</integer>
@@ -604,7 +604,7 @@
 		<integer>0</integer>
 		<integer>0</integer>
 		<integer>1</integer>
-		<real>0.6</real>
+		<real>1.2</real>
 		<real>0.01</real>
 		<real>0.001</real>
 		<integer>4</integer>
